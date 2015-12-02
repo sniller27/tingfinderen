@@ -130,9 +130,12 @@ table {
 }
 /** small **/
 body {
+  background-color: #8e8e8e;
   background-color: #255858;
   height: 100px;
-  background-color: #8e8e8e;
+}
+body #active {
+  color: red;
 }
 body #logo {
   width: 80px;
@@ -146,4 +149,12 @@ body .verticalalign {
 body #wrapper {
   width: 80%;
   margin: auto;
+}
+body main {
+  height: 400px;
+  background-color: bisque;
+}
+body footer {
+  height: 200px;
+  background-color: blueviolet;
 }
