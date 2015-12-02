@@ -28,8 +28,41 @@ require_once("php/header.php");
 <!-- main -->
 <main>
     
-    <h1>shop</h1>
+    <div class="row">
+        <div class="col-xs-12 product"><h1>Produkter</h1></div>
     
+    
+    <?php 
+    
+    require_once("php/config.php");
+    
+    //SQL query
+    $sql = "select * from products";
+
+    //forbinder query til MySQL
+    $result = $conn->query($sql);
+
+    //udtrækker fra database
+    while($row = $result->fetch_array()){
+
+    ?>
+    
+    
+    <div class="col-xs-3 product">
+       
+        <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
+        <p class="textoverlay"><?= $row['productname']; ?></p>
+        <img src="<?= $row['mainimage']; ?>" alt="" />
+        </a>
+    </div>
+    
+    
+    <?php
+    }
+    
+    
+    ?>
+    </div>
 </main>
 
 <?php 

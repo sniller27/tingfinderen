@@ -21,7 +21,7 @@ if($currentsite == 'index'){
 
     $about = 'id="active"';
 
-}else if($currentsite == 'sell'){
+}else if($currentsite == 'selltous'){
 
     $sell = 'id="active"';
 
@@ -48,7 +48,7 @@ if($currentsite == 'index'){
 
 
 <div class="navbar-header">
-				<a href="#"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
+				<a href="index.php"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
 				
 				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 					<span class="icon-bar"></span>
@@ -65,11 +65,11 @@ if($currentsite == 'index'){
 <li><a href="index.php" <?= $frontpage ?>>Forside</a></li>
 <li><a href="shop.php" <?= $shop ?>>Shop</a></li>
 <li><a href="about.php" <?= $about ?>>Om os</a></li>
-<li><a href="sell.php" <?= $sell ?>>Sælg til os</a></li>
+<li><a href="selltous.php" <?= $sell ?>>Sælg til os</a></li>
 <li><a href="contact.php" <?= $contact ?>>Kontakt</a></li>
 
 <li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mere<b class="caret"></b></a>
 <ul class="dropdown-menu">
 
 <li><a href="admin.php">Admin login</a></li>

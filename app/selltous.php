@@ -6,7 +6,7 @@
 <title>Tingfinderen.dk</title>
         
 <!-- Pane Description -->
-<meta name="description" content="Kontakt os hvis du har spørgsmål">
+<meta name="description" content="Hvis du står med nogle varer, du mener vi kunne være intresserede i, så er du velkommen til at kontakte os">
 
 <?php
 
@@ -29,7 +29,7 @@ require_once("php/header.php");
 <!-- main -->
 <main>
     
-        <h1>kontakt</h1>
+        <h1>sælg</h1>
     
 </main>
 

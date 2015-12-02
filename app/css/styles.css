@@ -130,9 +130,44 @@ table {
 }
 /** small **/
 body {
-  background-color: #8e8e8e;
-  background-color: #255858;
-  height: 100px;
+  font-family: sans-serif;
+}
+body h1 {
+  font-size: 2em;
+}
+body h2 {
+  font-size: 1.5em;
+}
+body #wrapper {
+  width: 80%;
+  margin: auto;
+}
+body main {
+  min-height: 400px;
+  background-color: #efefef;
+}
+body main .product a {
+  text-decoration: none;
+  color: #404040;
+}
+body main .product img {
+  width: 100%;
+  height: 200px;
+  opacity: 0.5;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+  z-index: 0;
+}
+body main .product img:hover {
+  opacity: 1;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+body main .textoverlay {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
 }
 body #active {
   color: red;
@@ -140,21 +175,25 @@ body #active {
 body #logo {
   width: 80px;
 }
-body .omg {
-  background-color: bisque;
-}
-body .verticalalign {
-  vertical-align: middle;
-}
-body #wrapper {
-  width: 80%;
-  margin: auto;
-}
-body main {
-  height: 400px;
-  background-color: bisque;
-}
 body footer {
   height: 200px;
   background-color: blueviolet;
+}
+body .adminlogindiv {
+  width: 220px;
+  margin: auto;
+  position: relative;
+  margin-top: 12%;
+  padding: 10px;
+  border: 1px solid #cecece;
+  border-radius: 2px;
+  text-align: center;
+}
+body .adminlogindiv img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+body .adminlogindiv input {
+  margin-bottom: 10px;
 }
