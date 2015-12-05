@@ -6,7 +6,7 @@
 <title>Tingfinderen.dk</title>
         
 <!-- Pane Description -->
-<meta name="description" content="Velkommen til Tindfinderen.dk">
+<meta name="description" content="Velkommen til Tingfinderen.dk">
 
 <?php
 
