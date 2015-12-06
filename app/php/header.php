@@ -3,7 +3,6 @@
 $frontpage = "";
 $shop = "";
 $about = "";
-$sell = "";
 $contact = "";
 
 
@@ -21,10 +20,6 @@ if($currentsite == 'index'){
 
     $about = 'id="active"';
 
-}else if($currentsite == 'selltous'){
-
-    $sell = 'id="active"';
-
 }else if($currentsite == 'contact'){
 
     $contact = 'id="active"';
@@ -35,59 +30,54 @@ if($currentsite == 'index'){
 
 ?>
 
-
- 
-         
-         
-<div class="row">
-               
-<div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar navbar-inverse navbar-static-top">
 
 
-<div class="container">
+        <div class="container">
 
 
-<div class="navbar-header">
-				<a href="index.php"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
-				
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-</div>
+            <div class="navbar-header">
 
-<div class="collapse navbar-collapse navHeaderCollapse">
+                <a href="index.php"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
 
-<ul class="nav navbar-nav navbar-right verticalalign">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
 
+            <!--mobile menu-->
+            <div class="collapse navbar-collapse navHeaderCollapse">
 
-<li><a href="index.php" <?= $frontpage ?>>Forside</a></li>
-<li><a href="shop.php" <?= $shop ?>>Shop</a></li>
-<li><a href="about.php" <?= $about ?>>Om os</a></li>
-<li><a href="selltous.php" <?= $sell ?>>Sælg til os</a></li>
-<li><a href="contact.php" <?= $contact ?>>Kontakt</a></li>
-
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mere<b class="caret"></b></a>
-<ul class="dropdown-menu">
-
-<li><a href="admin.php">Admin login</a></li>
-
-</ul>
-</li>
-
-</ul>
-
-</div>
+                <ul class="nav navbar-nav navbar-right verticalalign">
 
 
-</div>
+                    <li><a href="index.php" <?= $frontpage ?> class="hvr-underline-from-center">Forside</a></li>
+                    <li><a href="shop.php" <?= $shop ?> class="hvr-underline-from-center">Shop</a></li>
+                    <li><a href="about.php" <?= $about ?> class="hvr-underline-from-center">Info</a></li>
+                    <li><a href="contact.php" <?= $contact ?> class="hvr-underline-from-center">Kontakt</a></li>
+                    
+                    
+                    <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount">1</p></a></li>
+
+<!--
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mere<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="admin.php">Admin login</a></li>
+
+                        </ul>
+                    </li>
+-->
+                
+
+                </ul>
+
+            </div>
 
 
+        </div>
 
-
-</div>
-               
-</div>
-          
+    </div>

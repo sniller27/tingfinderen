@@ -16,8 +16,6 @@ require_once("php/head.php");
 ?>
 </head>
 <body>
-
-<div class="container">
 <?php
 
 //header
@@ -25,6 +23,7 @@ require_once("php/header.php");
 
 ?>
 
+<div class="container">
 <!-- main -->
 <main>
     
@@ -48,12 +47,13 @@ require_once("php/header.php");
     ?>
     
     
-    <div class="col-xs-3 product">
+    <div class="col-sm-3 product productsize">
        
         <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
         <p class="textoverlay"><?= $row['productname']; ?></p>
         <img src="<?= $row['mainimage']; ?>" alt="" />
         </a>
+        
     </div>
     
     

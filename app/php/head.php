@@ -23,3 +23,10 @@
 
 <!-- JavaScript -->
 <script src="js/script.js"></script>
+
+<!-- Google font -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+
+
+<!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

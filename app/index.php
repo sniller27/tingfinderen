@@ -1,125 +1,96 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
 
-<!-- title -->
-<title>Tingfinderen.dk</title>
-        
-<!-- Pane Description -->
-<meta name="description" content="Velkommen til Tingfinderen.dk">
+    <!-- title -->
+    <title>Tingfinderen.dk</title>
 
-<?php
+    <!-- Pane Description -->
+    <meta name="description" content="Velkommen til Tingfinderen.dk">
 
-//head info
-require_once("php/head.php");
+    <?php
 
-?>
+    //head info
+    require_once("php/head.php");
+
+    ?>
 
 </head>
+
 <body>
+   
+    <?php
 
-<div class="container">
-<?php
+    //header
+    require_once("php/header.php");
 
-//header
-require_once("php/header.php");
+    ?>
 
-?>
-
-
-
+        <div class="container">
 
 
+            <div class="jumbotron">
 
 
+                <div class="text-center">
+                    <h1>hej</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+                    <a class="btn btn-default">Hey</a>
+                    <a class="btn btn-info">Hey</a>
+                </div>
 
 
-<div class="row">
-               
-<div class="navbar navbar-default navbar-static-top">
-
-
-<div class="container">
-
-
-<div class="navbar-header">
-				<a href="index.php"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
-				
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-</div>
-
-<div class="collapse navbar-collapse navHeaderCollapse">
-
-<ul class="nav navbar-nav navbar-right verticalalign">
-
-
-<li><a href="index.php">Forside</a></li>
-<li><a href="shop.php">Shop</a></li>
-
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mere<b class="caret"></b></a>
-<ul class="dropdown-menu">
-
-<li><a href="admin.php">Admin login</a></li>
-
-</ul>
-</li>
-
-</ul>
-
-</div>
-
-
-</div>
-
-
-
-
-</div>
-               
-</div>
-
-
-
-
-
-
-
-<!-- main -->
-<main>
-    
-        <h1>home</h1>
-        <div class="row">
-            
-            <div class="col-sm-4" style="background-color:blue">
-                
-                hi
-                
-            </div>  
-            <div class="col-sm-4" style="background-color:blue">
-                
-                hi
-                
-            </div>  
-            <div class="col-sm-4" style="background-color:blue">
-                
-                hi
-                
             </div>
-              
-        </div>
-    
-</main>
 
-<?php 
-//footer
-require_once("php/footer.php");
-    
-?>
-</div>
+
+            <!-- main -->
+            <main>
+
+                <div class="row">
+
+
+                    <div class="col-sm-3">
+
+                        <img src="images/processcircle.png" alt="proces" class="processicon" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <img src="images/processcircle.png" alt="proces" class="processicon" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <img src="images/processcircle.png" alt="proces" class="processicon" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <img src="images/processcircle.png" alt="proces" class="processicon" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+
+                    </div>
+
+
+
+                </div>
+
+            </main>
+
+            <?php 
+            //footer
+            require_once("php/footer.php");
+
+            ?>
+            
+        </div>
 </body>
+
 </html>

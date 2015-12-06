@@ -17,19 +17,19 @@ require_once("php/head.php");
 
 </head>
 <body>
-
-<div class="container">
 <?php
 
 //header
 require_once("php/header.php");
 
 ?>
+<div class="container">
+
 
 <!-- main -->
 <main>
     
-    <h1>about</h1>
+    <h1>Velkommen til Tingfinderen!</h1>
     
 </main>
 
