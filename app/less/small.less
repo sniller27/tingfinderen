@@ -1,4 +1,7 @@
 /** small **/
+//colors
+@darkgray : #232323;
+
 
 body {
     //    font
@@ -45,7 +48,7 @@ body {
             position:relative;
             top:-15px;
 //            left:20px;
-            background-color: #222;
+            background-color: @darkgray;
             padding: 10px;
             border-radius: 200px;
             color: #9d9d9d;
@@ -81,6 +84,7 @@ body {
     //    jumbotron
     .jumbotron {
         background-image: url(../images/antiqueworkshop.jpg);
+        background-size: cover;
         line-height: 1;
         h1 {
             color: #d9cccc;
@@ -262,7 +266,7 @@ body {
     //footer
     #footer {
         min-height: 200px;
-        background-color: #222;
+        background-color: @darkgray;
         color: #d9cccc;
         padding: 20px;
     }
@@ -290,7 +294,7 @@ body {
 
 
 //NAVBAR
-@bgDefault      : #222222;
+@bgDefault      : @darkgray;
 @bgHighlight    : #000000;
 @colDefault     : #b2b2b2;
 @colHighlight   : #5b5c5b;

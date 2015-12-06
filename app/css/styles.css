@@ -1,6 +1,10 @@
 /** big **/
 /** medium **/
 @media only screen and (min-width: 768px) {
+  ul {
+    position: relative;
+    top: 15px;
+  }
   .cart2 #cart2icon {
     left: 20px;
   }
@@ -206,7 +210,7 @@ body .cart2 #cart2icon {
   font-size: 30px;
   position: relative;
   top: -15px;
-  background-color: #222;
+  background-color: #232323;
   padding: 10px;
   border-radius: 200px;
   color: #9d9d9d;
@@ -231,6 +235,7 @@ body #wrapper {
 }
 body .jumbotron {
   background-image: url(../images/antiqueworkshop.jpg);
+  background-size: cover;
   line-height: 1;
 }
 body .jumbotron h1 {
@@ -353,7 +358,7 @@ body #logo {
 }
 body #footer {
   min-height: 200px;
-  background-color: #222;
+  background-color: #232323;
   color: #d9cccc;
   padding: 20px;
 }
@@ -376,7 +381,7 @@ body .adminlogindiv input {
   margin-bottom: 10px;
 }
 .navbar-default {
-  background-color: #222222;
+  background-color: #232323;
   border-color: #000000;
 }
 .navbar-default .navbar-brand {
@@ -397,7 +402,7 @@ body .adminlogindiv input {
   color: #5b5c5b;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
-  background-color: #222222;
+  background-color: #232323;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
   color: #b2b2b2;

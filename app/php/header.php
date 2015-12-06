@@ -51,7 +51,7 @@ if($currentsite == 'index'){
 
             <div class="navbar-header">
 
-                <a href="index.php"><img src="images/logo.jpg" alt="Tingfinderen logo" id="logo"></a>
+                <a href="index.php"><img src="images/logo.png" alt="Tingfinderen logo" id="logo"></a>
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" id="nav-icon4">
                     <span class="icon-bar"></span>

@@ -47,7 +47,7 @@ require_once("php/header.php");
     ?>
     
     
-    <div class="col-sm-3 product productsize">
+    <div class="col-xs-6 col-sm-3 product productsize">
        
         <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
         <p class="textoverlay"><?= $row['productname']; ?></p>
