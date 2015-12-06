@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           separator: ';',
         },
         js: {
-          src: ['app/js/menu.js'],
+          src: ['app/js/scripts/*.js'],
           dest: 'app/js/script.js',
         },
         css: {
