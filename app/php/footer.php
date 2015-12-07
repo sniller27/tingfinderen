@@ -1,5 +1,6 @@
-<div id="footer">
 
+    <div id="footer">
+<div class="container">
     <div class="row">
 
         <div class="col-sm-3">
@@ -24,7 +25,7 @@
 
         </div>
         <div class="col-sm-3">
-
+<p>Find os også på sociale medier</p>
             <a href="#"><i class="fa fa-facebook-square" style="font-size:48px;"></i></a>
             <a href="#"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a>
             <a href="#"><i class="fa fa-google-plus-square" style="font-size:48px;"></i></a>
@@ -35,4 +36,5 @@
 
     </div>
 
+</div>
 </div>

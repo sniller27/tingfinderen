@@ -56,11 +56,12 @@ require_once("php/header.php");
     
 </main>
 
+
+</div>
 <?php 
 //footer
 require_once("php/footer.php");
     
 ?>
-</div>
 </body>
 </html>

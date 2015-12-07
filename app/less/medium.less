@@ -7,6 +7,12 @@
     top: 15px;
     }
     
+    //    notification
+    #notification {
+        
+        display: none;
+        
+    }
     
     //    cart2
     .cart2 {
@@ -19,6 +25,17 @@
             }
         }
     }
+    
+    //active page
+    #active {
+        //        color: #dd5b5b;
+        background-color: transparent !important;
+        color: @gold !important;
+        padding-bottom: 14px;
+        border-bottom: 1px solid @gold;
+    }
+    
+    
     //    HOVEREFFECTS
     /* Underline From Center */
     .hvr-underline-from-center {
@@ -40,8 +57,8 @@
         left: 50%;
         right: 50%;
         bottom: 0;
-        background: #d9cccc;
-        height: 4px;
+        background: @gold;
+        height: 1px;
         -webkit-transition-property: left, right;
         transition-property: left, right;
         -webkit-transition-duration: 0.3s;

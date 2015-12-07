@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
 
-<!-- title -->
-<title>Tingfinderen.dk</title>
-        
-<!-- Pane Description -->
-<meta name="description" content="Velkommen til Tindfinderen.dk">
+    <!-- title -->
+    <title>Tingfinderen.dk</title>
 
-<?php
+    <!-- Pane Description -->
+    <meta name="description" content="Velkommen til Tindfinderen.dk">
+
+    <?php
 
 //head info
 require_once("php/head.php");
@@ -16,22 +17,21 @@ require_once("php/head.php");
 ?>
 
 </head>
-<body>
 
-<div class="container">
-<?php
+<body>
+    <?php
 
 //header
 require_once("php/header.php");
 
 ?>
+        <div class="container">
 
-<!-- main -->
-<main>
-    
-        <h1>showproduct</h1>
-        
-    <?php 
+
+            <!-- main -->
+            <main>
+
+                <?php 
     
     if(isset($_GET['productid'])){
         
@@ -55,31 +55,46 @@ require_once("php/header.php");
 
     //udtrækker personinfo fra database
     while($stmt->fetch()){
+        
+        ?>
 
-        echo '
-        <div class="col-xs-3 product">
-        <img src="' . $pimage . '" alt="">
-        </div>';
-        
-        echo '<div class="col-xs-3 product">';
-        echo $pname . '<br>'
-        . $price . '<br>'
-        . $pdesc . '<br>
-        </div>';
-        
-        
+                    <div class="col-xs-6 product">
+                        <h1><?= $pname ?></h1>
+
+                        <img src="<?= $pimage ?>" alt="">
+
+
+
+                    </div>
+
+                    <div class="col-xs-6 product">
+                       <p><?= $pname ?></p> <br/>
+                        <p>
+                            <?= $price ?>
+                        </p>
+                        <br>
+                        <p>
+                            <?= $pdesc ?>
+                        </p>
+                        <br>
+
+                    </div>
+
+                    <?php
     }
     
     
     ?>
-    
-</main>
 
-<?php 
+            </main>
+
+
+        </div>
+        <?php 
 //footer
 require_once("php/footer.php");
     
 ?>
-</div>
 </body>
+
 </html>

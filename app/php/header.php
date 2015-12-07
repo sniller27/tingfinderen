@@ -1,4 +1,5 @@
 <?php
+
 //active site in navbar
 $frontpage = "";
 $shop = "";
@@ -29,16 +30,6 @@ if($currentsite == 'index'){
 
 
 ?>
-
-<!--   facebook feed SDK-->
-   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
    
    
    
@@ -58,6 +49,7 @@ if($currentsite == 'index'){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <span class="cartamount" id="notification">1</span>
             </div>
 
             <!--mobile menu-->
@@ -66,14 +58,14 @@ if($currentsite == 'index'){
                 <ul class="nav navbar-nav navbar-right verticalalign">
 
 
-                    <li><a href="index.php" <?= $frontpage ?> class="hvr-underline-from-center">Forside</a></li>
-                    <li><a href="shop.php" <?= $shop ?> class="hvr-underline-from-center">Shop</a></li>
-                    <li><a href="about.php" <?= $about ?> class="hvr-underline-from-center">Info</a></li>
-                    <li><a href="contact.php" <?= $contact ?> class="hvr-underline-from-center">Kontakt</a></li>
-                    <li><a href="#" class="hvr-underline-from-center">Tyskenhavn.dk</a></li>
+                    <li><a href="index.php" <?= $frontpage ?> class="uppercase hvr-underline-from-center">Forside</a></li>
+                    <li><a href="shop.php" <?= $shop ?> class="uppercase hvr-underline-from-center">Shop</a></li>
+                    <li><a href="about.php" <?= $about ?> class="uppercase hvr-underline-from-center">Info</a></li>
+                    <li><a href="contact.php" <?= $contact ?> class="uppercase hvr-underline-from-center">Kontakt</a></li>
+                    <li><a href="#" class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
 <!--                    CART IN MENU-->
-<!--                    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount">1</p></a></li>-->
+                    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount">1</p></a></li>
 
 <!--
                     <li class="dropdown">

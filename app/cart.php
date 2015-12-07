@@ -30,14 +30,27 @@ require_once("php/header.php");
 <main>
     
     <h1>Indkøbsvogn</h1>
+    <?php 
+    if(isset($_SESSION["vogn"])){
+   
+    foreach($_SESSION["vogn"] as $key => $val)
+    { 
+        echo $key. ": ".$val. "<br>";
+        echo '<a href="cart.php" class="btn btn-default">Fjern produkt</a><br>';
+    }
+    
+    }
+    
+    ?>
     
 </main>
 
+
+</div>
 <?php 
 //footer
 require_once("php/footer.php");
     
 ?>
-</div>
 </body>
 </html>
