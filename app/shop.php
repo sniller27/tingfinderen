@@ -29,10 +29,10 @@ class Product {
     $newproduct = new Product(1,2);
     
 //array_push($_SESSION['names'],$id);
-    $_SESSION['vogn'];
-    array_push($_SESSION['vogn'],$newproduct);
-    
-    echo $_SESSION['vogn'][0];
+//    $_SESSION['vogn'];
+//    array_push($_SESSION['vogn'],$newproduct);
+//    
+//    echo $_SESSION['vogn'][0];
 //    array_push($_SESSION['vogn'],{2,1});
 //    array_push($_SESSION['vogn'],{3,1});
 //    
