@@ -120,6 +120,7 @@ require_once("php/header.php");
     $productid = $row['idproducts'];
     $productqty = $_SESSION["items"][$productid];
     $totalproductprice = $row['price']*$productqty;
+    $totalprice += $totalproductprice;
     
     ?>
 
@@ -160,7 +161,6 @@ require_once("php/header.php");
         
     }
         
-    
     }
     
     
@@ -169,16 +169,38 @@ require_once("php/header.php");
         
         ?>
 
-                                <div class="row bot-buffer">
+                               <div class="row bot-buffer cartproduct">
 
-                                    <div class="col-sm-12">
-
-                                        <a href="#" class="btn btn-default">Køb</a>
-
-
-                                    </div>
+                                <div class="col-sm-3">
+                                    
+                                    
+                                </div>
+                                
+                                <div class="col-sm-3">
+                                    
+                                    <h2><?= $row['price']; ?></h2>
+                                    
+                                </div>
+                                
+                                <div class="col-sm-3">
+                                    
+                                    <h2>Total</h2>
 
                                 </div>
+                                
+                                <div class="col-sm-2">
+                                    
+                                    <h2><?= $totalprice ?></h2>
+
+                                </div>
+                                <div class="col-sm-1">
+                                    
+                                    <a href="#" class="btn btn-default">Køb</a>
+
+                                </div>
+
+                            </div>
+                             
 
                                 <?php
         
@@ -188,7 +210,7 @@ require_once("php/header.php");
     
     ?>
 
-                </main>
+            </main>
 
 
             </div>
