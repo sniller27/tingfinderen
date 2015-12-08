@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           dest: 'app/js/script.js',
         },
         css: {
-          src: ['app/less/*.less'],
+          src: ['app/less/reset.less','app/less/small.less','app/less/medium.less','app/less/large.less'],
           dest: 'app/styles.less',
         },
       },

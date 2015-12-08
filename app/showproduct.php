@@ -1,13 +1,29 @@
-<?php 
+<?php
+session_start();
+
+//customerfeedback
 $feedback = '';
+
 if(isset($_GET['productid']) && isset($_GET['qty'])){
     
-    $id = $_GET['productid'];
+    $pid = $_GET['productid'];
     $qty = $_GET['qty'];
     
 
+if(isset($_SESSION["items"][$pid])){
+    
+    $_SESSION["items"][$pid] += $qty;
+//    $_SESSION["items"][2] += 1;
+    
+}else {
+    
+    $_SESSION["items"][$pid] = $qty;
+//    $_SESSION["items"][2] = 1;
+    
+}
+    
     //opretter en session med produktet
-    $_SESSION['items'][$id]= $qty;
+//    $_SESSION['items'][$id]= $qty;
     
     $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
     
@@ -90,7 +106,7 @@ require_once("php/header.php");
 
                             <div class="col-xs-12">
 
-                                <ol class="breadcrumb">
+                                <ol class="breadcrumb top-buffer">
                                     <li><a href="shop.php">Shop</a></li>
                                     <li class="active"><?= $pname ?></li>
                                 </ol>
@@ -112,14 +128,13 @@ require_once("php/header.php");
                                     <?= $pdesc ?>
                                 </p>
                                 <br>
-                                <p>
-                                    <?= $price ?> kr
-                                </p>
+                                <h2>
+                                    <?= $price ?> kr,-
+                                </h2>
                                 <br>
                                 <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&qty=1" class="btn btn-default">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
                             </div>
 
-                            <div class="row">
 
                                 <div class="col-xs-12">
                                     <p>Klik på billederne for at se forstørret udgave.</p>
@@ -152,7 +167,6 @@ require_once("php/header.php");
                                 </div>
 
 
-                            </div>
                     </main>
 
                 </div>
