@@ -1,5 +1,4 @@
 <?php
-
 //active site in navbar
 $frontpage = "";
 $shop = "";
@@ -28,6 +27,20 @@ if($currentsite == 'index'){
 }
 
 
+//itemcounter
+$itemcount = 0;
+if(isset($_SESSION["items"])){
+    
+    foreach($_SESSION["items"] as $key => $val)
+    {
+        $itemcount = $itemcount + $val;
+    }
+    
+}else {
+    
+    $itemcount = 0;
+    
+}
 
 ?>
    
@@ -49,7 +62,7 @@ if($currentsite == 'index'){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="cartamount" id="notification">1</span>
+                <span class="cartamount" id="notification"><?= $itemcount ?></span>
             </div>
 
             <!--mobile menu-->
@@ -65,7 +78,7 @@ if($currentsite == 'index'){
                     <li><a href="#" class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
 <!--                    CART IN MENU-->
-                    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount">1</p></a></li>
+                    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
 
 <!--
                     <li class="dropdown">

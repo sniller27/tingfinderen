@@ -165,7 +165,8 @@ body #notification {
 }
 body .cartamount {
   background-color: red;
-  width: 20px;
+  width: 23px;
+  height: 23px;
   text-align: center;
   border-radius: 200px;
   position: relative;
@@ -173,32 +174,14 @@ body .cartamount {
   top: -5px;
   color: #FFFFFF;
 }
-body .cart2 {
-  height: 0px;
-  float: right;
+body .cartproduct {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
 }
-body .cart2 #cart2icon {
-  font-size: 30px;
-  position: relative;
-  top: -15px;
-  background-color: #232323;
-  padding: 10px;
-  border-radius: 200px;
-  color: #9d9d9d;
-}
-body .cart2 #cart2icon:hover {
-  color: white;
-}
-body .cart2 a {
-  text-decoration: none;
-}
-body .cart2 a p {
-  background-color: red;
-  height: 30px;
-  width: 30px;
-  position: relative;
-  top: -30px;
-  cursor: default;
+body .cartproduct img {
+  width: 100%;
+  height: 200px;
 }
 body #wrapper {
   width: 80%;

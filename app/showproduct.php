@@ -93,10 +93,8 @@ require_once("php/header.php");
     $stmt->bind_param('i', $productid);
     $stmt->bind_result($pname, $pdesc, $price, $pimage);
     $stmt->execute();
-                
-    //images
-         $sqlimg = "select imagesource from productimages where products_idproducts = ?";    
     
+                        
            
     //udtrækker personinfo fra database
     while($stmt->fetch()){
@@ -108,7 +106,9 @@ require_once("php/header.php");
 
                                 <ol class="breadcrumb top-buffer">
                                     <li><a href="shop.php">Shop</a></li>
-                                    <li class="active"><?= $pname ?></li>
+                                    <li class="active">
+                                        <?= $pname ?>
+                                    </li>
                                 </ol>
 
                                 <?= $feedback ?>
@@ -136,12 +136,13 @@ require_once("php/header.php");
                             </div>
 
 
-                                <div class="col-xs-12">
-                                    <p>Klik på billederne for at se forstørret udgave.</p>
-                                    <?php
+                            <div class="col-xs-12">
+                                <p>Klik på billederne for at se forstørret udgave.</p>
+                                <?php
     }
     
     //prepared statement for produkt info
+    $sqlimg = "select imagesource from productimages where products_idproducts = ?";
     $stmtimg = $conn->prepare($sqlimg);
     $stmtimg->bind_param('i', $productid);
     $stmtimg->bind_result($imgsrc);
@@ -149,22 +150,16 @@ require_once("php/header.php");
     $stmtimg->execute();
          while($stmtimg->fetch()){ 
              
-             ?>
+    ?>
+             
+<!--colorbox billeder-->
+<a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="pic1" /></a>
 
-
-                                        <!--                                    <img src="<?= $imgsrc ?>" class="productpics" alt="">-->
-                                        <!--colorbox billeder-->
-
-                                        <a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="pic1" /></a>
-
-
-
-
-                                        <?php
+                                    <?php
             
 }
     ?>
-                                </div>
+                            </div>
 
 
                     </main>
