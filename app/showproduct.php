@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 //customerfeedback
 $feedback = '';
 
@@ -10,22 +11,67 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
     $qty = $_GET['qty'];
     
 
-if(isset($_SESSION["items"][$pid])){
+     
     
-    $_SESSION["items"][$pid] += $qty;
-//    $_SESSION["items"][2] += 1;
     
-}else {
     
-    $_SESSION["items"][$pid] = $qty;
-//    $_SESSION["items"][2] = 1;
     
-}
     
-    //opretter en session med produktet
-//    $_SESSION['items'][$id]= $qty;
     
-    $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
+    $stock = 0;
+
+require_once("php/config.php");
+    
+    //SQL query
+    $sql = "select stock from products where idproducts = ? LIMIT 1";
+
+
+//prepared statement for produkt info
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $pid);
+    $stmt->bind_result($pstockid);
+    $stmt->execute();
+    
+                        
+           
+    //udtrækker personinfo fra database
+    while($stmt->fetch()){
+        
+        $stock = $pstockid;
+        
+    }
+
+    if(isset($_SESSION["items"][$pid])){
+        
+        if($_SESSION["items"][$pid]>=$stock){
+    
+            $feedback = '<h1 style="color:red">Vi har ikke flere af dette produkt på lager</h1>';
+
+        }else {
+    
+    
+    
+            //opretter en session med produktet
+        //    $_SESSION['items'][$id]= $qty;
+
+            $_SESSION["items"][$pid] += $qty;
+
+            $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
+
+
+        }
+        
+
+        
+        
+    }else {
+        
+        $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
+        $_SESSION["items"][$pid] = $qty;
+        
+    }
+    
+
     
 }
 

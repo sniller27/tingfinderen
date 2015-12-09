@@ -1,5 +1,12 @@
 <?php 
 session_start();
+
+$sent = '';
+if(isset($_GET['mailsent'])){
+    
+    $sent = 'Din besked er blevet sendt';
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -31,20 +38,46 @@ require_once("php/header.php");
 
 <!-- main -->
 <main>
-            <h1>Kontakt</h1>
+           <div class="row">
+               <div class="col-sm-12">
+                   
+                   
+                   <h1 style="color:green"><?= $sent ?></h1>
+                   <h1>Kontakt</h1>
+                   
+               </div>
+           </div>
 
        <div class="row">
            
            <div class="col-sm-3">
                
-               <form action="#" method="post" class="contactform">
+        <form action="php/sendemail.php" method="post" class="contactform">
             
-            <input type="text" placeholder="Navn" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Besked" required></textarea>
+            <input type="text" placeholder="Navn" name="name" required>
+            <input type="email" placeholder="Email" name="mail" required>
+            <textarea placeholder="Besked" name="msg" required></textarea>
             <button type="submit" class="btn btn-default">Send</button>
             
         </form>
+             
+<!--
+              <form action="php/sendemail.php" method="post" name="sendmailform" onsubmit="return validatesignupForm()">
+                        <label for="sendmail">Email:</label><br>
+                        <input type="email" placeholder="Email" id="sendmail" name="mail" required>
+                        <br>
+                        <label for="title">Titel:</label>
+                        <br>
+                        <input type="text" placeholder="Titel" id="title" name="title" required>
+                        <br>
+                        <label for="mailtextarea">Besked:</label>
+                        <br>
+                        <textarea id="mailtextarea" placeholder="Besked" name="msg" required></textarea>
+                        <br>
+                        <button type="submit" value="Send" class="donatebutton" name="sendmailsubmit">Send</button>
+                    
+                    </form>
+-->
                
            </div>
            <div class="col-sm-3">

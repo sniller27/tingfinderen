@@ -243,6 +243,9 @@ body main .breadcrumb {
 body main .breadcrumb a {
   color: #a89a75;
 }
+body main .contactform {
+  color: black;
+}
 body main .contactform input,
 body main .contactform textarea {
   display: block;

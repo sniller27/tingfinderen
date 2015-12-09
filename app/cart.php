@@ -114,6 +114,7 @@ require_once("php/header.php");
     //forbinder query til MySQL
     $result = $conn->query($sql);
 
+    $totalprice = 0;
     //udtrækker fra database
     while($row = $result->fetch_array()){
     
@@ -195,7 +196,7 @@ require_once("php/header.php");
                                 </div>
                                 <div class="col-sm-1">
                                     
-                                    <a href="#" class="btn btn-default">Køb</a>
+                                    <a href="checkout.php" class="btn btn-default">Køb</a>
 
                                 </div>
 
