@@ -156,6 +156,8 @@ body .diamondrow hr {
 }
 body .diamondrow img {
   width: 40px;
+  display: block;
+  margin: auto;
   user-drag: none;
   -moz-user-select: none;
   -webkit-user-drag: none;

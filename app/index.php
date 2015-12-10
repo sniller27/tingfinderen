@@ -1,8 +1,8 @@
 <?php 
 session_start();
 ?>
-    <!DOCTYPE html>
-    <html lang="da">
+<!DOCTYPE html>
+<html lang="da">
 
     <head>
 
@@ -18,7 +18,14 @@ session_start();
     require_once("php/head.php");
 
     ?>
-            <!--   facebook feed SDK-->
+           
+            
+
+    </head>
+
+    <body>
+
+       <!--   facebook feed SDK-->
             <div id="fb-root"></div>
             <script>
                 (function (d, s, id) {
@@ -30,11 +37,7 @@ session_start();
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
             </script>
-
-    </head>
-
-    <body>
-
+       
         <?php
 
     //header
@@ -117,7 +120,7 @@ session_start();
                                                                            <hr class="goldcolor" style="float:left;">
 
                                                                             <hr class="goldcolor" style="float:right;">
-                                        <img src="images/diamond.svg" style="display:block;margin:auto;">
+                                        <img src="images/diamond.svg" class="diamondimage" alt="diamant">
 
                                 
 
@@ -169,11 +172,6 @@ session_start();
 
 
                     </main>
-
-
-
-
-
 
 
             </div>

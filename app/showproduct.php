@@ -178,7 +178,7 @@ require_once("php/header.php");
                                     <?= $price ?> kr,-
                                 </h2>
                                 <br>
-                                <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&qty=1" class="btn btn-default">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
+                                <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&amp;qty=1" class="btn btn-default">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
                             </div>
 
 
