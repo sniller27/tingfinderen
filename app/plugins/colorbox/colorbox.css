@@ -78,3 +78,14 @@
 .cboxIE #cboxMiddleRight {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
+
+/*custom*/
+#colorbox{border-radius: 0px;}
+#cboxTopLeft{width:21px; height:21px; background: #fff;}
+#cboxTopRight{width:21px; height:21px; background: #fff;}
+#cboxBottomLeft{width:21px; height:21px; background: #fff;}
+#cboxBottomRight{width:21px; height:21px; background: #fff;}
+#cboxMiddleLeft{width:21px; background: #fff;}
+#cboxMiddleRight{width:21px; background: #fff;}
+#cboxTopCenter{height:21px; background: #fff;}
+#cboxBottomCenter{height:21px; background: #fff;}

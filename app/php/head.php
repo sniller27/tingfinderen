@@ -30,3 +30,7 @@
 
 <!--Fontawesome CDN-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!--Open Graph Tags-->
+<meta property="og:image" content="images/opengraphpicture.jpg" />
+<meta property="og:title" content="Køb fedt genbrugsdesign hos Tingfinderen" />

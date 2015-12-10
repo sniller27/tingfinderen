@@ -134,6 +134,9 @@ body {
   background-color: #4e565c;
   color: #d9cccc;
 }
+body .goldcolor {
+  border: 1px solid #a89a75;
+}
 body p {
   letter-spacing: 0.5px;
 }
@@ -147,6 +150,15 @@ body h2 {
 }
 body .textdecoration {
   text-decoration: none;
+}
+body .diamondrow hr {
+  width: 43%;
+}
+body .diamondrow img {
+  width: 40px;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
 }
 body .sharp {
   border-radius: 0;

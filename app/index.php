@@ -1,7 +1,7 @@
 <?php 
 session_start();
 ?>
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="da">
 
     <head>
@@ -67,18 +67,10 @@ session_start();
 
 
                     <!-- main -->
-                    <main class="alibaba">
+                    <main>
 
-                        <div class="row">
+                        <div class="row bot-buffer">
 
-
-                            <div class="col-sm-3">
-
-                                <img src="images/processcircle.png" alt="proces" class="processicon" />
-                                <h2 class="text-center">Overskrift</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
-
-                            </div>
 
                             <div class="col-sm-3">
 
@@ -103,6 +95,73 @@ session_start();
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
                             </div>
+
+                            <div class="col-sm-3">
+
+                                <img src="images/processcircle.png" alt="proces" class="processicon" />
+                                <h2 class="text-center">Overskrift</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="row diamondrow">
+
+                            <div class="col-xs-12">
+
+                          
+                                    
+                                                                           <hr class="goldcolor" style="float:left;">
+
+                                                                            <hr class="goldcolor" style="float:right;">
+                                        <img src="images/diamond.svg" style="display:block;margin:auto;">
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="row bot-buffer">
+
+
+                            <div class="col-sm-9 bot-buffer top-buffer">
+
+                                <h2>Om os</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+
+                                <!--
+                        </div>
+
+                        <div class="col-sm-4">
+-->
+                                <br>
+
+                                <h2>Konceptet</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+
+                            </div>
+
+                            <div class="col-sm-3 top-buffer">
+
+                                <div class="fb-page" data-href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" data-tabs="timeline" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+
+                            </div>
+
+
 
 
 
@@ -115,34 +174,7 @@ session_start();
 
 
 
-                    <div class="row bot-buffer">
 
-
-                        <div class="col-sm-4">
-
-                            <h2>Om os</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <h2>Konceptet</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="fb-page" data-href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" data-tabs="timeline" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-
-                        </div>
-
-
-
-
-
-                    </div>
 
             </div>
             <?php 

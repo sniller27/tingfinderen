@@ -60,7 +60,9 @@ body {
     line-height: 1.7;
     background-color: @darkblue;
     color: @textcolorwheat;
-    
+    .goldcolor {
+        border: 1px solid @gold;
+    }
     p {
         letter-spacing: 0.5px;
     }
@@ -72,12 +74,18 @@ body {
         color: @gold;
         font-weight: 500;
     }
-    
-//    no text decoration
+    //    no text decoration
     .textdecoration {
-        
         text-decoration: none;
-        
+    }
+    .diamondrow hr {
+        width:43%;
+    }
+    .diamondrow img {
+        width: 40px;
+        user-drag: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
     }
     //    buttons
     .sharp {
@@ -115,32 +123,20 @@ body {
         top: -5px;
         color: #FFFFFF;
     }
-    
     //cartpage
     .cartproductcontainer {
-        
         border: 1px solid black;
         background-color: white;
-        
     }
-    
     .cartproduct {
-        
-        
         color: black;
         margin: 20px;
-        
-        
         img {
-            
             width: 100%;
             max-width: 400px;
-//            height: 200px;
-            
+            //            height: 200px;
         }
-        
     }
-    
     //wrapper
     #wrapper {
         width: 80%;
@@ -152,10 +148,8 @@ body {
         background-size: cover;
         line-height: 1;
         div {
-            
             max-width: 1170px;
             margin: auto;
-            
         }
         h1 {
             color: #d9cccc;
@@ -170,7 +164,7 @@ body {
         min-height: 400px;
         margin-bottom: 30px;
         border-radius: 5px;
-//        padding: 20px;
+        //        padding: 20px;
         //        FRONTSITE
         .processicon {
             width: 150px;
@@ -196,11 +190,10 @@ body {
             img {
                 width: 100%;
                 height: 200px;
-//                opacity: 1;
-//                transition: 0.4s;
-//                z-index: 1;
+                //                opacity: 1;
+                //                transition: 0.4s;
+                //                z-index: 1;
             }
-           
         }
         .textoverlay {
             position: relative;
@@ -210,26 +203,19 @@ body {
             z-index: 1;
             color: @darkgray;
         }
-//        PRODUCTSITE
+        //        PRODUCTSITE
         .productpage img {
-            
             width: 100%
-            
         }
         .breadcrumb {
-            
             background-color: @darkgray;
-         
             a {
                 color: @gold;
             }
         }
-        
         //        CONTACTSITE
         .contactform {
-            
             color: black;
-            
             input,
             textarea {
                 display: block;
@@ -276,7 +262,6 @@ body {
     //            transition: .5s ease-in-out;
     //            cursor: pointer;
     //        }
-    
     //burgermenu size and padding
     .navbar-toggle {
         padding: 15px;
@@ -344,7 +329,7 @@ body {
     }
     //logo
     #logo {
-//        width: 80px;
+        //        width: 80px;
         height: 70px;
         margin: 5px 5px 0px 5px;
     }
