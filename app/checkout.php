@@ -32,6 +32,25 @@ require_once("php/header.php");
 <!-- main -->
 <main>
     
+    <!--             buying process -->
+                 <div class="row">
+                  <div class="col-xs-12">
+
+                                <ol class="breadcrumb top-buffer">
+                                    
+                                    <li><a class="textdecoration">Indkøbsvogn</a></li>
+                                    <li class="active">
+                                        Kasse
+                                    </li>
+                                    <li><a class="textdecoration">Betaling</a></li>
+
+                                </ol>
+
+                    </div>
+                  </div>
+    
+    
+    
     <h1>Betaling</h1>
     <div class="row">
    

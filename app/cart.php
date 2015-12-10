@@ -69,6 +69,22 @@ require_once("php/header.php");
                 <!-- main -->
                 <main>
 
+<!--             buying process -->
+                 <div class="row">
+                  <div class="col-xs-12">
+
+                                <ol class="breadcrumb top-buffer">
+                                    <li class="active">
+                                        Indkøbsvogn
+                                    </li>
+                                    <li><a class="textdecoration">Kasse</a></li>
+                                    <li><a class="textdecoration">Betaling</a></li>
+
+                                </ol>
+
+                    </div>
+                  </div> 
+                   
                     <h1>Indkøbsvogn</h1>
                     <?php 
     
@@ -125,6 +141,7 @@ require_once("php/header.php");
     
     ?>
 
+                        <div class="cartproductcontainer bot-buffer">
                             <div class="row bot-buffer cartproduct">
 
                                 <div class="col-sm-3">
@@ -136,19 +153,19 @@ require_once("php/header.php");
                                 
                                 <div class="col-sm-3">
                                     
-                                    <h2><?= $row['price']; ?></h2>
+                                    <h2>Pris <?= $row['price']; ?> kr,-</h2>
                                     
                                 </div>
                                 
-                                <div class="col-sm-3">
+                                <div class="col-sm-2">
                                     
                                     <h2><?= $productqty ?> stk</h2>
 
                                 </div>
                                 
-                                <div class="col-sm-2">
+                                <div class="col-sm-3">
                                     
-                                    <h2><?= $totalproductprice ?></h2>
+                                    <h2><?= $totalproductprice ?> kr,-</h2>
 
                                 </div>
                                 <div class="col-sm-1">
@@ -158,6 +175,7 @@ require_once("php/header.php");
                                 </div>
 
                             </div>
+                        </div>
     <?php
         
     }
@@ -170,6 +188,7 @@ require_once("php/header.php");
         
         ?>
 
+                              <div class="cartproductcontainer">
                                <div class="row bot-buffer cartproduct">
 
                                 <div class="col-sm-3">
@@ -183,7 +202,7 @@ require_once("php/header.php");
                                     
                                 </div>
                                 
-                                <div class="col-sm-3">
+                                <div class="col-sm-2">
                                     
                                     <h2>Total</h2>
 
@@ -191,17 +210,17 @@ require_once("php/header.php");
                                 
                                 <div class="col-sm-2">
                                     
-                                    <h2><?= $totalprice ?></h2>
+                                    <h2><?= $totalprice ?> kr,-</h2>
 
                                 </div>
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
                                     
-                                    <a href="checkout.php" class="btn btn-default">Køb</a>
+                                    <a href="checkout.php" class="btn btn-default">Videre til kassen</a>
 
                                 </div>
 
                             </div>
-                             
+                          </div>   
 
                                 <?php
         

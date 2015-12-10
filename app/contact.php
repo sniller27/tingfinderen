@@ -24,9 +24,63 @@ if(isset($_GET['mailsent'])){
 require_once("php/head.php");
 
 ?>
+<style>
+
+    /** Google maps **/
+#map_canvas {
+
+    height:400px;
+    
+
+}
+    
+</style>
+
+<!-- Google maps API -->
+     <script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var position = new google.maps.LatLng(55.778145, 12.532205);
+    var myOptions = {
+      zoom: 11,
+    scrollwheel: false,
+    navigationControl: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    draggable: false,
+      center: position,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(
+        document.getElementById("map_canvas"),
+        myOptions);
+ 
+    var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title:"F.C.Fremtiden"
+    });  
+ 
+    var contentString = 'Trongårdsvej 46, 2800 Kgs Lyngby';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+ 
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+ 
+  }
+ 
+</script>
 
 </head>
-<body>
+<!-- initialize Google Maps -->
+    <body onload="initialize()">
+
+
 <?php
 
 //header
@@ -50,7 +104,7 @@ require_once("php/header.php");
 
        <div class="row">
            
-           <div class="col-sm-3">
+           <div class="col-sm-6 col-md-4 col-lg-3">
                
         <form action="php/sendemail.php" method="post" class="contactform">
             
@@ -80,10 +134,17 @@ require_once("php/header.php");
 -->
                
            </div>
-           <div class="col-sm-3">
+           <div class="col-sm-6 col-md-4">
                
                 
 <p>Send os endelig en besked, hvis du har spørgsmål eller vil vide andet. Vi er klar på tasterne, altid!</p>
+               
+           </div>
+           
+           <div class="col-sm-12 col-md-4 col-lg-5">
+               
+                <!-- Google maps -->
+                <div id="map_canvas"></div>
                
            </div>
            

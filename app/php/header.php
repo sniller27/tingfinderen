@@ -55,7 +55,7 @@ if(isset($_SESSION["items"])){
 
             <div class="navbar-header">
 
-                <a href="index.php"><img src="images/logo.png" alt="Tingfinderen logo" id="logo"></a>
+                <a href="index.php"><img src="images/logo.svg" alt="Tingfinderen logo" id="logo"></a>
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" id="nav-icon4">
                     <span class="icon-bar"></span>
@@ -75,7 +75,7 @@ if(isset($_SESSION["items"])){
                     <li><a href="shop.php" <?= $shop ?> class="uppercase hvr-underline-from-center">Shop</a></li>
                     <li><a href="about.php" <?= $about ?> class="uppercase hvr-underline-from-center">Info</a></li>
                     <li><a href="contact.php" <?= $contact ?> class="uppercase hvr-underline-from-center">Kontakt</a></li>
-                    <li><a href="#" class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
+                    <li><a href="tyskenhavn.php" class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
 <!--                    CART IN MENU-->
                     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount"><?= $itemcount ?></p></a></li>

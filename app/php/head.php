@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Favicons -->
-<link rel="icon" type="image/png" href="images/logo.jpg">
+<link rel="icon" type="image/png" href="images/favicon.ico">
 <!--[if IE]><link rel="shortcut icon" href="http://www.example.com/alternateimage.ico"/><![endif]-->
 
 <!-- en vidst bedre måde

@@ -134,6 +134,9 @@ body {
   background-color: #4e565c;
   color: #d9cccc;
 }
+body p {
+  letter-spacing: 0.5px;
+}
 body h1 {
   font-size: 2em;
 }
@@ -141,6 +144,9 @@ body h2 {
   font-size: 1.5em;
   color: #a89a75;
   font-weight: 500;
+}
+body .textdecoration {
+  text-decoration: none;
 }
 body .sharp {
   border-radius: 0;
@@ -174,14 +180,17 @@ body .cartamount {
   top: -5px;
   color: #FFFFFF;
 }
-body .cartproduct {
+body .cartproductcontainer {
   border: 1px solid black;
   background-color: white;
+}
+body .cartproduct {
   color: black;
+  margin: 20px;
 }
 body .cartproduct img {
   width: 100%;
-  height: 200px;
+  max-width: 400px;
 }
 body #wrapper {
   width: 80%;
@@ -191,6 +200,10 @@ body .jumbotron {
   background-image: url(../images/antiqueworkshop.jpg);
   background-size: cover;
   line-height: 1;
+}
+body .jumbotron div {
+  max-width: 1170px;
+  margin: auto;
 }
 body .jumbotron h1 {
   color: #d9cccc;
@@ -327,6 +340,7 @@ body #footer {
   background-color: #232323;
   color: #d9cccc;
   padding: 20px;
+  border-top: 2px solid #a89a75;
 }
 body .adminlogindiv {
   width: 220px;
@@ -431,6 +445,9 @@ body .adminlogindiv input {
   }
   .cart2 a p {
     left: 50px;
+  }
+  .cartproduct img {
+    width: 100%;
   }
   #active {
     background-color: transparent !important;
