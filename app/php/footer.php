@@ -26,11 +26,11 @@
         </div>
         <div class="col-sm-3">
 <p>Find os også på sociale medier</p>
-            <a href="#"><i class="fa fa-facebook-square" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-google-plus-square" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-instagram" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-youtube-square" style="font-size:48px;"></i></a>
+            <a href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-google-plus-square" style="font-size:48px;"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram" style="font-size:48px;"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-youtube-square" style="font-size:48px;"></i></a>
 
         </div>
 
