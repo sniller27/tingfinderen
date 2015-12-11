@@ -132,7 +132,7 @@ require_once("php/header.php");
  
 
     //vælger alt information som er tilknyttet projektet og den der har oprettet det
-    $sql = "select productname, productdescription, price, mainimage  from products where idproducts = ?";    
+    $sql = "select productname, productdescription, price, mainimage  from products where idproducts = ? limit 1";    
     
     //prepared statement for produkt info
     $stmt = $conn->prepare($sql);
@@ -163,8 +163,7 @@ require_once("php/header.php");
                             </div>
                             <div class="col-sm-6 productpage">
 
-                                <img src="<?= $pimage ?>" alt="">
-
+                                <img src="<?= $pimage ?>" alt="<?= $pname ?>">
 
 
                             </div>
@@ -199,7 +198,7 @@ require_once("php/header.php");
     ?>
              
 <!--colorbox billeder-->
-<a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="pic1" /></a>
+<a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="produktbilled" /></a>
 
                                     <?php
             

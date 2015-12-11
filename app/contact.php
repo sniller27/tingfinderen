@@ -42,9 +42,9 @@ require_once("php/head.php");
 </script>
 <script type="text/javascript">
   function initialize() {
-    var position = new google.maps.LatLng(55.778145, 12.532205);
+    var position = new google.maps.LatLng(55.677517, 12.575853);
     var myOptions = {
-      zoom: 11,
+      zoom: 16,
     scrollwheel: false,
     navigationControl: false,
     mapTypeControl: false,
@@ -63,14 +63,14 @@ require_once("php/head.php");
         title:"F.C.Fremtiden"
     });  
  
-    var contentString = 'Trongårdsvej 46, 2800 Kgs Lyngby';
+    var contentString = 'Tingfinderen Aps <br> Knabrostræde 25, KL, 1204 Copenhagen, Denmark';
     var infowindow = new google.maps.InfoWindow({
         content: contentString
     });
  
-    google.maps.event.addListener(marker, 'click', function() {
+//    google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map,marker);
-    });
+//    });
  
   }
  

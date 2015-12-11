@@ -153,9 +153,15 @@ body .textdecoration {
 }
 body .diamondrow hr {
   width: 43%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #a89a75;
+  margin: 0.6em 0;
+  padding: 0;
 }
 body .diamondrow img {
-  width: 40px;
+  width: 20px;
   display: block;
   margin: auto;
   user-drag: none;
@@ -171,6 +177,9 @@ body .top-buffer {
 }
 body .bot-buffer {
   margin-bottom: 30px;
+}
+body .facebookfeedbuffer {
+  margin-top: 30px;
 }
 body .uppercase {
   text-transform: uppercase;
@@ -206,6 +215,10 @@ body .cartproduct img {
   width: 100%;
   max-width: 400px;
 }
+body .breadcrumb > li + li:before {
+  color: #cccccc;
+  content: "\276F\00a0";
+}
 body #wrapper {
   width: 80%;
   margin: auto;
@@ -214,6 +227,7 @@ body .jumbotron {
   background-image: url(../images/antiqueworkshop.jpg);
   background-size: cover;
   line-height: 1;
+  border-bottom: 2px solid #a89a75;
 }
 body .jumbotron div {
   max-width: 1170px;
@@ -251,7 +265,6 @@ body main .product a {
 }
 body main .product img {
   width: 100%;
-  height: 200px;
 }
 body main .textoverlay {
   position: relative;
@@ -260,6 +273,19 @@ body main .textoverlay {
   font-weight: bold;
   z-index: 1;
   color: #232323;
+}
+body main .image-container {
+  position: relative;
+}
+body main .image-container p {
+  color: #e3e3e3;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+body main .image-container .after {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 body main .productpage img {
   width: 100%;
@@ -362,9 +388,10 @@ body .adminlogindiv {
   position: relative;
   margin-top: 12%;
   padding: 10px;
-  border: 1px solid #cecece;
+  border: 1px solid #a89a75;
   border-radius: 2px;
   text-align: center;
+  color: black;
 }
 body .adminlogindiv img {
   display: block;
@@ -448,6 +475,9 @@ body .adminlogindiv input {
     position: relative;
     top: 15px;
   }
+  .diamondrow hr {
+    width: 46% !important;
+  }
   #notification {
     display: none;
   }
@@ -506,3 +536,8 @@ body .adminlogindiv input {
   }
 }
 /** big **/
+@media only screen and (min-width: 1200px) {
+  .diamondrow hr {
+    width: 47% !important;
+  }
+}

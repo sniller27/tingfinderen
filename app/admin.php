@@ -16,7 +16,7 @@
 
 <div class="adminlogindiv">
 <form action="#" method="post">
-<img src="images/logo.jpg" alt="tingfinderen logo" />
+<img src="images/logo.svg" alt="tingfinderen logo" />
 <input type="text" placeholder="Brugernavn" required>
 <input type="text" placeholder="Password" required>
 <button type="submit">Log ind</button>

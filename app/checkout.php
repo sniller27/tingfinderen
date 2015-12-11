@@ -43,6 +43,7 @@ require_once("php/header.php");
                                         Kasse
                                     </li>
                                     <li><a class="textdecoration">Betaling</a></li>
+                                    <li><a class="textdecoration">Kvittering</a></li>
 
                                 </ol>
 

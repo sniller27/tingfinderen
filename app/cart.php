@@ -5,34 +5,25 @@ session_start();
 $customerfeedback = '';
 $sessionids = '';
 
+
 if(isset($_GET['id'])){
     
     $deleteproductid = $_GET['id'];
     
     unset($_SESSION['items'][$deleteproductid]);
-    
-    //sikker måde at slette sessions på
-// Unset all of the session variables.
-//$_SESSION = array();
-
-// If it's desired to kill the session, also delete the session cookie.
-// Note: This will destroy the session, and not just the session data!
-//if (ini_get("session.use_cookies")) {
-//    $params = session_get_cookie_params();
-//    setcookie(session_name(), '', time() - 42000,
-//        $params["path"], $params["domain"],
-//        $params["secure"], $params["httponly"]
-//    );
-//}
-
-// Finally, destroy the session.
-//session_destroy();
-    
-    $customerfeedback = 'Produkt fjernet';
+        
     
 }
 
+//tester om itemarrayet indeholder produkter
+if(isset($_SESSION['items']) && $_SESSION['items'] != true){
+    
+//    echo 'array findes ikke';
+    unset($_SESSION['items']);
+    
+}
 
+ 
 
 
 ?>
@@ -58,7 +49,9 @@ require_once("php/head.php");
 
     <body>
         <?php
-
+//udprinter array til test
+//print_r($_SESSION);
+        
 //header
 require_once("php/header.php");
 
@@ -79,6 +72,7 @@ require_once("php/header.php");
                                     </li>
                                     <li><a class="textdecoration">Kasse</a></li>
                                     <li><a class="textdecoration">Betaling</a></li>
+                                    <li><a class="textdecoration">Kvittering</a></li>
 
                                 </ol>
 
@@ -147,7 +141,7 @@ require_once("php/header.php");
                                 <div class="col-sm-3">
                                     
                                     <h2><?= $row['productname']; ?></h2>
-                                    <img src="<?= $row['mainimage']; ?>" alt="" />
+                                    <img src="<?= $row['mainimage']; ?>" alt="<?= $row['productname']; ?>" />
                                     
                                 </div>
                                 
@@ -179,6 +173,11 @@ require_once("php/header.php");
     <?php
         
     }
+        
+    }else {
+        
+        $customerfeedback = 'Din indkøbsvogn er tom.';
+        echo $customerfeedback;
         
     }
     
@@ -215,7 +214,8 @@ require_once("php/header.php");
                                 </div>
                                 <div class="col-sm-2">
                                     
-                                    <a href="checkout.php" class="btn btn-default">Videre til kassen</a>
+<!--                                    <a href="checkout.php" class="btn btn-default">Videre til kassen</a>-->
+                                    <a href="checkout.php" class="textdecoration"><h2 href="checkout.php">Videre til kassen<i class="fa fa-arrow-right"></i></a>
 
                                 </div>
 

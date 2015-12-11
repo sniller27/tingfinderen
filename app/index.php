@@ -77,33 +77,33 @@ session_start();
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="proces" class="processicon" />
-                                <h2 class="text-center">Overskrift</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+                                <img src="images/processcircle.png" alt="1.step in proces" class="processicon" />
+                                <h2 class="text-center">Finder historie</h2>
+                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
                             </div>
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="proces" class="processicon" />
-                                <h2 class="text-center">Overskrift</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+                                <img src="images/processcircle.png" alt="2.step in proces" class="processicon" />
+                                <h2 class="text-center">Restaurerer</h2>
+                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
                             </div>
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="proces" class="processicon" />
-                                <h2 class="text-center">Overskrift</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+                                <img src="images/processcircle.png" alt="3.step in proces" class="processicon" />
+                                <h2 class="text-center">Sælger</h2>
+                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
                             </div>
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="proces" class="processicon" />
-                                <h2 class="text-center">Overskrift</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+                                <img src="images/processcircle.png" alt="4.step in proces" class="processicon" />
+                                <h2 class="text-center">Pynter</h2>
+                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
                             </div>
 
@@ -111,15 +111,15 @@ session_start();
 
                         </div>
 
-                        <div class="row diamondrow">
+                        <div class="row diamondrow bot-buffer">
 
                             <div class="col-xs-12">
 
                           
                                     
-                                                                           <hr class="goldcolor" style="float:left;">
+                                                                           <hr style="float:left;">
 
-                                                                            <hr class="goldcolor" style="float:right;">
+                                                                            <hr style="float:right;">
                                         <img src="images/diamond.svg" class="diamondimage" alt="diamant">
 
                                 
@@ -158,7 +158,7 @@ session_start();
 
                             </div>
 
-                            <div class="col-sm-3 top-buffer">
+                            <div class="col-sm-3 facebookfeedbuffer">
 
                                 <div class="fb-page" data-href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" data-tabs="timeline" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 
