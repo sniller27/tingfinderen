@@ -148,6 +148,9 @@ body h2 {
   color: #a89a75;
   font-weight: 500;
 }
+body .userwarning {
+  color: #ff0000;
+}
 body .textdecoration {
   text-decoration: none;
 }

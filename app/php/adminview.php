@@ -1,5 +1,7 @@
 <?php 
 session_start();
+
+if(isset($_SESSION['uid'])){
 ?>
     <!DOCTYPE html>
     <html lang="da">
@@ -21,18 +23,21 @@ session_start();
 
 
         <div class="container">
-            <a href="../admin.php">Logud</a>
+            <a href="logout.php">Log ud</a>
 
             <div class="row">
 
-                <div class="col-sm-6">
+                <div class="col-sm-12">
 
                     <h1>Ordrer</h1>
                     <table class="table">
                         <tr>
                             <th>Ordre ID</th>
-                            <th>Dato</th>
+                            <th>Oprettet dato</th>
                             <th>Status</th>
+                            <th>Produkt nr.</th>
+                            <th>Produktnavn</th>
+                            <th>Antal</th>
                         </tr>
 
                         <?php
@@ -40,7 +45,7 @@ session_start();
 require_once("config.php");
     
     //SQL query
-    $sql = "select * from orders";
+    $sql = "select * from orders, orders_has_products, products where orders.idorders = orders_has_products.orders_idorders and orders_has_products.products_idproducts = products.idproducts";
 
     //forbinder query til MySQL
     $result = $conn->query($sql);
@@ -71,6 +76,9 @@ require_once("config.php");
         }
          ?>
                                 </td>
+                                  <td><?= $row['idproducts']; ?></td>
+                                <td><?= $row['productname']; ?></td>
+                                <td><?= $row['quantity']; ?></td>
 
                             </tr>
 
@@ -87,17 +95,14 @@ require_once("config.php");
 
             </div>
 
-            <div class="row">
-
-                <div class="col-6-sm">
-
-
-
-                </div>
-
-            </div>
+                        
         </div>
 
     </body>
 
     </html>
+    <?php }else {
+    
+    header("Location: ../index.php");
+    
+} ?>
