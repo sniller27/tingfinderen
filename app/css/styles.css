@@ -148,6 +148,9 @@ body h2 {
   color: #a89a75;
   font-weight: 500;
 }
+body .bold {
+  font-weight: bold;
+}
 body .userwarning {
   color: #ff0000;
 }
@@ -302,7 +305,8 @@ body main .breadcrumb a {
 body main .contactform {
   color: black;
 }
-body main .contactform input,
+body main .contactform input[type="text"],
+body main .contactform input[type="email"],
 body main .contactform textarea {
   display: block;
   margin-bottom: 20px;
@@ -312,13 +316,27 @@ body main .contactform textarea {
   resize: none;
   width: 250px;
   border: 0px;
-}
-body main .contactform input {
   height: 40px;
 }
 body main .contactform textarea {
   height: 150px;
   padding-top: 5px;
+}
+body main .contactform label {
+  display: block;
+}
+body .paymentinfo {
+  background-color: white;
+  border-radius: 2px;
+  padding: 20px;
+}
+body .paymentinfo .lastcell {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+body .tablediv {
+  padding: 20px;
+  background-color: white;
 }
 body #active {
   background-color: #a89a75;
@@ -495,6 +513,9 @@ body .adminlogindiv input {
   }
   .cartproduct img {
     width: 100%;
+  }
+  .rightbutton {
+    float: right;
   }
   #active {
     background-color: transparent !important;

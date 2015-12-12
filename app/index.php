@@ -52,8 +52,8 @@ session_start();
                 <div class="text-center">
                     <h1>Tingfinderen</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
-                    <a class="btn btn-default sharp">Køb</a>
-                    <a class="btn btn-info sharp">Sælg</a>
+                    <a href="shop.php" class="btn btn-default sharp">Køb</a>
+                    <a href="about.php" class="btn btn-info sharp">Sælg</a>
                 </div>
 
 

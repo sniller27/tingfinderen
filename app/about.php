@@ -43,7 +43,9 @@ require_once("php/header.php");
         <div class="col-sm-6">
             
             <h2>Sælg til os!</h2>
-    <p>Man skal være velkommen til at sende os en besked vedr. køb/salg. Det er muligt at kontakte os hvis i har en ting eller flere ting, som i tror, ville være spændende for os at kigge på, vi ser gerne på jeres ting og sager og vurderer derefter om det er interessant for os. Vi elsker alt specielt med noget historik, crazy af udseende eller industri præget design! Alle emails vil blive besvaret. Skriv en besked til siden eller kontakt os via email - kontakt@tingfinderen.dk. Vi kan også findes på facebook.</p>
+    <p>Man skal være velkommen til at sende os en besked vedr. køb/salg. Det er muligt at kontakte os hvis i har en ting eller flere ting, som i tror, ville være spændende for os at kigge på, vi ser gerne på jeres ting og sager og vurderer derefter om det er interessant for os. Vi elsker alt specielt med noget historik, crazy af udseende eller industri præget design! Alle emails vil blive besvaret. Skriv en besked til siden eller kontakt os via email - kontakt@tingfinderen.dk. <br>Vi kan også findes på facebook.</p>
+          <br>
+           <a href="contact.php" class="btn btn-default">Kontakt os her</a>
             
         </div>
         

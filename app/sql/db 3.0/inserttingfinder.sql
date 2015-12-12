@@ -1162,7 +1162,11 @@ INSERT INTO `orders`(`status`) VALUES (0);
 INSERT INTO `orders_has_products`(`orders_idorders`, `products_idproducts`, `quantity`) VALUES (1,10,1);
 INSERT INTO `orders_has_products`(`orders_idorders`, `products_idproducts`, `quantity`) VALUES (1,2,2);
 
+-- insert customer
+INSERT INTO `shippinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES ('Hanne','Jensen','Præstevej 5','hanne7@hotmail.com',2900,1);
 
-use somethi1_tingfinderdb;
-select * from admin;
-select * from orders;
+-- use somethi1_tingfinderdb;
+-- select * from admin;
+-- select * from orders, orders_has_products, products where orders.idorders = orders_has_products.orders_idorders and orders_has_products.products_idproducts = products.idproducts;
+-- select * from admin where username='admin' and password='admin';
+-- select idadmin from admin where username='df' and password='sd';

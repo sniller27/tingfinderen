@@ -28,7 +28,13 @@ body {
         color: @gold;
         font-weight: 500;
     }
-//    userwarning
+    //bold
+    .bold {
+        
+        font-weight:bold
+        
+    }
+    //    userwarning
     .userwarning {
         
         color: @feedbackwarning;
@@ -84,7 +90,7 @@ body {
         top: 40px;
         left: 60px;
     }
-    //    cart
+    //    cart and cart page
     .cartamount {
         background-color: red;
         width: 23px;
@@ -142,7 +148,7 @@ body {
         margin-bottom: 30px;
         border-radius: 5px;
         //        padding: 20px;
-        //        FRONTSITE
+        //        FRONTPAGE
         .processicon {
             width: 150px;
             display: block;
@@ -214,7 +220,7 @@ body {
         //        }
         //        
         //        new end
-        //        PRODUCTSITE
+        //        PRODUCTPAGE
         .productpage img {
             width: 100%
         }
@@ -224,10 +230,11 @@ body {
                 color: @gold;
             }
         }
-        //        CONTACTSITE
+        //        CONTACTPAGE and forms
         .contactform {
             color: black;
-            input,
+            input[type="text"],
+            input[type="email"],
             textarea {
                 display: block;
                 margin-bottom: 20px;
@@ -237,15 +244,41 @@ body {
                 resize: none;
                 width: 250px;
                 border: 0px;
+                height: 40px;
             }
             input {
-                height: 40px;
+                
             }
             textarea {
                 height: 150px;
                 padding-top: 5px;
             }
+            label {
+                display: block;
+            }
         }
+    }
+//    PAYMENT PAGE
+    .paymentinfo {
+        
+        background-color: white;
+        border-radius: 2px;
+        padding: 20px;
+        
+        .lastcell {
+            
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            
+        }
+        
+        
+    }
+    .tablediv {
+            
+            padding:20px;
+            background-color:white
+            
     }
     //active navbar
     #active {
