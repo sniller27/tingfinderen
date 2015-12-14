@@ -68,12 +68,10 @@ session_start();
     ?>
 
 
-
                     <!-- main -->
                     <main>
 
                         <div class="row bot-buffer">
-
 
                             <div class="col-sm-3">
 

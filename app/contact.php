@@ -106,7 +106,7 @@ require_once("php/header.php");
            
            <div class="col-sm-6 col-md-4 col-lg-3">
                
-        <form action="php/sendemail.php" method="post" class="contactform">
+        <form action="php/sendemail.php" method="post" class="contactform" name="contactform" onsubmit="return validatecontactform()">
             
             <input type="text" placeholder="Navn" name="name" required>
             <input type="email" placeholder="Email" name="mail" required>

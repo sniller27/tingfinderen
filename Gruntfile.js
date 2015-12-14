@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     watch: {
   scripts: {
     files: ['app/**/*.{js,css,less}'],
-    tasks: ['concat', 'less', 'autoprefixer','jshint'],
+    tasks: ['concat', 'less', 'autoprefixer'],
     options: {
       spawn: false,
     },

@@ -72,7 +72,7 @@ if($stmt->fetch() == 1){
 
 <div class="adminlogindiv">
 
-<form action="#" method="post">
+<form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" name="adminloginform" onsubmit="return validateadminloginform()">
 <img src="images/logo.svg" alt="tingfinderen logo" />
 <input type="text" placeholder="Brugernavn" aria-label="Brugernavn" name="usernamelogin" required>
 <input type="text" placeholder="Password" aria-label="Password" name="passwordlogin" required>
