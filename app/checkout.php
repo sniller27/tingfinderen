@@ -278,10 +278,29 @@ require_once("php/header.php");
                                 <label for="nosent">
                                     <input type="radio" name="sent" id="nosent" value="nosent" required>Nej</label>
 
+                               
                                 <select id="deliveryaddress" name="location">
-                                    <option value="1">København K</option>
-                                    <option value="2">Odense C</option>
-                                    <option value="3">Sdr. Jylland</option>
+                                    <?php 
+                                
+                                require_once("php/config.php");
+    
+                            //SQL query
+                            $sqloptionlist = "select * from pickupaddresses;";
+
+                            //forbinder query til MySQL
+                            $result = $conn->query($sqloptionlist);
+
+                            //udtrækker fra database
+                            while($row = $result->fetch_array()){
+
+                            ?>
+                                        <option value="<?= $row['iddeliveryaddresses']; ?>"><?= $row['addressname']; ?></option>
+                            <?php
+
+
+                            }
+                                
+                                ?>
                                 </select>
 
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
