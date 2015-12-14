@@ -16,8 +16,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     require_once("php/config.php");
     
+    //check radiobuttons
+    if($_POST['sent'] == 'yessent'){
+        
+        $deliveryaddress = 'null';
+        
+    }else if($_POST['sent'] == 'nosent') {
+        
+        $deliveryaddress = $_POST['location'];
+        
+    }
+    echo $deliveryaddress;
+    
     //insert order
-    $sql = "INSERT INTO `orders`(`status`) VALUES (0);";
+    $sql = "INSERT INTO `orders`(`status`, `deliveryaddresses_iddeliveryaddresses`) VALUES ('ikke sendt', $deliveryaddress);";
 
     //prepared statement for produkt info
     $stmt = $conn->prepare($sql);
@@ -34,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     
     //insert contactinformation
-    $sql = "INSERT INTO `shippinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES (?,?,?,?,?,?)";
+    $sql = "INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES (?,?,?,?,?,?)";
 
     //prepared statement for produkt info
     $stmt = $conn->prepare($sql);
@@ -184,16 +196,15 @@ require_once("php/head.php");
            document.getElementById('yessent').onchange = disablefield;
            document.getElementById('nosent').onchange = disablefield;
            
-           
            function disablefield(){
 
-if ( document.getElementById('yessent').checked == true ){
+if (document.getElementById('nosent').checked == true ){
     
             document.getElementById('deliveryaddress').disabled = false;
 
     
 }
-else if (document.getElementById('nosent').checked == true ){
+else if (document.getElementById('yessent').checked == true ){
     
             document.getElementById('deliveryaddress').disabled = true;
 
@@ -263,14 +274,14 @@ require_once("php/header.php");
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
                                 <label for="yessent">
-                                    <input type="radio" name="sent" id="yessent" required>Ja</label>
+                                    <input type="radio" name="sent" id="yessent" value="yessent" checked required>Ja</label>
                                 <label for="nosent">
-                                    <input type="radio" name="sent" id="nosent" required>Nej</label>
+                                    <input type="radio" name="sent" id="nosent" value="nosent" required>Nej</label>
 
-                                <select id="deliveryaddress">
-                                    <option value="copenhagen">København</option>
-                                    <option value="odense">Odense</option>
-                                    <option value="jutland">Sdr. Jylland</option>
+                                <select id="deliveryaddress" name="location">
+                                    <option value="1">København K</option>
+                                    <option value="2">Odense C</option>
+                                    <option value="3">Sdr. Jylland</option>
                                 </select>
 
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>

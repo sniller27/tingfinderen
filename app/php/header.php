@@ -1,10 +1,12 @@
 <?php
 //active site in navbar
-$frontpage = "";
-$shop = "";
-$about = "";
-$contact = "";
+$frontpage = '';
+$shop = '';
+$about = '';
+$tyskenhavn = '';
+$contact = '';
 
+//$classe = 'class="uppercase hvr-underline-from-center"';
 
 //vælger en id til den aktive side
 $currentsite = basename($_SERVER['PHP_SELF'], ".php");
@@ -20,11 +22,16 @@ if($currentsite == 'index'){
 
     $about = 'id="active"';
 
+}else if($currentsite == '$tyskenhavn'){
+
+    $contact = 'id="active"';
+
 }else if($currentsite == 'contact'){
 
     $contact = 'id="active"';
 
 }
+
 
 
 //itemcounter
@@ -62,7 +69,7 @@ if(isset($_SESSION["items"])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <span class="cartamount" id="notification"><?= $itemcount ?></span>
+                <p class="cartamount" id="notification"><?= $itemcount ?></p>
             </div>
 
             <!--mobile menu-->
@@ -75,7 +82,7 @@ if(isset($_SESSION["items"])){
                     <li><a href="shop.php" <?= $shop ?> class="uppercase hvr-underline-from-center">Shop</a></li>
                     <li><a href="about.php" <?= $about ?> class="uppercase hvr-underline-from-center">Info</a></li>
                     <li><a href="contact.php" <?= $contact ?> class="uppercase hvr-underline-from-center">Kontakt</a></li>
-                    <li><a href="tyskenhavn.php" class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
+                    <li><a href="tyskenhavn.php" <?= $tyskenhavn ?> class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
 <!--                    CART IN MENU-->
                     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
