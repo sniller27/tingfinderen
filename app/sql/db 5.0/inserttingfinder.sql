@@ -1177,4 +1177,4 @@ INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcode
 INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES ('Knud','Jensen','Præstevej 5','knud12@hotmail.com',2900,2);
 
 
--- use somethi1_tingfinderdb;
+-- select * from pickupaddresses;

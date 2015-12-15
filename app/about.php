@@ -34,12 +34,7 @@ require_once("php/header.php");
     
     <h1>Velkommen til Tingfinderen!</h1>
     <div class="row">
-        <div class="col-sm-6">
-            
-            <h2>Hvem er vi?</h2>
-    <p>Tingfinderen er en nyetableret virksomhed i Danmark med fokus på spændende highend genbrug. EST 2015. Vi fokuserer på indkøb af kommunalt affald vi forvandler til guld, antikke spisfindiheder bliver rekonstrueret til det moderne hjem eller helt nye designs bliver skabt komplet fra bunden. Vi henvender os ikke til den enkelte katergori, men breder os gerne ud og kan finde på hvad som helst. Om det er lamper, møbler, heste eller fly, det er ligemeget. Vores team kombinerer deres ekspertise og kreative tankeveje med innovativt håndværk for at leverer de bedste produkter, af allerbedste kvalitet.</p>
-            
-        </div>
+        
         <div class="col-sm-6">
             
             <h2>Sælg til os!</h2>

@@ -263,6 +263,10 @@ body main .processicon {
   -moz-user-select: none;
   -webkit-user-drag: none;
 }
+body main .youtubevideo {
+  width: 100%;
+  height: 250px;
+}
 body main .productsize {
   max-width: 380px;
   margin: auto;

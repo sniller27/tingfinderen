@@ -9,15 +9,7 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
     
     $pid = $_GET['productid'];
     $qty = $_GET['qty'];
-    
 
-     
-    
-    
-    
-    
-    
-    
     $stock = 0;
 
 require_once("php/config.php");

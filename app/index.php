@@ -139,32 +139,45 @@ session_start();
                         <div class="row bot-buffer">
 
 
+                           
                             <div class="col-sm-9 bot-buffer top-buffer">
+                            
+                            <div class="row bot-buffer">
+                                <div class="col-sm-12 top-buffer">
 
-                                <h2>Om os</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+<h2>Hvem er vi?</h2>
+    <p>Tingfinderen er en nyetableret virksomhed i Danmark med fokus på spændende highend genbrug. EST 2015. Vi fokuserer på indkøb af kommunalt affald vi forvandler til guld, antikke spisfindiheder bliver rekonstrueret til det moderne hjem eller helt nye designs bliver skabt komplet fra bunden. Vi henvender os ikke til den enkelte katergori, men breder os gerne ud og kan finde på hvad som helst. Om det er lamper, møbler, heste eller fly, det er ligemeget. Vores team kombinerer deres ekspertise og kreative tankeveje med innovativt håndværk for at leverer de bedste produkter, af allerbedste kvalitet.</p>
+                             
+                             </div> 
+                               </div>
+                               
+                            <div class="row">
+                            
+                            <div class="col-sm-6 bot-buffer">
 
-                                <!--
-                        </div>
+<h2>Konceptet</h2>
+    <p>Tingfinderen er en nyetableret virksomhed i Danmark med fokus på spændende highend genbrug. EST 2015. Vi fokuserer på indkøb af kommunalt affald vi forvandler til guld, antikke spisfindiheder bliver rekonstrueret til det moderne hjem eller helt nye designs bliver skabt komplet fra bunden.</p>
+                             
+                             </div>
+                             
+                             <div class="col-sm-6 bot-buffer">
 
-                        <div class="col-sm-4">
--->
-                                <br>
+<iframe class="youtubevideo" src="https://www.youtube.com/embed/l12xBNcM_Ho" frameborder="0" allowfullscreen></iframe>
+                             
+                             </div>
+                              
+                               </div>
+                               
+                               
+                               
+                                </div>
 
-                                <h2>Konceptet</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
-
-                            </div>
-
+<!--                           facebook feed-->
                             <div class="col-sm-3 facebookfeedbuffer">
 
                                 <div class="fb-page" data-href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" data-tabs="timeline" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 
                             </div>
-
-
-
-
 
                         </div>
 
