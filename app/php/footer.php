@@ -32,6 +32,7 @@
             <a href="https://www.instagram.com/bjctingfinderen/" target="_blank"><i class="fa fa-instagram" style="font-size:48px;"></i></a>
             <a href="https://www.youtube.com/channel/UC0UBSMu4ebnayb1tB02G4PA" target="_blank"><i class="fa fa-youtube-square" style="font-size:48px;"></i></a>
 
+       <a href="https://dk.trustpilot.com/review/tingfinderen.dk" target="_blank"><img src="images/trustpilot.png" id="trustpilot" alt="trustpilot"></a>
         </div>
 
     </div>

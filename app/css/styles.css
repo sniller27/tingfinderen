@@ -263,6 +263,12 @@ body main .processicon {
   -moz-user-select: none;
   -webkit-user-drag: none;
 }
+body main .processiconabout {
+  width: 150px;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+}
 body main .youtubevideo {
   width: 100%;
   height: 250px;
@@ -408,6 +414,12 @@ body #footer {
   color: #d9cccc;
   padding: 20px;
   border-top: 2px solid #a89a75;
+}
+body #trustpilot {
+  width: 120px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
 }
 body .adminlogindiv {
   width: 220px;
