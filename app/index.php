@@ -52,8 +52,8 @@ session_start();
                 <div class="text-center">
                     <h1>Tingfinderen</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
-                    <a href="shop.php" class="btn btn-default sharp">Køb</a>
-                    <a href="about.php" class="btn btn-info sharp">Sælg</a>
+                    <a href="shop.php" class="btn graybutton sharp">Køb</a>
+                    <a href="about.php" class="btn graybutton sharp">Sælg</a>
                 </div>
 
 
@@ -75,7 +75,7 @@ session_start();
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="1.step in proces" class="processicon" />
+                                <img src="images/questiongem.svg" alt="1.step in proces" class="processicon" />
                                 <h2 class="text-center">Finder historie</h2>
                                 <p class="text-center">Hos Tingfinderen køber vi gamle ting og sager som enten er blevet smidt ud eller ikke længer har nogle personlig værdi for ejeren igennem kommuner eller privatpersoner.</p>
 
@@ -83,7 +83,7 @@ session_start();
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="2.step in proces" class="processicon" />
+                                <img src="images/cleangem.svg" alt="2.step in proces" class="processicon" />
                                 <h2 class="text-center">Restaurerer</h2>
                                 <p class="text-center">Hos Tingfinderen tager vi de gamle ting og giver dem en ny chance ved at restaurere dem.</p>
 
@@ -91,7 +91,7 @@ session_start();
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="3.step in proces" class="processicon" />
+                                <img src="images/givegem.svg" alt="3.step in proces" class="processicon" />
                                 <h2 class="text-center">Sælger</h2>
                                 <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
 
@@ -99,7 +99,7 @@ session_start();
 
                             <div class="col-sm-3">
 
-                                <img src="images/processcircle.png" alt="4.step in proces" class="processicon" />
+                                <img src="images/shinygem.svg" alt="4.step in proces" class="processicon" />
                                 <h2 class="text-center">Pynter</h2>
                                 <p class="text-center">Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
 

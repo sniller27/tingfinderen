@@ -139,6 +139,7 @@ body .goldcolor {
 }
 body p {
   letter-spacing: 0.5px;
+  color: #e3e1e1;
 }
 body h1 {
   font-size: 2em;
@@ -178,6 +179,19 @@ body .sharp {
   border-radius: 0;
   padding: 6px 30px;
 }
+body .graybutton {
+  background-color: #232323;
+  color: #a89a75;
+  border: 1px solid #a89a75;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+body .graybutton:hover {
+  color: #c4b48a;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+  border: 1px solid #c4b48a;
+}
 body .top-buffer {
   margin-top: 20px;
 }
@@ -186,6 +200,9 @@ body .bot-buffer {
 }
 body .facebookfeedbuffer {
   margin-top: 30px;
+}
+body .contactpagebottombuffer {
+  margin-bottom: 22px;
 }
 body .uppercase {
   text-transform: uppercase;
@@ -242,11 +259,12 @@ body .jumbotron div {
   margin: auto;
 }
 body .jumbotron h1 {
-  color: #d9cccc;
+  color: #e3e1e1;
+  text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.5);
 }
 body .jumbotron p {
   font-weight: bold;
-  color: #d9cccc;
+  color: #e3e1e1;
 }
 body main {
   min-height: 400px;
@@ -254,7 +272,7 @@ body main {
   border-radius: 5px;
 }
 body main .processicon {
-  width: 150px;
+  width: 120px;
   display: block;
   margin: auto;
   margin-top: 20px;
@@ -305,6 +323,16 @@ body main .image-container .after {
   top: 0;
   left: 0;
 }
+body main .productinfoshop {
+  background-color: #000000;
+  margin-bottom: 30px;
+  padding-left: 5%;
+}
+body main .separator {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 body main .productpage img {
   width: 100%;
 }
@@ -313,6 +341,9 @@ body main .breadcrumb {
 }
 body main .breadcrumb a {
   color: #a89a75;
+}
+body main .smallprocessicons {
+  width: 80px;
 }
 body main .contactform {
   color: black;
@@ -326,7 +357,7 @@ body main .contactform textarea {
   border-radius: 2px;
   padding: 0em 1em 0em 0.5em;
   resize: none;
-  width: 250px;
+  width: 100%;
   border: 0px;
   height: 40px;
 }
@@ -415,10 +446,22 @@ body #footer {
   padding: 20px;
   border-top: 2px solid #a89a75;
 }
+body #footer i {
+  color: #a89a75;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+body #footer i:hover {
+  color: #c4b48a;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+body .admintext {
+  color: #a89a75;
+}
 body #trustpilot {
   width: 120px;
   display: block;
-  margin: auto;
   margin-top: 20px;
 }
 body .adminlogindiv {

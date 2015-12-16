@@ -104,44 +104,25 @@ require_once("php/header.php");
 
        <div class="row">
            
-           <div class="col-sm-6 col-md-4 col-lg-3">
+           <div class="col-sm-6 col-md-6 col-lg-7 contactpagebottombuffer">
                
+<!--               write to us-->
+               <p>Send os endelig en besked, hvis du har spørgsmål eller vil vide andet. Vi er klar på tasterne, altid!</p>
+               
+<!--               form-->
         <form action="php/sendemail.php" method="post" class="contactform" name="contactform" onsubmit="return validatecontactform()">
             
             <input type="text" placeholder="Navn" name="name" required>
             <input type="email" placeholder="Email" name="mail" required>
             <textarea placeholder="Besked" name="msg" required></textarea>
-            <button type="submit" class="btn btn-default">Send</button>
+            <button type="submit" class="btn graybutton sharp">Send</button>
             
         </form>
-             
-<!--
-              <form action="php/sendemail.php" method="post" name="sendmailform" onsubmit="return validatesignupForm()">
-                        <label for="sendmail">Email:</label><br>
-                        <input type="email" placeholder="Email" id="sendmail" name="mail" required>
-                        <br>
-                        <label for="title">Titel:</label>
-                        <br>
-                        <input type="text" placeholder="Titel" id="title" name="title" required>
-                        <br>
-                        <label for="mailtextarea">Besked:</label>
-                        <br>
-                        <textarea id="mailtextarea" placeholder="Besked" name="msg" required></textarea>
-                        <br>
-                        <button type="submit" value="Send" class="donatebutton" name="sendmailsubmit">Send</button>
-                    
-                    </form>
--->
-               
-           </div>
-           <div class="col-sm-6 col-md-4">
-               
-                
-<p>Send os endelig en besked, hvis du har spørgsmål eller vil vide andet. Vi er klar på tasterne, altid!</p>
-               
+            
            </div>
            
-           <div class="col-sm-12 col-md-4 col-lg-5">
+           
+           <div class="col-sm-6 col-md-6 col-lg-5">
                
                 <!-- Google maps -->
                 <div id="map_canvas"></div>

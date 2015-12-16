@@ -21,7 +21,7 @@
         </div>
         <div class="col-sm-3">
 
-            <a href="admin.php">Admin Login</a>
+            <a href="admin.php" class="admintext">Admin Login</a>
 
         </div>
         <div class="col-sm-3">

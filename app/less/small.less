@@ -1,11 +1,12 @@
 /** small **/
-
 //colors
 @darkgray : #232323;
 @darkblue : #4e565c;
 @gold : #a89a75;
 @textcolorwheat : #d9cccc;
 @feedbackwarning : #ff0000;
+@fontcolor : #e3e1e1;
+
 body {
     //    font
     font-family: 'Raleway', sans-serif;
@@ -19,6 +20,7 @@ body {
     }
     p {
         letter-spacing: 0.5px;
+        color: @fontcolor;
     }
     h1 {
         font-size: 2em;
@@ -68,6 +70,18 @@ body {
         border-radius: 0;
         padding: 6px 30px;
     }
+    //     gray buttons
+    .graybutton {
+        background-color: @darkgray;
+        color: @gold;
+        border: 1px solid @gold;
+        transition: 0.2s;
+    }
+    .graybutton:hover {
+        color: #c4b48a;
+        transition: 0.2s;
+        border: 1px solid #c4b48a;
+    }
     //    boostrap row space
     .top-buffer {
         margin-top: 20px;
@@ -77,6 +91,9 @@ body {
     }
     .facebookfeedbuffer {
         margin-top: 30px;
+    }
+    .contactpagebottombuffer{
+        margin-bottom: 22px;
     }
     .uppercase {
         text-transform: uppercase;
@@ -132,16 +149,18 @@ body {
         background-size: cover;
         line-height: 1;
         border-bottom: 2px solid @gold;
+        
         div {
             max-width: 1170px;
             margin: auto;
         }
         h1 {
-            color: #d9cccc;
+            color: @fontcolor;
+            text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.5);
         }
         p {
             font-weight: bold;
-            color: #d9cccc;
+            color: @fontcolor;
         }
     }
     //main
@@ -152,7 +171,7 @@ body {
         //        padding: 20px;
         //        FRONTPAGE
         .processicon {
-            width: 150px;
+            width: 120px;
             display: block;
             margin: auto;
             margin-top: 20px;
@@ -217,26 +236,20 @@ body {
             top: 0;
             left: 0;
         }
-        .nopadding {
-            //   padding: 0 !important;
-            //   margin: 0 !important;
+     
+//        text under product
+        .productinfoshop {
+            
+            background-color: #000000;
+            margin-bottom: 30px;
+            padding-left: 5%;
+            
         }
-        //         new
-        //        .productshopcontainers {
-        //            
-        ////            background-size: contain no-repeat;
-        //            width: 100%;
-        //            height: 200px;
-        //            
-        //            h2 {
-        //                
-        //                color: @darkgray;
-        //                
-        //            }
-        //            
-        //        }
-        //        
-        //        new end
+        .separator {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
         //        PRODUCTPAGE
         .productpage img {
             width: 100%
@@ -246,6 +259,12 @@ body {
             a {
                 color: @gold;
             }
+        }
+//        ABOUT PAGE
+        .smallprocessicons {
+            
+            width: 80px;
+            
         }
         //        CONTACTPAGE and forms
         .contactform {
@@ -259,7 +278,7 @@ body {
                 border-radius: 2px;
                 padding: 0em 1em 0em 0.5em;
                 resize: none;
-                width: 250px;
+                width: 100%; //270px tidligere
                 border: 0px;
                 height: 40px;
             }
@@ -307,22 +326,7 @@ body {
         margin-bottom: 0px;
         border-bottom: 2px solid @gold;
     }
-    //    navbar animation
-    //        #nav-icon4 {
-    //            width: 60px;
-    //            height: 45px;
-    //            position: relative;
-    //            margin: 50px auto;
-    //            -webkit-transform: rotate(0deg);
-    //            -moz-transform: rotate(0deg);
-    //            -o-transform: rotate(0deg);
-    //            transform: rotate(0deg);
-    //            -webkit-transition: .5s ease-in-out;
-    //            -moz-transition: .5s ease-in-out;
-    //            -o-transition: .5s ease-in-out;
-    //            transition: .5s ease-in-out;
-    //            cursor: pointer;
-    //        }
+
     //burgermenu size and padding
     .navbar-toggle {
         padding: 15px;
@@ -401,6 +405,17 @@ body {
         color: #d9cccc;
         padding: 20px;
         border-top: 2px solid @gold;
+        i{
+            color: @gold;
+            transition: 0.2s;
+        }
+        i:hover{
+            color: #c4b48a;
+            transition: 0.2s;
+        }
+    }
+    .admintext {
+        color: @gold;
     }
     //trustpilot
     #trustpilot {
@@ -408,7 +423,7 @@ body {
         width:120px;
 //        margin-left: 50px;
         display: block;
-        margin: auto;
+//        margin: auto;
         margin-top: 20px;
 
     }

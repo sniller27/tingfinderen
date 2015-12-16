@@ -176,7 +176,7 @@ require_once("php/header.php");
         
     }else {
         
-        $customerfeedback = 'Din indkøbsvogn er tom.';
+        $customerfeedback = '<p>Din indkøbsvogn er tom.</p>';
         echo $customerfeedback;
         
     }

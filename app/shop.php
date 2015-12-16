@@ -55,18 +55,14 @@ require_once("php/header.php");
     
     
     <div class="col-xs-6 col-sm-3 product productsize nopadding">
-       <div class="image-container">
-<!--
-        <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
-        <p class="textoverlay"><?= $row['productname']; ?></p>
-        <img src="<?= $row['mainimage']; ?>" alt="" />
-        </a>
--->
-               <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
-                <img src="<?= $row['mainimage']; ?>" alt="<?= $row['productname']; ?>" />
 
-         <div class="after"><p><?= $row['productname']; ?></p></div>
+        <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
+                <img src="<?= $row['mainimage']; ?>" alt="<?= $row['productname']; ?>" class="separator" />
          </a>
+         
+        <div class="productinfoshop">
+        <p><?= $row['productname']; ?></p>
+        <h2><?= $row['price']; ?> kr,-</h2>
         </div>
     </div>
     
