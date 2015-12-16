@@ -7,10 +7,10 @@ session_start();
     <head>
 
         <!-- title -->
-        <title>Tingfinderen.dk</title>
+        <title>Tingfinderen.dk | Velkommen til Tingfinderen.dk</title>
 
         <!-- Pane Description -->
-        <meta name="description" content="Velkommen til Tingfinderen.dk">
+        <meta name="description" content="På Tingfinderen.dk kan du købe spændende og interessante produkter, der har en historie bag sig.">
 
         <?php
 

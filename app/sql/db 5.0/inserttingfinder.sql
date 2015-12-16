@@ -1,6 +1,3 @@
--- Insert data
-select * from zipcodes;
-
 -- Insert zipcodes
 insert into zipcodes (idzipcodes,cityname,region) values ('1211','københavn k','region hovedstaden');
 insert into zipcodes (idzipcodes,cityname,region) values ('1106','københavn k','region hovedstaden');
@@ -285,7 +282,6 @@ insert into zipcodes (idzipcodes,cityname,region) values ('6760','ribe','region 
 insert into zipcodes (idzipcodes,cityname,region) values ('7990','øster assels','region nordjylland');
 insert into zipcodes (idzipcodes,cityname,region) values ('8660','skanderborg','region midtjylland');
 insert into zipcodes (idzipcodes,cityname,region) values ('4671','strøby','region sjælland');
-
 insert into zipcodes (idzipcodes,cityname,region) values ('2620','albertslund','region hovedstaden');
 insert into zipcodes (idzipcodes,cityname,region) values ('7270','stakroge','region midtjylland');
 insert into zipcodes (idzipcodes,cityname,region) values ('4060','kirke såby','region sjælland');
@@ -1138,6 +1134,7 @@ INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (4,'ima
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (4,'images/produkter/lamper/darkgranite/darkgranite2.jpg');
 
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (5,'images/produkter/lamper/haanbanketmessinglampe/messinglampemain.jpg');
+INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (5,'images/produkter/lamper/haanbanketmessinglampe/messinglampe1.jpg');
 
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (6,'images/produkter/lamper/lightgranite/lightgranitemain.jpg');
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (6,'images/produkter/lamper/lightgranite/lightgranite2.jpg');
@@ -1149,9 +1146,11 @@ INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (8,'ima
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (8,'images/produkter/lamper/rawreplica/rawreplica2.jpg');
 
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (9,'images/produkter/lamper/rawwhite/rawwhitemain.jpg');
+INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (9,'images/produkter/lamper/rawwhite/rawwhite1.jpg');
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (9,'images/produkter/lamper/rawwhite/rawwhite2.jpg');
 
 INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (10,'images/produkter/skaenk/renoveretgammelteak/skaenkmain.jpg');
+INSERT INTO `productimages`(`products_idproducts`, `imagesource`) VALUES (10,'images/produkter/skaenk/renoveretgammelteak/skaenk1.jpg');
 
 -- insert pickup places
 INSERT INTO `pickupaddresses`(`addressname`) VALUES ('Copenhagen K');
@@ -1175,6 +1174,3 @@ INSERT INTO `orders_has_products`(`orders_idorders`, `products_idproducts`, `qua
 -- insert customer
 INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES ('Hanne','Jensen','Præstevej 5','hanne7@hotmail.com',2900,1);
 INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES ('Knud','Jensen','Præstevej 5','knud12@hotmail.com',2900,2);
-
-
--- select * from pickupaddresses;

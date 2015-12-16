@@ -127,6 +127,9 @@ table {
   border-spacing: 0;
 }
 /** small **/
+html {
+  overflow-y: scroll;
+}
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -157,6 +160,9 @@ body .userwarning {
 }
 body .textdecoration {
   text-decoration: none;
+}
+body .goldhr {
+  border-top: 1px solid #a89a75;
 }
 body .diamondrow hr {
   width: 43%;
@@ -295,10 +301,6 @@ body main .productsize {
   max-width: 380px;
   margin: auto;
 }
-body main .product a {
-  text-decoration: none;
-  color: #404040;
-}
 body main .product img {
   width: 100%;
 }
@@ -324,7 +326,7 @@ body main .image-container .after {
   left: 0;
 }
 body main .productinfoshop {
-  background-color: #000000;
+  background-color: #232323;
   margin-bottom: 30px;
   padding-left: 5%;
 }
@@ -614,8 +616,8 @@ body .adminlogindiv input {
     transition-timing-function: ease-out;
   }
   .hvr-underline-from-center:not(#active):hover:before,
-  .hvr-underline-from-center:focus:before,
-  .hvr-underline-from-center:active:before {
+  .hvr-underline-from-center:not(#active):focus:before,
+  .hvr-underline-from-center:not(#active):active:before {
     left: 0;
     right: 0;
   }

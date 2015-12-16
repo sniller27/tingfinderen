@@ -33,7 +33,7 @@ if(isset($_SESSION['items']) && $_SESSION['items'] != true){
     <head>
 
         <!-- title -->
-        <title>Tingfinderen.dk</title>
+        <title>Tingfinderen.dk | Indkøbsvogn</title>
 
         <!-- Pane Description -->
         <meta name="description" content="Her kan du lægge ting ting i din indkøbsvogn.">

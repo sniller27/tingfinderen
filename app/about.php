@@ -6,7 +6,7 @@ session_start();
 <head>
 
 <!-- title -->
-<title>Tingfinderen.dk</title>
+<title>Tingfinderen.dk | Om tingfinderen</title>
         
 <!-- Pane Description -->
 <meta name="description" content="Læs om Tingfinderen koncept og opstand.">
@@ -48,16 +48,20 @@ require_once("php/header.php");
             </div>
             </div>
             
+            <hr class="goldhr">
+            
             <!--        icon-->
             <div class="row">
             <div class="col-sm-2">
                 <img src="images/cleangem.svg" alt="2.step in proces" class="processiconabout smallprocessicons" />
             </div>
             <div class="col-sm-10">
-                <h2>Sælger</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+                <h2>Restaurerer</h2>
+                <p>Hos Tingfinderen tager vi de gamle ting og giver dem en ny chance ved at restaurere dem.</p>
             </div>
             </div>
+            
+            <hr class="goldhr">
             
             <!--        icon-->
             <div class="row">
@@ -65,10 +69,12 @@ require_once("php/header.php");
                 <img src="images/givegem.svg" alt="3.step in proces" class="processiconabout smallprocessicons" />
             </div>
             <div class="col-sm-10">
-                <h2>Pynter</h2>
-                                <p>Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
+                <h2>Sælger</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
             </div>
             </div>
+            
+            <hr class="goldhr">
             
             <!--        icon-->
             <div class="row">
@@ -76,8 +82,8 @@ require_once("php/header.php");
                 <img src="images/shinygem.svg" alt="4.step in proces" class="processiconabout smallprocessicons" />
             </div>
             <div class="col-sm-10">
-                <h2>Finder historie</h2>
-                                <p>Hos Tingfinderen køber vi gamle ting og sager som enten er blevet smidt ud eller ikke længer har nogle personlig værdi for ejeren igennem kommuner eller privatpersoner.</p>
+                <h2>Pynter</h2>
+                                <p>Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
             </div>
             </div>
             

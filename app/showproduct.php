@@ -74,7 +74,7 @@ require_once("php/config.php");
     <head>
 
         <!-- title -->
-        <title>Tingfinderen.dk</title>
+        <title>Tingfinderen.dk | Produktside</title>
 
         <!-- Pane Description -->
         <meta name="description" content="Velkommen til Tindfinderen.dk">
@@ -85,11 +85,13 @@ require_once("php/config.php");
 require_once("php/head.php");
 
 ?>
+            
+    <!--colorbox links-->
+    <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
+    <script src="plugins/colorbox/jquery-1.11.1.js"></script>
+    <script src="plugins/colorbox/jquery.colorbox.js"></script>
+    <script src="plugins/colorbox/colorbox.js"></script>
 
-            <!--colorbox links-->
-            <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
-            <script src="plugins/colorbox/jquery.colorbox.js"></script>
-            <script src="plugins/colorbox/colorbox.js"></script>
 
 
     </head>
@@ -169,7 +171,7 @@ require_once("php/header.php");
                                     <?= $price ?> kr,-
                                 </h2>
                                 <br>
-                                <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&amp;qty=1" class="btn btn-default">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
+                                <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&amp;qty=1" class="btn graybutton sharp">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
                             </div>
 
 

@@ -13,7 +13,7 @@ if(isset($_GET['mailsent'])){
 <head>
 
 <!-- title -->
-<title>Tingfinderen.dk</title>
+<title>Tingfinderen.dk | Kontakt</title>
         
 <!-- Pane Description -->
 <meta name="description" content="Kontakt os hvis du har spørgsmål">

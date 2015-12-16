@@ -7,7 +7,7 @@ session_start();
 <head>
 
 <!-- title -->
-<title>Tingfinderen.dk</title>
+<title>Tingfinderen.dk | Shop</title>
         
 <!-- Pane Description -->
 <meta name="description" content="Her kan se udvalget alle vores flotte produkter">
@@ -18,6 +18,7 @@ session_start();
 require_once("php/head.php");
 
 ?>
+
 </head>
 
 <body>

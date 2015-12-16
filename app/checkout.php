@@ -176,7 +176,7 @@ EOD;
     <head>
 
         <!-- title -->
-        <title>Tingfinderen.dk</title>
+        <title>Tingfinderen.dk | Betaling</title>
 
         <!-- Pane Description -->
         <meta name="description" content="Læs om Tingfinderen koncept og opstand.">
@@ -372,7 +372,7 @@ require_once("php/header.php");
                                 </div>
                                 <div class="col-sm-12">
 
-                                    <button type="submit" class="btn btn-default rightbutton" id="submitcheckout">Betal</button>
+                                    <button type="submit" class="btn graybutton sharp rightbutton" id="submitcheckout">Betal</button>
 
                                 </div>
                         </form>

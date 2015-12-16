@@ -58,7 +58,7 @@ if($stmt->fetch() == 1){
 <html lang="">
 <head>
 
-    <title>Tingfinderen.dk</title>
+    <title>Tingfinderen.dk | Admin login</title>
 
 <?php 
 
@@ -68,7 +68,7 @@ if($stmt->fetch() == 1){
 
 </head>
 <body>
-<a href="index.php">Tilbage til forside</a>
+<a href="index.php" class="admintext">Tilbage til forside</a>
 
 <div class="adminlogindiv">
 
@@ -76,7 +76,7 @@ if($stmt->fetch() == 1){
 <img src="images/logo.svg" alt="tingfinderen logo" />
 <input type="text" placeholder="Brugernavn" aria-label="Brugernavn" name="usernamelogin" required>
 <input type="text" placeholder="Password" aria-label="Password" name="passwordlogin" required>
-<button type="submit">Log ind</button>
+<button type="submit" class="btn graybutton sharp">Log ind</button>
 <p class="userwarning"><?= $userresponse ?></p>
 </form>
 </div>
