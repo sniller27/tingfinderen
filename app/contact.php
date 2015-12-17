@@ -4,7 +4,7 @@ session_start();
 $sent = '';
 if(isset($_GET['mailsent'])){
     
-    $sent = 'Din besked er blevet sendt';
+    $sent = '<h1 style="color:green">Din besked er blevet sendt</h1>';
     
 }
 ?>
@@ -96,7 +96,7 @@ require_once("php/header.php");
                <div class="col-sm-12">
                    
                    
-                   <h1 style="color:green"><?= $sent ?></h1>
+                   <?= $sent ?>
                    <h1>Kontakt</h1>
                    
                </div>
@@ -112,9 +112,9 @@ require_once("php/header.php");
 <!--               form-->
         <form action="php/sendemail.php" method="post" class="contactform" name="contactform" onsubmit="return validatecontactform()">
             
-            <input type="text" placeholder="Navn" name="name" required>
-            <input type="email" placeholder="Email" name="mail" required>
-            <textarea placeholder="Besked" name="msg" required></textarea>
+            <input type="text" placeholder="Navn" name="name" aria-label="navn" required>
+            <input type="email" placeholder="Email" name="mail" aria-label="email" required>
+            <textarea placeholder="Besked" name="msg" aria-label="besked" required></textarea>
             <button type="submit" class="btn graybutton sharp">Send</button>
             
         </form>

@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="da" class="no-js">
+<html lang="da">
 <head>
 
 <!-- title -->

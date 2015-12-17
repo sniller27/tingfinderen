@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <title>Tyskenhavn</title>
-	<meta name="Author" content=""/>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    
+    
 </head>
 <body>
 

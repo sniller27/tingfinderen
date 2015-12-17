@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-sm-3">
+        <div class="col-sm-3 footerspace">
            
             <p>Kontakt:
                 <br/>+45 60 15 85 75
@@ -11,7 +11,7 @@
             </p>
 
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 footerspace">
 
             <p>Adresser:
                 <br/> København K, Sdr. Jylland og Odense C.
@@ -19,7 +19,7 @@
             </p>
 
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 footerspace">
 
             <a href="admin.php" class="admintext">Admin Login</a>
 

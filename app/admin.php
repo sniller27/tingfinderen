@@ -55,7 +55,7 @@ if($stmt->fetch() == 1){
 
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 <head>
 
     <title>Tingfinderen.dk | Admin login</title>
@@ -75,7 +75,7 @@ if($stmt->fetch() == 1){
 <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" name="adminloginform" onsubmit="return validateadminloginform()">
 <img src="images/logo.svg" alt="tingfinderen logo" />
 <input type="text" placeholder="Brugernavn" aria-label="Brugernavn" name="usernamelogin" required>
-<input type="text" placeholder="Password" aria-label="Password" name="passwordlogin" required>
+<input type="password" placeholder="Password" aria-label="Password" name="passwordlogin" required>
 <button type="submit" class="btn graybutton sharp">Log ind</button>
 <p class="userwarning"><?= $userresponse ?></p>
 </form>

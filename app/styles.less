@@ -248,8 +248,9 @@ body {
             -webkit-user-drag: none;
         }
         .youtubevideo {
-          width: 100%;
-          height: 250px;
+            width: 100%;
+            height: 250px;
+            max-width: 438px;
         }
         //product in webshop
         .productsize {
@@ -312,10 +313,21 @@ body {
                 color: @gold;
             }
         }
+        
+            
+            a{
+                i {
+                    margin-left: 5px;
+                }
+            }
+            
+        
+        
 //        ABOUT PAGE
         .smallprocessicons {
             
-            width: 80px;
+            width: 188%;
+            max-width: 80px;
             
         }
         //        CONTACTPAGE and forms
@@ -367,6 +379,9 @@ body {
             padding:20px;
             background-color:white
             
+    }
+    #submitcheckout {
+        margin-top: 20px;
     }
     //active navbar
     #active {
@@ -464,6 +479,9 @@ body {
         i:hover{
             color: #c4b48a;
             transition: 0.2s;
+        }
+        .footerspace {
+            margin-bottom: 20px;
         }
     }
     .admintext {
@@ -611,26 +629,23 @@ body {
 @media only screen and (min-width: 768px) {
     //    navbar
     ul {
-    position: relative;
-    top: 15px;
+        position: relative;
+        top: 15px;
     }
-    
-//    diamond hr
+    //    diamond hr
     .diamondrow hr {
         width: 46% !important;
     }
-    
     //  notification
     #notification {
-        
         display: none;
-        
     }
     body {
-    #logo {
-        margin: 5px 5px 0px 0px;
+        #logo {
+            margin: 5px 5px 0px 0px;
+        }
     }
-    }
+
     //cart2 
     .cart2 {
         #cart2icon {
@@ -642,25 +657,27 @@ body {
             }
         }
     }
-    
     .cartproduct {
-      
         img {
-            
             width: 100%;
-            
         }
-        
     }
-    
     //    PAYMENT PAGE
-    .rightbutton {
-        
-        float: right;
-        
+    body {
+        //    payment button
+        #submitcheckout {
+            float: right;
+            margin-top: 0px;
+        }
     }
-    
-    
+    //    footer
+    body {
+        #footer {
+            .footerspace {
+                margin-bottom: 0px;
+            }
+        }
+    }
     //active page
     #active {
         //        color: #dd5b5b;
@@ -669,8 +686,6 @@ body {
         padding-bottom: 14px;
         border-bottom: 1px solid @gold;
     }
-    
-    
     //    HOVEREFFECTS
     /* Underline From Center */
     .hvr-underline-from-center {
@@ -707,8 +722,6 @@ body {
         left: 0;
         right: 0;
     }
-    
-
 };/** big **/
 @media only screen and (min-width: 1200px) {
 

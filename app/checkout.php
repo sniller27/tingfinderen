@@ -1,21 +1,20 @@
 <?php 
 session_start();
 
+if(isset($_SESSION["items"])){
 $sessionids = '';
 
 
 //tjekker om form er blevet submitted
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $name = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING) or die('Error: username er ikke gyldigt');
-    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING) or die('Error: password er ikke gyldigt');
-    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING) or die('Error: password er ikke gyldigt');
-    $zipcode = filter_input(INPUT_POST, 'zipcode', FILTER_VALIDATE_INT) or die('Error: password er ikke gyldigt');
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('Error: password er ikke gyldigt');
+    $name = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING) or die('Error: fornavn er ikke gyldigt');
+    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING) or die('Error: efternavn er ikke gyldigt');
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING) or die('Error: adressen er ikke gyldig');
+    $zipcode = filter_input(INPUT_POST, 'zipcode', FILTER_VALIDATE_INT) or die('Error: post nr er ikke gyldigt');
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('Error: email er ikke gyldig');
     $orderid;
 
-    require_once("php/config.php");
-    
     //check radiobuttons
     if($_POST['sent'] == 'yessent'){
         
@@ -25,8 +24,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         $deliveryaddress = $_POST['location'];
         
+    }else {
+        die('Error: der er ikke blevet valgt en mulighed for forsendelse');
     }
-    echo $deliveryaddress;
+    
+    require_once("php/config.php");
     
     //insert order
     $sql = "INSERT INTO `orders`(`status`, `deliveryaddresses_iddeliveryaddresses`) VALUES ('ikke sendt', $deliveryaddress);";
@@ -240,11 +242,11 @@ require_once("php/header.php");
 
                             <div class="col-sm-6">
 
-                                <input type="text" name="firstname" placeholder="Navn" maxlength="100" required>
-                                <input type="text" name="lastname" placeholder="Efternavn" maxlength="100" required>
-                                <input type="text" name="address" placeholder="Adresse" maxlength="45" required>
-                                <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" required>
-                                <input type="email" name="email" placeholder="Email" maxlength="100" required>
+                                <input type="text" name="firstname" placeholder="Navn" maxlength="100" aria-label="fornavn" required>
+                                <input type="text" name="lastname" placeholder="Efternavn" maxlength="100" aria-label="efternavn" required>
+                                <input type="text" name="address" placeholder="Adresse" maxlength="45" aria-label="adresse" required>
+                                <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" aria-label="postnr" required>
+                                <input type="email" name="email" placeholder="Email" maxlength="100" aria-label="email" required>
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
                                 <label for="yessent">
@@ -268,7 +270,7 @@ require_once("php/header.php");
                             while($row = $result->fetch_array()){
 
                             ?>
-                                        <option value="<?= $row['iddeliveryaddresses']; ?>"><?= $row['addressname']; ?></option>
+                                        <option label="<?= $row['addressname']; ?>" value="<?= $row['iddeliveryaddresses']; ?>"><?= $row['addressname']; ?></option>
                             <?php
 
 
@@ -280,7 +282,7 @@ require_once("php/header.php");
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
 
                             </div>
-                            <div>
+<!--                            <div>-->
                                 <div class="col-sm-6">
                                 <div class="tablediv">
 
@@ -344,23 +346,11 @@ require_once("php/header.php");
         
     }
         
-    }else {
-        
-        $customerfeedback = 'Din indkøbsvogn er tom.';
-        echo $customerfeedback;
-        
     }
                                 
                                 
                                 
                                 ?>
-<!--
-                                       <tr>
-                                           <td>Levering</td>
-                                           <td></td>
-                                           <td>20 kr,-</td>
-                                       </tr>
--->
                                        <tr class="lastcell">
                                            <td></td>
                                            <td></td>
@@ -396,4 +386,9 @@ require_once("php/footer.php");
    
     </body>
 
-    </html>
+</html>
+<?php
+}else {
+    header("Location: index.php");
+}
+?>

@@ -162,7 +162,7 @@ session_start();
                              
                              <div class="col-sm-6 bot-buffer">
 
-<iframe class="youtubevideo" src="https://www.youtube.com/embed/l12xBNcM_Ho" frameborder="0" allowfullscreen></iframe>
+<iframe class="youtubevideo" src="https://www.youtube.com/embed/l12xBNcM_Ho" allowfullscreen></iframe>
                              
                              </div>
                               
