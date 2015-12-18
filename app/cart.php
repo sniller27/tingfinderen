@@ -89,28 +89,6 @@ require_once("php/header.php");
     foreach($_SESSION["items"] as $key => $val)
     { 
         $sessionids .= $key . ',';
-        ?>
-   
-<!--
-                        <div class="row bot-buffer cartproduct">
-
-                            <div class="col-sm-12">
-
-                                <p>
-                                    <?= $key ?> :
-                                        <?= $val ?> stk</p>
-                              
-                                <a href="cart.php?id=<?= $key ?>" class="btn btn-default">X</a>
-                                <br>
-
-                            </div>
-
-                        </div>
--->
-
-
-                        <?php
-    
     }
         
     //save ids for SQL
@@ -164,7 +142,7 @@ require_once("php/header.php");
                                 </div>
                                 <div class="col-sm-1">
                                     
-                                    <a href="cart.php?id=<?= $productid ?>" class="btn btn-default">X</a>
+                                    <a href="cart.php?id=<?= $productid ?>" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Fjern produkt">X</a>
 
                                 </div>
 
@@ -212,14 +190,19 @@ require_once("php/header.php");
                                     <h2><?= $totalprice ?> kr,-</h2>
 
                                 </div>
-                                <div class="col-sm-2">
+                                <div class="col-xs-12 col-lg-2">
                                     
 <!--                                    <a href="checkout.php" class="btn btn-default">Videre til kassen</a>-->
-                                    <a href="checkout.php" class="textdecoration"><h2 href="checkout.php">Videre til kassen<i class="fa fa-arrow-right"></i></a>
-
+<!--                                    <a href="checkout.php" class="textdecoration"><h2 href="checkout.php">Videre til kassen<i class="fa fa-arrow-right"></i></a>-->
+                                <a href="checkout.php" class="textdecoration" ><h2 href="checkout.php" class="btn graybutton sharp" id="cartnext">Til betaling<i class="fa fa-arrow-right"></i></a>
+                          
                                 </div>
 
                             </div>
+                                
+                               
+                            
+                            
                           </div>   
 
                                 <?php
@@ -239,6 +222,12 @@ require_once("php/header.php");
 require_once("php/footer.php");
     
 ?>
+<script>
+
+    //tooltip
+    $('[data-toggle="tooltip"]').tooltip();   
+
+</script>
     </body>
 
     </html>

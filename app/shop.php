@@ -67,19 +67,7 @@ require_once("php/header.php");
         </div>
     </div>
     
-<!--
-    <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
-      <div class="col-xs-6 col-sm-3 product productsize" style="background-image: url(<?= $row['mainimage']; ?>);background-size: cover;">
-       
-        <div class="productshopcontainers">
-            
-            <h2><?= $row['productname']; ?></h2>
-            
-        </div>
-        
-      </div>
-    </a>
--->
+
     
     <?php
     }

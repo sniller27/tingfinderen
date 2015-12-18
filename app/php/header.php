@@ -6,8 +6,6 @@ $about = '';
 $tyskenhavn = '';
 $contact = '';
 
-//$classe = 'class="uppercase hvr-underline-from-center"';
-
 //vælger en id til den aktive side
 $currentsite = basename($_SERVER['PHP_SELF'], ".php");
 if($currentsite == 'index'){
@@ -15,6 +13,10 @@ if($currentsite == 'index'){
     $frontpage = 'id="active"';
 
 }else if($currentsite == 'shop'){
+    
+    $shop = 'id="active"';
+
+}else if($currentsite == 'showproduct'){
     
     $shop = 'id="active"';
 
@@ -86,17 +88,6 @@ if(isset($_SESSION["items"])){
                     
 <!--                    CART IN MENU-->
                     <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
-
-<!--
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mere<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-
-                            <li><a href="admin.php">Admin login</a></li>
-
-                        </ul>
-                    </li>
--->
                 
 
                 </ul>

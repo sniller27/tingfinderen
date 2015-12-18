@@ -53,6 +53,10 @@ table {
 @textcolorwheat : #d9cccc;
 @feedbackwarning : #ff0000;
 @fontcolor : #e3e1e1;
+
+//tyskenhavn
+@tyskenhavn : #FFFFFF;
+
 html {
     overflow-y: scroll;
 }
@@ -178,7 +182,7 @@ body {
     }
     //cartpage
     .cartproductcontainer {
-        border: 1px solid black;
+        border: 1px solid @gold;
         background-color: white;
     }
     .cartproduct {
@@ -189,9 +193,18 @@ body {
             max-width: 400px;
             //            height: 200px;
         }
+        h2 {
+            color: @darkgray;
+        }
     }
     //cart process breadcrumbs
     .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
+    
+    //cartbutton
+     #cartnext {
+        display: block;
+        margin: auto;
+    }
     
     //wrapper
     #wrapper {
@@ -382,6 +395,23 @@ body {
     }
     #submitcheckout {
         margin-top: 20px;
+    }
+    //SUCCES PAGE
+    .succesdiv {
+        
+        margin: auto;
+        position: relative;
+        margin-top: 15%;
+        padding: 15px;
+        text-align: center;
+        background-color: @darkgray;
+        border: 1px solid @gold;
+        p,h1,h2 {
+            color: @gold;
+            font-weight: 400;
+            line-height: 2;
+        }
+        
     }
     //active navbar
     #active {
@@ -624,6 +654,21 @@ body {
             }
         }
     }
+}
+//tyskenhavn
+.jumbotrontyskenhavn {
+    
+    background-image: url(../images/tyskenhavn/coverimage.png) !important;
+    height: 300px;
+    border-radius: 0px !important;
+    
+}
+#tyskenhavnbody {
+    
+    background-color: @tyskenhavn;
+    p {
+        color: #000000;
+    }
 };/** medium **/
 
 @media only screen and (min-width: 768px) {
@@ -662,6 +707,10 @@ body {
             width: 100%;
         }
     }
+    #cartnext {
+//        display: inline-block;
+//        float: right;
+    }
     //    PAYMENT PAGE
     body {
         //    payment button
@@ -669,6 +718,24 @@ body {
             float: right;
             margin-top: 0px;
         }
+    }
+    //SUCCES PAGE
+    .succesdiv {
+        
+        width: 50%;
+        margin: auto;
+        position: relative;
+        margin-top: 15%;
+        padding: 15px;
+        text-align: center;
+        background-color: @darkgray;
+        border: 1px solid @gold;
+        p,h1,h2 {
+            color: @gold;
+            font-weight: 400;
+            line-height: 2;
+        }
+        
     }
     //    footer
     body {
@@ -729,5 +796,7 @@ body {
     .diamondrow hr {
         width: 47% !important;
     }
-    
+    #cartnext {
+//        background-color: red;
+}
 }

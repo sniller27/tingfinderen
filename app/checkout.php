@@ -167,7 +167,7 @@ EOD;
         );
     }
     
-    header("Location: index.php");   
+    header("Location: succespage.php");   
     
 }
 
@@ -213,7 +213,7 @@ require_once("php/header.php");
 
                             <ol class="breadcrumb top-buffer">
 
-                                <li><a class="textdecoration">Indkøbsvogn</a></li>
+                                <li><a href="cart.php" class="textdecoration">Indkøbsvogn</a></li>
                                 <li class="active">
                                     Kasse
                                 </li>
@@ -362,7 +362,7 @@ require_once("php/header.php");
                                 </div>
                                 <div class="col-sm-12">
 
-                                    <button type="submit" class="btn graybutton sharp rightbutton" id="submitcheckout">Betal</button>
+                                    <button type="submit" class="btn graybutton sharp" id="submitcheckout">Betal</button>
 
                                 </div>
                         </form>

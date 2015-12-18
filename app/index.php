@@ -50,10 +50,10 @@ session_start();
 
 
                 <div class="text-center">
-                    <h1>Tingfinderen</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+                    <h1>Velkommen til Tingfinderen</h1>
+                    <p>Her hos Tingfinderen sælger vi restaurerede produkter med en historie. Kig forbi vores butik i indre København eller tag på eventyr i vores online shop.</p>
                     <a href="shop.php" class="btn graybutton sharp">Køb</a>
-                    <a href="about.php" class="btn graybutton sharp">Sælg</a>
+                    <a href="about.php#sell" class="btn graybutton sharp">Sælg</a>
                 </div>
 
 
@@ -119,16 +119,6 @@ session_start();
 
                                                                             <hr style="float:right;">
                                         <img src="images/diamond.svg" class="diamondimage" alt="diamant">
-
-                                
-
-
-
-
-
-
-
-
 
 
 

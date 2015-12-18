@@ -235,7 +235,7 @@ body .cartamount {
   line-height: 1.4;
 }
 body .cartproductcontainer {
-  border: 1px solid black;
+  border: 1px solid #a89a75;
   background-color: white;
 }
 body .cartproduct {
@@ -246,9 +246,16 @@ body .cartproduct img {
   width: 100%;
   max-width: 400px;
 }
+body .cartproduct h2 {
+  color: #232323;
+}
 body .breadcrumb > li + li:before {
   color: #cccccc;
   content: "\276F\00a0";
+}
+body #cartnext {
+  display: block;
+  margin: auto;
 }
 body #wrapper {
   width: 80%;
@@ -390,6 +397,22 @@ body .tablediv {
 }
 body #submitcheckout {
   margin-top: 20px;
+}
+body .succesdiv {
+  margin: auto;
+  position: relative;
+  margin-top: 15%;
+  padding: 15px;
+  text-align: center;
+  background-color: #232323;
+  border: 1px solid #a89a75;
+}
+body .succesdiv p,
+body .succesdiv h1,
+body .succesdiv h2 {
+  color: #a89a75;
+  font-weight: 400;
+  line-height: 2;
 }
 body #active {
   background-color: #a89a75;
@@ -564,6 +587,17 @@ body .adminlogindiv input {
     background-color: #000000;
   }
 }
+.jumbotrontyskenhavn {
+  background-image: url(../images/tyskenhavn/coverimage.png) !important;
+  height: 300px;
+  border-radius: 0px !important;
+}
+#tyskenhavnbody {
+  background-color: #FFFFFF;
+}
+#tyskenhavnbody p {
+  color: #000000;
+}
 /** medium **/
 @media only screen and (min-width: 768px) {
   ul {
@@ -591,6 +625,23 @@ body .adminlogindiv input {
   body #submitcheckout {
     float: right;
     margin-top: 0px;
+  }
+  .succesdiv {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    margin-top: 15%;
+    padding: 15px;
+    text-align: center;
+    background-color: #232323;
+    border: 1px solid #a89a75;
+  }
+  .succesdiv p,
+  .succesdiv h1,
+  .succesdiv h2 {
+    color: #a89a75;
+    font-weight: 400;
+    line-height: 2;
   }
   body #footer .footerspace {
     margin-bottom: 0px;
