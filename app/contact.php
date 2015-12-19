@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+//feedback if mail is sent
 $sent = '';
 if(isset($_GET['mailsent'])){
     
@@ -24,20 +25,9 @@ if(isset($_GET['mailsent'])){
 require_once("php/head.php");
 
 ?>
-<style>
-
-    /** Google maps **/
-#map_canvas {
-
-    height:400px;
-    
-
-}
-    
-</style>
 
 <!-- Google maps API -->
-     <script type="text/javascript"
+<script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
 <script type="text/javascript">
@@ -73,13 +63,11 @@ require_once("php/head.php");
 //    });
  
   }
- 
 </script>
 
 </head>
 <!-- initialize Google Maps -->
-    <body onload="initialize()">
-
+<body onload="initialize()">
 
 <?php
 
@@ -87,11 +75,12 @@ require_once("php/head.php");
 require_once("php/header.php");
 
 ?>
-<div class="container">
 
+<div class="container">
 
 <!-- main -->
 <main>
+<!--          headertext-->
            <div class="row">
                <div class="col-sm-12">
                    
@@ -104,9 +93,9 @@ require_once("php/header.php");
 
        <div class="row">
            
+<!--           text and contactform-->
            <div class="col-sm-6 col-md-6 col-lg-7 contactpagebottombuffer">
                
-<!--               write to us-->
                <p>Send os endelig en besked, hvis du har spørgsmål eller vil vide andet. Vi er klar på tasterne, altid!</p>
                
 <!--               form-->
@@ -121,7 +110,7 @@ require_once("php/header.php");
             
            </div>
            
-           
+<!--           Google maps-->
            <div class="col-sm-6 col-md-6 col-lg-5">
                
                 <!-- Google maps -->
@@ -133,7 +122,6 @@ require_once("php/header.php");
         
     
 </main>
-
 
 </div>
 <?php 

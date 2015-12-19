@@ -10,17 +10,19 @@ session_start();
 //
 //    $hash = password_hash($passwordFromPost, PASSWORD_BCRYPT, $options);     //bruger default Bcrypt algoritmen
 //    echo $hash;
+
+//response to user
 $userresponse = '';
 
+//check if formvalues are set
 if(isset($_POST['usernamelogin']) && isset($_POST['passwordlogin'])){
-
+//filter
     $usernamelogin = filter_input(INPUT_POST, 'usernamelogin', FILTER_SANITIZE_STRING) or die('Error: username er ikke gyldigt');
     $passwordlogin = filter_input(INPUT_POST, 'passwordlogin', FILTER_SANITIZE_STRING) or die('Error: password er ikke gyldigt');
 
 require_once("php/config.php");
 
-// Password should NOT be storred as clear text in the DB.
-// Use: http://php.net/manual/en/function.password-hash.php
+//prepared statement
 $sql = 'select idadmin, password from admin where username=?';
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('s', $usernamelogin);
@@ -29,12 +31,10 @@ $stmt->execute();
 
 if($stmt->fetch() == 1){
         
-        //$pasquery = 'SELECT id from user where password = ? LIMIT 1';
-      //  echo $uidfromthedb;
-    //    echo $upassfromthedb;
-        
+    //checks password by using a verify function
         if(password_verify($passwordlogin, $upass)){
                 
+            //starts session and redirects
             $_SESSION['uid'] = $uidfromthedb;
 //            echo 'session startet';
             header("Location: php/adminview.php");
@@ -68,8 +68,10 @@ if($stmt->fetch() == 1){
 
 </head>
 <body>
+<!--back to frontpage link-->
 <a href="index.php" class="admintext">Tilbage til forside</a>
 
+<!--loginbox-->
 <div class="adminlogindiv">
 
 <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" name="adminloginform" onsubmit="return validateadminloginform()">

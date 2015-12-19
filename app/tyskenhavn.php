@@ -52,7 +52,7 @@ session_start();
 
             <div class="navbar-header">
 
-                <a href="tyskenhavn.php"><img src="images/tyskenhavn/tyskenhavnlogo.png" alt="Tingfinderen logo" id="tyskenhavnlogo"></a>
+                <a href="tyskenhavn.php"><img src="images/tyskenhavn/tyskenhavn-logo.svg" alt="Tingfinderen logo" id="tyskenhavnlogo"></a>
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" id="nav-icon4">
                     <span class="icon-bar"></span>
@@ -77,32 +77,31 @@ session_start();
 <!--                    CART IN MENU-->
                     <li><a href="#"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount">0</p></a></li>
 
-
-                
-
                 </ul>
 
             </div>
-
 
         </div>
 
     </div>
 
-
-            
-
-            <div class="container">
+    <div class="container">
+               
                 <div class="row">
+                   
+<!--                   coverimage-->
                     <div class="col-xs-12">
                            <img src="images/tyskenhavn/coverimage.png" alt="tyskenhavncoverimage" style="width:100%">
                     </div>
+                    
                 </div>
+                   
                     <!-- main -->
                     <main>
 
                         <div class="row bot-buffer">
 
+<!--                           wine 1-->
                             <div class="col-sm-3 bot-buffer">
 
                                 <img src="images/tyskenhavn/vin-flaske.svg" alt="1.step in proces" class="processicon" />
@@ -111,6 +110,7 @@ session_start();
 
                             </div>
 
+<!--                           wine2-->
                             <div class="col-sm-3 bot-buffer">
 
                                 <img src="images/tyskenhavn/vin-flaske.svg" alt="2.step in proces" class="processicon" />
@@ -119,6 +119,7 @@ session_start();
 
                             </div>
 
+<!--                           wine 3-->
                             <div class="col-sm-3 bot-buffer">
 
                                 <img src="images/tyskenhavn/vin-flaske.svg" alt="3.step in proces" class="processicon" />
@@ -127,6 +128,7 @@ session_start();
 
                             </div>
 
+<!--                           wine 4-->
                             <div class="col-sm-3 bot-buffer">
 
                                 <img src="images/tyskenhavn/vin-flaske.svg" alt="4.step in proces" class="processicon" />
@@ -135,17 +137,17 @@ session_start();
 
                             </div>
 
-
-
-                        </div>                    
-<hr>
+                        </div>
+                                      
+                            <hr>
+                            
                         <div class="row bot-buffer">
 
-
-                           
+<!--                           leftcolumns-->
                             <div class="col-sm-9 bot-buffer top-buffer">
                             
                             <div class="row bot-buffer">
+<!--                               column 1-->
                                 <div class="col-sm-12 top-buffer">
 
 <h2>Rødvin</h2>
@@ -155,7 +157,7 @@ session_start();
                                </div>
                                
                             <div class="row">
-                            
+<!--                            column 2-->
                             <div class="col-sm-12 bot-buffer">
 
 <h2>Hvidvin</h2>
@@ -163,14 +165,11 @@ session_start();
                              
                              </div>
                             
-                              
                                </div>
-                               
-                                
                                
                                 </div>
 
-<!--                           facebook feed-->
+<!--                           right column-->
                             <div class="col-sm-3 bot-buffer top-buffer">
 
 <h2>Rosévin</h2>
@@ -180,58 +179,63 @@ session_start();
 
                         </div>
 
-
                     </main>
-
 
             </div>
             
 <!--        footer-->
+<div id="footer" class="tyskenhavnfooter">
+   
+    <div class="container">
        
-    <div id="footer" class="tyskenhavnfooter">
-<div class="container">
-    <div class="row">
+        <div class="row">
+        
+<!--           Contactinfo-->
+            <div class="col-sm-3 footerspace">
 
-        <div class="col-sm-3 footerspace">
+                <p>Kontakt:
+                    <br/>+45 21 33 32 09
+                    <br/> kontakt@tyskenhavn.dk
+                </p>
+
+            </div>
+            
+<!--            Location-->
+            <div class="col-sm-3 footerspace">
+
+                <p>Adresse:<br>
+                Tyskenhavn ApS<br>
+                Knabrostræde 25 kl.<br>
+                1210 København K<br>
+                Danmark
+                </p>
+
+            </div>
+            <div class="col-sm-3 footerspace">
+
+
+            </div>
+            
+<!--            Social Media-->
+            <div class="col-sm-3">
+            
+                <p>Find os også på sociale medier</p>
+                <a href="#"><i class="fa fa-facebook-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
+                <a href="#"><i class="fa fa-twitter-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
+                <a href="#"><i class="fa fa-instagram tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
+                <a href="#"><i class="fa fa-youtube-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
+
+           <a href="#"><img src="images/trustpilot.png" id="trustpilot" alt="trustpilot"></a>
            
-            <p>Kontakt:
-                <br/>+45 21 33 32 09
-                <br/> kontakt@tyskenhavn.dk
-            </p>
+            </div>
 
-        </div>
-        <div class="col-sm-3 footerspace">
-
-            <p>Adresse:<br>
-            Tyskenhavn ApS<br>
-            Knabrostræde 25 kl.<br>
-            1210 København K<br>
-            Danmark
-            </p>
-
-        </div>
-        <div class="col-sm-3 footerspace">
-
-
-        </div>
-        <div class="col-sm-3">
-<p>Find os også på sociale medier</p>
-            <a href="#"><i class="fa fa-facebook-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-twitter-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-google-plus-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-instagram tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa fa-youtube-square tyskenhavnsocialmedia" style="font-size:48px;"></i></a>
-
-       <a href="#"><img src="images/trustpilot.png" id="trustpilot" alt="trustpilot"></a>
         </div>
 
     </div>
-
+    
 </div>
-</div>
-        
-        
-        
+    
     </body>
 
-    </html>
+</html>

@@ -37,7 +37,7 @@ require_once("php/header.php");
         
         <div class="col-sm-6">
           
-          <!--        icon-->
+          <!--        gem with question mark icon-->
            <div class="row">
             <div class="col-sm-2">
                 <img src="images/questiongem.svg" alt="1.step in proces" class="processiconabout smallprocessicons" />
@@ -48,9 +48,10 @@ require_once("php/header.php");
             </div>
             </div>
             
+<!--            goldline-->
             <hr class="goldhr">
             
-            <!--        icon-->
+            <!--        cleaning gem icon-->
             <div class="row">
             <div class="col-sm-2">
                 <img src="images/cleangem.svg" alt="2.step in proces" class="processiconabout smallprocessicons" />
@@ -61,9 +62,10 @@ require_once("php/header.php");
             </div>
             </div>
             
+            <!--            goldline-->
             <hr class="goldhr">
             
-            <!--        icon-->
+            <!--        give gem icon-->
             <div class="row">
             <div class="col-sm-2">
                 <img src="images/givegem.svg" alt="3.step in proces" class="processiconabout smallprocessicons" />
@@ -74,9 +76,10 @@ require_once("php/header.php");
             </div>
             </div>
             
+            <!--            goldline-->
             <hr class="goldhr">
             
-            <!--        icon-->
+            <!--        shiny gem icon-->
             <div class="row">
             <div class="col-sm-2">
                 <img src="images/shinygem.svg" alt="4.step in proces" class="processiconabout smallprocessicons" />
@@ -90,7 +93,7 @@ require_once("php/header.php");
         </div>
         
         
-        
+<!--        right column-->
         <div class="col-sm-6">
           
            <div class="row">

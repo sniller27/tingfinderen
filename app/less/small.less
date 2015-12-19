@@ -9,8 +9,10 @@
 
 //tyskenhavn
 @newgray : #521F1F;
-@newblue : #5C4E5B;
-@newgold : #A78C26;
+@newblue : #FFFFFF;
+@newgold : #eaaa28;
+//@newgold : #A78C26;
+//lolo @newgold : ##484848;
 
 html {
     overflow-y: scroll;
@@ -325,6 +327,13 @@ body {
                 display: block;
             }
         }
+//        google maps
+        #map_canvas {
+
+            height:400px;
+
+
+        }
     }
 //    PAYMENT PAGE
     .paymentinfo {
@@ -630,6 +639,9 @@ body {
     h2 {
         color: @newgold;
     }
+    p{
+        color: #000000;
+    }
     hr {
         border-top: 1px solid @newgold;
     }
@@ -639,16 +651,24 @@ body {
         border-bottom: 2px solid @newgold;
     }
     .tyskenhavnfooter {
+        p {
+            color: #FFFFFF;
+        }
         background-color: @newgray;
         border-top: 2px solid @newgold;
         
         .tyskenhavnsocialmedia {
             color: @newgold;
+            transition: 0.2s;
+        }
+        i:hover{
+            color: #ffc653;
+            transition: 0.2s;
         }
     }
     #tyskenhavnlogo {
-        max-width: 200px;
-        margin: 0px 0px 0px 10px;
+        width: 200px;
+        margin: 15px 0px 0px 6px !important;
     }
    
     .navbar p {
@@ -659,7 +679,7 @@ body {
         color: @newgold;
         font-weight: 400;
     }
-    .navbar-collapse,
+    .navbar-collapse,    
     .navbar-form {
         border-color: @newgold;
     }

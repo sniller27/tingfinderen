@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-
 //customerfeedback
 $feedback = '';
 
+//checks if product has been added to the cart by using get parameter
 if(isset($_GET['productid']) && isset($_GET['qty'])){
     
     $pid = $_GET['productid'];
@@ -12,59 +12,47 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
 
     $stock = 0;
 
-require_once("php/config.php");
+    require_once("php/config.php");
     
-    //SQL query
+    //SQL query that select product stock
     $sql = "select stock from products where idproducts = ? LIMIT 1";
 
-
-//prepared statement for produkt info
+    //prepared statement for produkt info
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $pid);
     $stmt->bind_result($pstockid);
     $stmt->execute();
     
-                        
-           
-    //udtrækker personinfo fra database
+    //saves stock as variable
     while($stmt->fetch()){
         
         $stock = $pstockid;
         
     }
 
+    //checks if shoppingcart is set
     if(isset($_SESSION["items"][$pid])){
         
+        //compares stock quantity to shoppingcart quantity of the product
         if($_SESSION["items"][$pid]>=$stock){
     
-            $feedback = '<h1 style="color:red">Vi har ikke flere af dette produkt på lager</h1>';
+            $feedback = '<h1 style="color:#e63c3c">Vi har ikke flere af dette produkt på lager</h1>';
 
         }else {
-    
-    
-    
-            //opretter en session med produktet
-        //    $_SESSION['items'][$id]= $qty;
-
+        //adds product to shoppingcart quantity
             $_SESSION["items"][$pid] += $qty;
 
-            $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
-
+            $feedback = '<h1 style="color:#68E63C">Tilføjet til vogn</h1>';
 
         }
         
+        }else {
+        //creates key to items with productid and quantity
+                $feedback = '<h1 style="color:#68E63C">Tilføjet til vogn</h1>';
+                $_SESSION["items"][$pid] = $qty;
 
-        
-        
-    }else {
-        
-        $feedback = '<h1 style="color:green">Tilføjet til vogn</h1>';
-        $_SESSION["items"][$pid] = $qty;
-        
-    }
-    
+        }
 
-    
 }
 
 ?>
@@ -81,80 +69,76 @@ require_once("php/config.php");
 
         <?php
 
-//head info
-require_once("php/head.php");
+        //head info
+        require_once("php/head.php");
 
-?>
+        ?>
             
-    <!--colorbox links-->
-    <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
-    <script src="plugins/colorbox/jquery-1.11.1.js"></script>
-    <script src="plugins/colorbox/jquery.colorbox.js"></script>
-    <script src="plugins/colorbox/colorbox.js"></script>
-
-
+        <!--Colorbox links-->
+        <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
+        <script src="plugins/colorbox/jquery-1.11.1.js"></script>
+        <script src="plugins/colorbox/jquery.colorbox.js"></script>
+        <script src="plugins/colorbox/colorbox.js"></script>
 
     </head>
 
     <body>
+       
         <?php
 
-//header
-require_once("php/header.php");
+        //header
+        require_once("php/header.php");
 
-?>
+        ?>
             <div class="container">
 
                 <div class="row">
-
 
                     <!-- main -->
                     <main>
 
                         <?php 
-    
+    //checks if a get parameter is set
     if(isset($_GET['productid'])){
         
             $productid = $_GET['productid'];
         
-        
     }
     
-    
-    
     require_once("php/config.php");
- 
-
-    //vælger alt information som er tilknyttet projektet og den der har oprettet det
+                        
+    //selects information about product
     $sql = "select productname, productdescription, price, mainimage  from products where idproducts = ? limit 1";    
     
-    //prepared statement for produkt info
+    //prepared statement for productinfo
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $productid);
     $stmt->bind_result($pname, $pdesc, $price, $pimage);
     $stmt->execute();
     
-                        
-           
-    //udtrækker personinfo fra database
+    //printing products with database information
     while($stmt->fetch()){
         
         ?>
 
-
+<!--                           breadcrumbs-->
                             <div class="col-xs-12">
 
                                 <ol class="breadcrumb top-buffer">
+                                   
                                     <li><a href="shop.php">Shop</a></li>
-                                    <li class="active">
-                                        <?= $pname ?>
-                                    </li>
+                                    <li class="active"><?= $pname ?></li>
+                                    
                                 </ol>
 
                                 <?= $feedback ?>
-                                    <h1><?= $pname ?></h1>
+                                
+<!--                                productname-->
+                                <h1><?= $pname ?></h1>
 
                             </div>
+                            
+<!--                            productimage-->
                             <div class="col-sm-6 productpage">
 
                                 <img src="<?= $pimage ?>" alt="<?= $pname ?>">
@@ -162,6 +146,7 @@ require_once("php/header.php");
 
                             </div>
 
+<!--                           productinformation and button-->
                             <div class="col-sm-6 product">
                                 <p>
                                     <?= $pdesc ?>
@@ -174,13 +159,13 @@ require_once("php/header.php");
                                 <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&amp;qty=1" class="btn graybutton sharp">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
                             </div>
 
-
+<!--                           Colorbox slides-->
                             <div class="col-xs-12">
                                 <p>Klik på billederne for at se forstørret udgave.</p>
                                 <?php
     }
     
-    //prepared statement for produkt info
+    //prepared statement
     $sqlimg = "select imagesource from productimages where products_idproducts = ?";
     $stmtimg = $conn->prepare($sqlimg);
     $stmtimg->bind_param('i', $productid);
@@ -194,12 +179,11 @@ require_once("php/header.php");
 <!--colorbox billeder-->
 <a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="produktbilled" /></a>
 
-                                    <?php
+    <?php
             
 }
     ?>
                             </div>
-
 
                     </main>
 
@@ -207,11 +191,11 @@ require_once("php/header.php");
 
             </div>
 
-            <?php 
-//footer
-require_once("php/footer.php");
-    
-?>
+        <?php 
+        //footer
+        require_once("php/footer.php");
+
+        ?>
     </body>
 
-    </html>
+</html>

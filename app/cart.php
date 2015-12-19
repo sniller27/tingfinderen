@@ -5,17 +5,16 @@ session_start();
 $customerfeedback = '';
 $sessionids = '';
 
-
+//deletes product if GET parameter is set
 if(isset($_GET['id'])){
     
     $deleteproductid = $_GET['id'];
     
-    unset($_SESSION['items'][$deleteproductid]);
-        
+    unset($_SESSION['items'][$deleteproductid]);    
     
 }
 
-//tester om itemarrayet indeholder produkter
+//checks if itemsarray contains products
 if(isset($_SESSION['items']) && $_SESSION['items'] != true){
     
 //    echo 'array findes ikke';
@@ -23,12 +22,9 @@ if(isset($_SESSION['items']) && $_SESSION['items'] != true){
     
 }
 
- 
-
-
 ?>
-    <!DOCTYPE html>
-    <html lang="da">
+<!DOCTYPE html>
+<html lang="da">
 
     <head>
 
@@ -49,13 +45,11 @@ require_once("php/head.php");
 
     <body>
         <?php
-//udprinter array til test
-//print_r($_SESSION);
         
-//header
-require_once("php/header.php");
+        //header
+        require_once("php/header.php");
 
-?>
+        ?>
             <div class="container">
 
 
@@ -79,19 +73,22 @@ require_once("php/header.php");
                     </div>
                   </div> 
                    
+<!--                   shoppingcart-->
                     <h1>Indkøbsvogn</h1>
                     <?php 
-    
+    //customer feedback
     echo $customerfeedback;
     
+    //checks if itemsarray is set
     if(isset($_SESSION["items"])){
    
+    //saving product id's in variable
     foreach($_SESSION["items"] as $key => $val)
     { 
         $sessionids .= $key . ',';
     }
         
-    //save ids for SQL
+    //trimming variable for SQL
     $sessionids = rtrim($sessionids, ',');
         
     require_once("php/config.php");
@@ -99,11 +96,12 @@ require_once("php/header.php");
     //SQL query
     $sql = "select * from products where idproducts in ($sessionids)";
 
-    //forbinder query til MySQL
+    //connects to databse
     $result = $conn->query($sql);
 
     $totalprice = 0;
-    //udtrækker fra database
+        
+    //getting from database and prints out products
     while($row = $result->fetch_array()){
     
     $productid = $row['idproducts'];
@@ -160,7 +158,7 @@ require_once("php/header.php");
     }
     
     
-    //checkout button
+    //totalprice and button to paymentpage
     if(isset($_SESSION["items"])){
         
         ?>
@@ -190,10 +188,9 @@ require_once("php/header.php");
                                     <h2><?= $totalprice ?> kr,-</h2>
 
                                 </div>
+                                
                                 <div class="col-xs-12 col-lg-2">
                                     
-<!--                                    <a href="checkout.php" class="btn btn-default">Videre til kassen</a>-->
-<!--                                    <a href="checkout.php" class="textdecoration"><h2 href="checkout.php">Videre til kassen<i class="fa fa-arrow-right"></i></a>-->
                                 <a href="checkout.php" class="textdecoration" ><h2 href="checkout.php" class="btn graybutton sharp" id="cartnext">Til betaling<i class="fa fa-arrow-right"></i></a>
                           
                                 </div>
@@ -205,7 +202,7 @@ require_once("php/header.php");
                             
                           </div>   
 
-                                <?php
+    <?php
         
     }
     
@@ -217,7 +214,7 @@ require_once("php/header.php");
 
 
             </div>
-            <?php 
+<?php 
 //footer
 require_once("php/footer.php");
     
@@ -228,6 +225,6 @@ require_once("php/footer.php");
     $('[data-toggle="tooltip"]').tooltip();   
 
 </script>
-    </body>
+</body>
 
-    </html>
+</html>

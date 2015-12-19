@@ -14,13 +14,11 @@ session_start();
 
         <?php
 
-    //head info
-    require_once("php/head.php");
+        //head info
+        require_once("php/head.php");
 
-    ?>
-           
-            
-
+        ?>
+        
     </head>
 
     <body>
@@ -40,15 +38,15 @@ session_start();
        
         <?php
 
-    //header
-    require_once("php/header.php");
+        //header
+        require_once("php/header.php");
 
-    ?>
+        ?>
 
-
+<!--           backgroundimage-->
             <div class="jumbotron">
-
-
+               
+<!--               text and buttons over backgroundimage-->
                 <div class="text-center">
                     <h1>Velkommen til Tingfinderen</h1>
                     <p>Her hos Tingfinderen sælger vi restaurerede produkter med en historie. Kig forbi vores butik i indre København eller tag på eventyr i vores online shop.</p>
@@ -61,18 +59,13 @@ session_start();
 
             <div class="container">
 
-                <?php 
-    
-//    require_once("php/carticon.php");
-            
-    ?>
-
-
                     <!-- main -->
                     <main>
 
+<!--                       gem icons-->
                         <div class="row bot-buffer">
 
+<!--                           questiongem icon-->
                             <div class="col-sm-3">
 
                                 <img src="images/questiongem.svg" alt="1.step in proces" class="processicon" />
@@ -81,6 +74,7 @@ session_start();
 
                             </div>
 
+<!--                           cleaning gem icon-->
                             <div class="col-sm-3">
 
                                 <img src="images/cleangem.svg" alt="2.step in proces" class="processicon" />
@@ -89,6 +83,7 @@ session_start();
 
                             </div>
 
+<!--                           selling gem icon-->
                             <div class="col-sm-3">
 
                                 <img src="images/givegem.svg" alt="3.step in proces" class="processicon" />
@@ -97,6 +92,7 @@ session_start();
 
                             </div>
 
+<!--                           shiny gem icon-->
                             <div class="col-sm-3">
 
                                 <img src="images/shinygem.svg" alt="4.step in proces" class="processicon" />
@@ -105,44 +101,34 @@ session_start();
 
                             </div>
 
-
-
                         </div>
 
+<!--                       diamond line-->
                         <div class="row diamondrow bot-buffer">
-
                             <div class="col-xs-12">
-
-                          
-                                    
-                                                                           <hr style="float:left;">
-
-                                                                            <hr style="float:right;">
-                                        <img src="images/diamond.svg" class="diamondimage" alt="diamant">
-
-
-
+                                <hr style="float:left;">
+                                <hr style="float:right;">
+                                <img src="images/diamond.svg" class="diamondimage" alt="diamant">
                             </div>
-
                         </div>
 
                         <div class="row bot-buffer">
-
-
                            
-                            <div class="col-sm-9 bot-buffer top-buffer">
+                           <div class="col-sm-9 bot-buffer top-buffer">
                             
+<!--                            hvem er vi?-->
                             <div class="row bot-buffer">
                                 <div class="col-sm-12 top-buffer">
 
 <h2>Hvem er vi?</h2>
     <p>Tingfinderen er en nyetableret virksomhed i Danmark med fokus på spændende highend genbrug. EST 2015. Vi fokuserer på indkøb af kommunalt affald vi forvandler til guld, antikke spisfindiheder bliver rekonstrueret til det moderne hjem eller helt nye designs bliver skabt komplet fra bunden. Vi henvender os ikke til den enkelte katergori, men breder os gerne ud og kan finde på hvad som helst. Om det er lamper, møbler, heste eller fly, det er ligemeget. Vores team kombinerer deres ekspertise og kreative tankeveje med innovativt håndværk for at leverer de bedste produkter, af allerbedste kvalitet.</p>
                              
-                             </div> 
-                               </div>
+                                 </div> 
+                            </div>
                                
                             <div class="row">
                             
+<!--                            Konceptet-->
                             <div class="col-sm-6 bot-buffer">
 
 <h2>Konceptet</h2>
@@ -150,6 +136,7 @@ session_start();
                              
                              </div>
                              
+<!--                             YouTube video-->
                              <div class="col-sm-6 bot-buffer">
 
 <iframe class="youtubevideo" src="https://www.youtube.com/embed/l12xBNcM_Ho" allowfullscreen></iframe>
@@ -158,11 +145,9 @@ session_start();
                               
                                </div>
                                
-                               
-                               
                                 </div>
 
-<!--                           facebook feed-->
+<!--                           Facebook feed-->
                             <div class="col-sm-3 facebookfeedbuffer">
 
                                 <div class="fb-page" data-href="https://www.facebook.com/BJCtingfinderen-995619370494820/timeline" data-tabs="timeline" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
@@ -171,16 +156,14 @@ session_start();
 
                         </div>
 
-
                     </main>
-
 
             </div>
             <?php 
             //footer
             require_once("php/footer.php");
 
-        ?>
+            ?>
     </body>
 
-    </html>
+</html>

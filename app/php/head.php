@@ -5,12 +5,6 @@
 
 <!-- Favicons -->
 <link rel="icon" type="image/png" href="images/favicon.ico">
-<!--[if IE]><link rel="shortcut icon" href="http://www.example.com/alternateimage.ico"/><![endif]-->
-
-<!-- en vidst bedre måde
-<link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
-<link rel="icon" href="images/logo.jpg" type="image/x-icon">
--->
 <link rel="apple-touch-icon" href="images/logo.jpg">
 
 <!-- Bootstrap -->
@@ -26,7 +20,6 @@
 
 <!-- Google font -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,600,900,800' rel='stylesheet' type='text/css'>
-
 
 <!--Fontawesome CDN-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

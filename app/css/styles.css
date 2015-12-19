@@ -382,6 +382,9 @@ body main .contactform textarea {
 body main .contactform label {
   display: block;
 }
+body main #map_canvas {
+  height: 400px;
+}
 body .paymentinfo {
   background-color: white;
   border-radius: 2px;
@@ -592,42 +595,55 @@ body .jumbotrontyskenhavn {
   background-size: 100% 100%;
 }
 #tyskenhavnbody {
-  background-color: #5C4E5B;
+  background-color: #FFFFFF;
 }
 #tyskenhavnbody .icon-bar {
-  background-color: #A78C26;
+  background-color: #eaaa28;
 }
 #tyskenhavnbody h2 {
-  color: #A78C26;
+  color: #eaaa28;
+}
+#tyskenhavnbody p {
+  color: #000000;
 }
 #tyskenhavnbody hr {
-  border-top: 1px solid #A78C26;
+  border-top: 1px solid #eaaa28;
 }
 #tyskenhavnbody #tyskenhavnheader {
   background-color: #521F1F;
-  border-bottom: 2px solid #A78C26;
+  border-bottom: 2px solid #eaaa28;
 }
 #tyskenhavnbody .tyskenhavnfooter {
   background-color: #521F1F;
-  border-top: 2px solid #A78C26;
+  border-top: 2px solid #eaaa28;
+}
+#tyskenhavnbody .tyskenhavnfooter p {
+  color: #FFFFFF;
 }
 #tyskenhavnbody .tyskenhavnfooter .tyskenhavnsocialmedia {
-  color: #A78C26;
+  color: #eaaa28;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+#tyskenhavnbody .tyskenhavnfooter i:hover {
+  color: #ffc653;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 #tyskenhavnbody #tyskenhavnlogo {
-  max-width: 200px;
-  margin: 0px 0px 0px 10px;
+  width: 200px;
+  margin: 15px 0px 0px 6px !important;
 }
 #tyskenhavnbody .navbar p {
   color: white;
 }
 #tyskenhavnbody .navbar-default .navbar-nav > li > a {
-  color: #A78C26;
+  color: #eaaa28;
   font-weight: 400;
 }
 #tyskenhavnbody .navbar-collapse,
 #tyskenhavnbody .navbar-form {
-  border-color: #A78C26;
+  border-color: #eaaa28;
 }
 /** medium **/
 @media only screen and (min-width: 768px) {
@@ -720,12 +736,11 @@ body .jumbotrontyskenhavn {
   }
 }
 #tyskenhavnbody #tyskenhavnlogo {
-  max-width: 150px;
-  margin: 0px;
-  margin-top: 23px;
+  width: 150px;
+  margin: 15px 0px 0px 6px !important;
 }
 #tyskenhavnbody .hvr-underline-from-center:before {
-  background: #A78C26;
+  background: #eaaa28;
 }
 /** big **/
 @media only screen and (min-width: 1200px) {
@@ -733,7 +748,7 @@ body .jumbotrontyskenhavn {
     width: 47% !important;
   }
   #tyskenhavnbody #tyskenhavnlogo {
-    max-width: 350px;
+    width: 200px;
     margin-top: 10px;
   }
 }

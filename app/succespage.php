@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<!--succesbox-->
 <div class="succesdiv">
 
 <h1>Din betaling er blevet gennemført</h1>

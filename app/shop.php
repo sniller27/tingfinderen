@@ -1,7 +1,6 @@
 <?php 
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -29,37 +28,38 @@ require_once("php/header.php");
 
 ?>
 
-
 <!--ORIGINAL GRID-->
 <div class="container">
   
 <main>
     
     <div class="row">
-        <div class="col-xs-12 product"><h1>Produkter</h1></div>
     
+<!--    product header-->
+    <div class="col-xs-12 product">
+    <h1>Produkter</h1>
+    </div>
     
     <?php 
     
     require_once("php/config.php");
     
-    //SQL query
+    //SQL query to select all products
     $sql = "select * from products";
 
-    //forbinder query til MySQL
+    //connects to db
     $result = $conn->query($sql);
 
-    //udtrækker fra database
+    //gets data from db and prints out products
     while($row = $result->fetch_array()){
 
     ?>
-    
     
     <div class="col-xs-6 col-sm-3 product productsize nopadding">
 
         <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
                 <img src="<?= $row['mainimage']; ?>" alt="<?= $row['productname']; ?>" class="separator" />
-         </a>
+        </a>
          
         <div class="productinfoshop">
         <p><?= $row['productname']; ?></p>
@@ -67,16 +67,13 @@ require_once("php/header.php");
         </div>
     </div>
     
-
-    
     <?php
+        
     }
-    
-    
+        
     ?>
     </div>
 </main>
-
 
 </div>
 
@@ -85,9 +82,6 @@ require_once("php/header.php");
 require_once("php/footer.php");
     
 ?>
-
-
-
 
 </body>
 </html>

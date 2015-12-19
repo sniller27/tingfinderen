@@ -1,16 +1,15 @@
 <?php 
 session_start();
 
+//checks if logged in og redirects
 if(isset($_SESSION['uid'])){
 ?>
-    <!DOCTYPE html>
-    <html lang="da">
+<!DOCTYPE html>
+<html lang="da">
 
     <head>
-        <meta charset="UTF-8">
-        <title>Untitled Document</title>
-        <meta name="Author" content="" />
-        <link rel="stylesheet" type="text/css" href="style.css">
+       
+        <title>Adminpanel</title>
 
         <?php
         require_once('head.php');
@@ -20,16 +19,19 @@ if(isset($_SESSION['uid'])){
 
     <body>
 
-
-
         <div class="container">
+           
+<!--           logout-->
             <a href="logout.php">Log ud</a>
 
             <div class="row">
 
                 <div class="col-sm-12 table-responsive">
 
+<!--                   header title-->
                     <h1>Ordrer</h1>
+                    
+<!--                    table-->
                     <table class="table">
                         <tr>
                             <th>Ordre ID</th>
@@ -41,11 +43,12 @@ if(isset($_SESSION['uid'])){
                             <th>Leveringsadresse</th>
                         </tr>
 
-                        <?php
-
+<?php
+//get data from db
+    
 require_once("config.php");
     
-    //SQL query
+    //SQL query selects information related to order
     $sql = "select idorders, orders.date, status, idproducts, productname, quantity, addressname, address, zipcodes_idzipcodes, cityname 
 from orders 
 	LEFT JOIN pickupaddresses 
@@ -57,12 +60,12 @@ from orders
     INNER JOIN billinginformation 
     ON billinginformation.orders_idorders=orders.idorders
     INNER JOIN zipcodes 
-    ON billinginformation.zipcodes_idzipcodes=zipcodes.idzipcodes;";
+    ON billinginformation.zipcodes_idzipcodes=zipcodes.idzipcodes order by orders.date asc;";
 
-    //forbinder query til MySQL
+    //connects to db
     $result = $conn->query($sql);
 
-    //udtrækker fra database
+    //prints out table data with data from db
     while($row = $result->fetch_array()){ 
         
         ?>
@@ -74,25 +77,15 @@ from orders
                                     <?= $row['date']; ?>
                                 </td>
                                 <td>
-                                    <?php 
-        
-        if($row['status'] == 0){
-            
-            echo 'ikke sendt';
-            
-        }else {
-            
-            echo 'ikke sendt';
-
-            
-        }
-         ?>
+                                    <?= $row['status']; ?>
                                 </td>
-                                  <td><?= $row['idproducts']; ?></td>
+                                <td><?= $row['idproducts']; ?></td>
                                 <td><?= $row['productname']; ?></td>
                                 <td><?= $row['quantity']; ?></td>
                                 <td>
-                                <?php if(!$row['addressname']==''){
+                                <?php
+                                //checks af buyer has a pickup address
+                                if(!$row['addressname']==''){
                                  
                                 echo $row['addressname'] . ' (til afhentning)';
 
@@ -110,20 +103,19 @@ from orders
 
 ?>
 
-
                     </table>
 
                 </div>
 
             </div>
-
-                        
+       
         </div>
 
     </body>
 
-    </html>
-    <?php }else {
+</html>
+<?php 
+}else {
     
     header("Location: ../index.php");
     

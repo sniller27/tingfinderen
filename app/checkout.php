@@ -1,13 +1,14 @@
 <?php 
 session_start();
 
+//only access to page if shoppingcart isn't empty
 if(isset($_SESSION["items"])){
 $sessionids = '';
 
 
-//tjekker om form er blevet submitted
+//checks for post form submission
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+//filter userinputs
     $name = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING) or die('Error: fornavn er ikke gyldigt');
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING) or die('Error: efternavn er ikke gyldigt');
     $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING) or die('Error: adressen er ikke gyldig');
@@ -15,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('Error: email er ikke gyldig');
     $orderid;
 
-    //check radiobuttons
+    //checks radiobuttons
     if($_POST['sent'] == 'yessent'){
         
         $deliveryaddress = 'null';
@@ -30,33 +31,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     require_once("php/config.php");
     
-    //insert order
+    //inserts order query
     $sql = "INSERT INTO `orders`(`status`, `deliveryaddresses_iddeliveryaddresses`) VALUES ('ikke sendt', $deliveryaddress);";
 
-    //prepared statement for produkt info
+    //prepared statement
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     
+    //gets id from the order which was just created
     $sqlorderid = "SELECT idorders FROM orders order by idorders desc LIMIT 1;";
     $result = $conn->query($sqlorderid);
 
-    //udtrækker fra database
+    //saves order id
     while($row = $result->fetch_array()){
     
         $orderid = $row['idorders'];
         
     }
     
-    //insert contactinformation
+    //insert contactinformation by using order id
     $sql = "INSERT INTO `billinginformation`(`name`, `lastname`, `address`, `mail`, `zipcodes_idzipcodes`, `orders_idorders`) VALUES (?,?,?,?,?,?)";
 
-    //prepared statement for produkt info
+    //prepared statement
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('ssssii', $name, $lastname, $address, $email, $zipcode, $orderid);
     $stmt->execute();
     
-    
-    //inserts qty of products to owner
+    //inserts qty of products related to the order
     foreach($_SESSION["items"] as $key => $val)
     { 
   
@@ -66,19 +67,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 //    echo $val . ' af produkt ' . $key . ' -- ';
     
-    
     }
 
-    
-    
     //SEND MAIL
+    //saves item ids in variable
      foreach($_SESSION["items"] as $key => $val)
     { 
         $sessionids .= $key . ',';
-    
     }
         
-    //save ids for SQL
+    //trims variable for SQL query
     $sessionids = rtrim($sessionids, ',');
         
     require_once("php/config.php");
@@ -86,12 +84,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //SQL query
     $sql = "select * from products where idproducts in ($sessionids)";
 
-    //forbinder query til MySQL
+    //connects to database
     $result = $conn->query($sql);
 
     $totalprice = 0;
+    //creates table for email
     $itemlist = '<table><thead align="left"><tr><th>Produkt</th><th>Antal</th><th>Samlet pris</th></tr></thead><tbody>';
-    //udtrækker fra database
+    
+    //gets data from database and puts in a table
     while($row = $result->fetch_array()){
     
     $productid = $row['idproducts'];
@@ -99,7 +99,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $totalproductprice = $row['price']*$productqty;
     $totalprice += $totalproductprice;
     
-        
         $itemlist .= '<tr>';
         $itemlist .= '<td width="250">';
         $itemlist .= $row['productname'];
@@ -125,10 +124,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $itemlist .= '</tr></tbody></table>'; 
 //                                            echo $itemlist;
 
-
-
-
-
+//inserts table in message
 $msg = <<<EOD
 <h1>Ordrebekræftelse</h1><br>
 <h2>Ordre nummer: $orderid</h2>
@@ -147,18 +143,13 @@ Venlig hilsen<br>
 Tingfinderen.dk
 
 EOD;
-//   $usersucces = "Info er sendt til email.";
-            //bruger mail function og sender mail
+
+    //sends email by using php mail function
     mail($email, "Tingfinderen.dk", $msg, "MIME-version: 1.0\nContent-type: text/html; charset= UTF-8");
     
-
-    
-    //RESET SHOPPINGCART
-    // Unset all of the session variables.
+    //RESET SHOPPINGCART and deleting all sessions
     $_SESSION = array();
 
-    // If it's desired to kill the session, also delete the session cookie.
-    // Note: This will destroy the session, and not just the session data!
     if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();
         setcookie(session_name(), '', time() - 42000,
@@ -167,6 +158,7 @@ EOD;
         );
     }
     
+    //page redirect
     header("Location: succespage.php");   
     
 }
@@ -185,10 +177,10 @@ EOD;
 
         <?php
 
-//head info
-require_once("php/head.php");
+        //head info
+        require_once("php/head.php");
 
-?>
+        ?>
     
 
     </head>
@@ -197,10 +189,10 @@ require_once("php/head.php");
        
         <?php
 
-//header
-require_once("php/header.php");
+        //header
+        require_once("php/header.php");
 
-?>
+        ?>
             <div class="container">
 
 
@@ -214,9 +206,7 @@ require_once("php/header.php");
                             <ol class="breadcrumb top-buffer">
 
                                 <li><a href="cart.php" class="textdecoration">Indkøbsvogn</a></li>
-                                <li class="active">
-                                    Kasse
-                                </li>
+                                <li class="active">Kasse</li>
                                 <li><a class="textdecoration">Betaling</a></li>
                                 <li><a class="textdecoration">Kvittering</a></li>
 
@@ -225,9 +215,7 @@ require_once("php/header.php");
                         </div>
                     </div>
 
-                    <!--    contactinformation-->
-
-
+                    <!--    Payment header title -->
                     <div class="row">
 
                         <div class="col-sm-12">
@@ -237,6 +225,8 @@ require_once("php/header.php");
                         </div>
 
                     </div>
+                    
+<!--                    contactinformation form-->
                     <div class="row">
                         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="contactform" name="checkoutform" onsubmit="return validatecheckoutform()">
 
@@ -260,21 +250,22 @@ require_once("php/header.php");
                                 
                                 require_once("php/config.php");
     
-                            //SQL query
-                            $sqloptionlist = "select * from pickupaddresses;";
+                                //SQL query for pickupaddresses
+                                $sqloptionlist = "select * from pickupaddresses;";
 
-                            //forbinder query til MySQL
-                            $result = $conn->query($sqloptionlist);
+                                //connects to db
+                                $result = $conn->query($sqloptionlist);
 
-                            //udtrækker fra database
-                            while($row = $result->fetch_array()){
+                                //get from db
+                                while($row = $result->fetch_array()){
 
-                            ?>
-                                        <option label="<?= $row['addressname']; ?>" value="<?= $row['iddeliveryaddresses']; ?>"><?= $row['addressname']; ?></option>
-                            <?php
+                                ?>
+                                
+            <option label="<?= $row['addressname']; ?>" value="<?= $row['iddeliveryaddresses']; ?>"><?= $row['addressname']; ?></option>
+                                
+                                <?php
 
-
-                            }
+                                }
                                 
                                 ?>
                                 </select>
@@ -282,7 +273,8 @@ require_once("php/header.php");
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
 
                             </div>
-<!--                            <div>-->
+
+<!--                               recipetable-->
                                 <div class="col-sm-6">
                                 <div class="tablediv">
 
@@ -294,32 +286,33 @@ require_once("php/header.php");
                                                 <th class="bold">Samlet pris</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <?php
+                                    <tbody>
+                                <?php
                                 
                                 
-                                
+    //prints out recipe if cart isn't empty                
     if(isset($_SESSION["items"])){
    
+    //saves item id's in variable
     foreach($_SESSION["items"] as $key => $val)
     { 
         $sessionids .= $key . ',';
     
     }
         
-    //save ids for SQL
+    //trims item ids for SQL
     $sessionids = rtrim($sessionids, ',');
         
     require_once("php/config.php");
     
-    //SQL query
+    //SQL query for selecting products in cart
     $sql = "select * from products where idproducts in ($sessionids)";
 
-    //forbinder query til MySQL
+    //connects to db
     $result = $conn->query($sql);
 
     $totalprice = 0;
-    //udtrækker fra database
+    //gets data from db and prints out
     while($row = $result->fetch_array()){
     
     $productid = $row['idproducts'];
@@ -342,15 +335,13 @@ require_once("php/header.php");
                                                     </tr>
 
 
-                                                    <?php
+    <?php
         
     }
         
     }
-                                
-                                
-                                
-                                ?>
+                             
+    ?>
                                        <tr class="lastcell">
                                            <td></td>
                                            <td></td>
@@ -360,6 +351,8 @@ require_once("php/header.php");
                                     </table>
                                 </div>
                                 </div>
+                                
+<!--                                paybutton-->
                                 <div class="col-sm-12">
 
                                     <button type="submit" class="btn graybutton sharp" id="submitcheckout">Betal</button>
@@ -367,24 +360,23 @@ require_once("php/header.php");
                                 </div>
                         </form>
 
-
                         </div>
 
                 </main>
 
 
                 </div>
+                
                 <?php 
-//footer
-require_once("php/footer.php");
-    
-?>
+                //footer
+                require_once("php/footer.php");
 
-<!--   JavaScript files  -->
-    <script src="js/script.js"></script>
+                ?>
+
+<!--   JavaScript validation  -->
+<script src="js/script.js"></script>
    
-   
-    </body>
+</body>
 
 </html>
 <?php
