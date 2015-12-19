@@ -587,16 +587,47 @@ body .adminlogindiv input {
     background-color: #000000;
   }
 }
-.jumbotrontyskenhavn {
-  background-image: url(../images/tyskenhavn/coverimage.png) !important;
-  height: 300px;
-  border-radius: 0px !important;
+body .jumbotrontyskenhavn {
+  background-image: url(../images/tyskenhavn/coverimage.png);
+  background-size: 100% 100%;
 }
 #tyskenhavnbody {
-  background-color: #FFFFFF;
+  background-color: #5C4E5B;
 }
-#tyskenhavnbody p {
-  color: #000000;
+#tyskenhavnbody .icon-bar {
+  background-color: #A78C26;
+}
+#tyskenhavnbody h2 {
+  color: #A78C26;
+}
+#tyskenhavnbody hr {
+  border-top: 1px solid #A78C26;
+}
+#tyskenhavnbody #tyskenhavnheader {
+  background-color: #521F1F;
+  border-bottom: 2px solid #A78C26;
+}
+#tyskenhavnbody .tyskenhavnfooter {
+  background-color: #521F1F;
+  border-top: 2px solid #A78C26;
+}
+#tyskenhavnbody .tyskenhavnfooter .tyskenhavnsocialmedia {
+  color: #A78C26;
+}
+#tyskenhavnbody #tyskenhavnlogo {
+  max-width: 200px;
+  margin: 0px 0px 0px 10px;
+}
+#tyskenhavnbody .navbar p {
+  color: white;
+}
+#tyskenhavnbody .navbar-default .navbar-nav > li > a {
+  color: #A78C26;
+  font-weight: 400;
+}
+#tyskenhavnbody .navbar-collapse,
+#tyskenhavnbody .navbar-form {
+  border-color: #A78C26;
 }
 /** medium **/
 @media only screen and (min-width: 768px) {
@@ -688,9 +719,21 @@ body .adminlogindiv input {
     right: 0;
   }
 }
+#tyskenhavnbody #tyskenhavnlogo {
+  max-width: 150px;
+  margin: 0px;
+  margin-top: 23px;
+}
+#tyskenhavnbody .hvr-underline-from-center:before {
+  background: #A78C26;
+}
 /** big **/
 @media only screen and (min-width: 1200px) {
   .diamondrow hr {
     width: 47% !important;
+  }
+  #tyskenhavnbody #tyskenhavnlogo {
+    max-width: 350px;
+    margin-top: 10px;
   }
 }

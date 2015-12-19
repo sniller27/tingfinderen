@@ -8,7 +8,9 @@
 @fontcolor : #e3e1e1;
 
 //tyskenhavn
-@tyskenhavn : #FFFFFF;
+@newgray : #521F1F;
+@newblue : #5C4E5B;
+@newgold : #A78C26;
 
 html {
     overflow-y: scroll;
@@ -444,7 +446,6 @@ body {
     }
     //logo
     #logo {
-        //        width: 80px;
         height: 70px;
         margin: 5px 5px 0px 5px;
     }
@@ -609,17 +610,60 @@ body {
     }
 }
 //tyskenhavn
+body {
 .jumbotrontyskenhavn {
     
-    background-image: url(../images/tyskenhavn/coverimage.png) !important;
-    height: 300px;
-    border-radius: 0px !important;
+    background-image: url(../images/tyskenhavn/coverimage.png);
+    background-size: 100% 100%;
     
 }
+    
+}
+
 #tyskenhavnbody {
+    background-color: @newblue;
     
-    background-color: @tyskenhavn;
-    p {
-        color: #000000;
+    .icon-bar {
+        background-color: @newgold;
     }
+    
+    h2 {
+        color: @newgold;
+    }
+    hr {
+        border-top: 1px solid @newgold;
+    }
+    
+    #tyskenhavnheader {
+        background-color: @newgray;
+        border-bottom: 2px solid @newgold;
+    }
+    .tyskenhavnfooter {
+        background-color: @newgray;
+        border-top: 2px solid @newgold;
+        
+        .tyskenhavnsocialmedia {
+            color: @newgold;
+        }
+    }
+    #tyskenhavnlogo {
+        max-width: 200px;
+        margin: 0px 0px 0px 10px;
+    }
+   
+    .navbar p {
+        color: white;
+    }
+   
+    .navbar-default .navbar-nav > li > a {
+        color: @newgold;
+        font-weight: 400;
+    }
+    .navbar-collapse,
+    .navbar-form {
+        border-color: @newgold;
+    }
+    
+    
 }
+
