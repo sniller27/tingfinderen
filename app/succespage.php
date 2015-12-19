@@ -16,9 +16,9 @@
 <!--succesbox-->
 <div class="succesdiv">
 
-<h1>Din betaling er blevet gennemført</h1>
-<h2>Klik for at komme til forsiden</h2>
-<a href="index.php" class="btn graybutton sharp">Til forsiden</a>
+<h1 class="usersucces">Din betaling er blevet gennemført</h1>
+<p>Klik for at komme til forsiden</p>
+<a href="index.php" class="btn graybutton sharp top-buffer">Til forsiden</a>
 
 </div>
 

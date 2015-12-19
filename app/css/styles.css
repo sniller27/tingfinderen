@@ -146,20 +146,33 @@ body p {
 }
 body h1 {
   font-size: 2em;
+  color: #e3e1e1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 300;
 }
 body h2 {
   font-size: 1.5em;
   color: #a89a75;
-  font-weight: 500;
+  font-weight: 400;
 }
 body .bold {
   font-weight: bold;
 }
 body .userwarning {
-  color: #ff0000;
+  color: #e63c3c;
+}
+body .usersucces {
+  color: #68E63C !important;
 }
 body .textdecoration {
   text-decoration: none;
+}
+body .floatleft {
+  float: left;
+}
+body .floatright {
+  float: right;
 }
 body .goldhr {
   border-top: 1px solid #a89a75;
@@ -222,6 +235,9 @@ body #notification {
   left: 60px;
   line-height: 1.7;
 }
+body .carticon {
+  font-size: 30px;
+}
 body .cartamount {
   background-color: #e63c3c;
   width: 23px;
@@ -235,7 +251,7 @@ body .cartamount {
   line-height: 1.4;
 }
 body .cartproductcontainer {
-  border: 1px solid #a89a75;
+  border: 1px solid #232323;
   background-color: white;
 }
 body .cartproduct {
@@ -253,31 +269,43 @@ body .breadcrumb > li + li:before {
   color: #cccccc;
   content: "\276F\00a0";
 }
+body .tooltip.bottom .tooltip-arrow {
+  border-bottom: 5px solid #232323;
+}
+body .tooltip-inner {
+  background-color: #232323;
+  color: #e3e1e1;
+}
 body #cartnext {
   display: block;
   margin: auto;
+  width: 153px;
+  margin-top: 20px;
 }
 body #wrapper {
   width: 80%;
   margin: auto;
 }
 body .jumbotron {
-  background-image: url(../images/antiqueworkshop.jpg);
+  background-image: url(../images/tingfinder-headerbillede.jpg);
   background-size: cover;
   line-height: 1;
   border-bottom: 2px solid #a89a75;
+  background-color: #000000;
 }
 body .jumbotron div {
   max-width: 1170px;
   margin: auto;
 }
 body .jumbotron h1 {
-  color: #e3e1e1;
-  text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.5);
+  color: #FFFFFF;
+  text-shadow: 0px 0px 20px #000000;
 }
 body .jumbotron p {
-  font-weight: bold;
+  font-weight: 500;
   color: #e3e1e1;
+  text-shadow: 0px 0px 20px #000000;
+  color: #FFFFFF;
 }
 body main {
   min-height: 400px;
@@ -354,6 +382,10 @@ body main .breadcrumb a {
 }
 body main a i {
   margin-left: 5px;
+}
+body main .colorboxpic {
+  border: 1px solid gray;
+  height: 80px;
 }
 body main .smallprocessicons {
   width: 188%;
@@ -498,6 +530,9 @@ body #footer .footerspace {
 body .admintext {
   color: #a89a75;
 }
+body .socialmediaicons {
+  font-size: 48px;
+}
 body #trustpilot {
   width: 120px;
   display: block;
@@ -590,12 +625,11 @@ body .adminlogindiv input {
     background-color: #000000;
   }
 }
-body .jumbotrontyskenhavn {
-  background-image: url(../images/tyskenhavn/coverimage.png);
-  background-size: 100% 100%;
-}
 #tyskenhavnbody {
   background-color: #FFFFFF;
+}
+#tyskenhavnbody .tyskenhavncoverimage {
+  width: 100%;
 }
 #tyskenhavnbody .icon-bar {
   background-color: #eaaa28;
@@ -668,6 +702,9 @@ body .jumbotrontyskenhavn {
   }
   .cartproduct img {
     width: 100%;
+  }
+  body #cartnext {
+    margin-top: 0px;
   }
   body #submitcheckout {
     float: right;

@@ -88,7 +88,7 @@ session_start();
 
                                 <img src="images/givegem.svg" alt="3.step in proces" class="processicon" />
                                 <h2 class="text-center">Sælger</h2>
-                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim. </p>
+                                <p class="text-center">Vores yderst velrestaurerede produkter bliver derefter solgt til vores flinke kunder, som altid kan forlade vores forretningen med oprejst pande og smil i øjnene.</p>
 
                             </div>
 
@@ -106,8 +106,8 @@ session_start();
 <!--                       diamond line-->
                         <div class="row diamondrow bot-buffer">
                             <div class="col-xs-12">
-                                <hr style="float:left;">
-                                <hr style="float:right;">
+                                <hr class="floatleft">
+                                <hr class="floatright">
                                 <img src="images/diamond.svg" class="diamondimage" alt="diamant">
                             </div>
                         </div>
@@ -139,7 +139,8 @@ session_start();
 <!--                             YouTube video-->
                              <div class="col-sm-6 bot-buffer">
 
-<iframe class="youtubevideo" src="https://www.youtube.com/embed/l12xBNcM_Ho" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/sdVsPWQQJ8Y" class="youtubevideo" allowfullscreen></iframe>
+                            
                              
                              </div>
                               

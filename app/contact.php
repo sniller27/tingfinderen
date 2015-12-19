@@ -5,7 +5,7 @@ session_start();
 $sent = '';
 if(isset($_GET['mailsent'])){
     
-    $sent = '<h1 style="color:green">Din besked er blevet sendt</h1>';
+    $sent = '<h1 class="usersucces">Din besked er blevet sendt</h1>';
     
 }
 ?>

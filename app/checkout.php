@@ -117,7 +117,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                    
 }
         $itemlist .= '<tr><td></td><td></td>';
-        $itemlist .= '<td style="font-weight:bold;">';
+        $itemlist .= '<td>';
         $itemlist .= $totalprice;
         $itemlist .= ' kr,-';
         $itemlist .= '</td>';

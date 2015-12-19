@@ -46,29 +46,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 };/** small **/
-//colors
+//Tingfinderen colors
 @darkgray : #232323;
 @darkblue : #4e565c;
 @gold : #a89a75;
 @textcolorwheat : #d9cccc;
-@feedbackwarning : #ff0000;
+@feedbackwarning : #e63c3c;
+@feedbacksucces : #68E63C;
 @fontcolor : #e3e1e1;
 
-//tyskenhavn
+//Tyskenhavn color
 @newgray : #521F1F;
 @newblue : #FFFFFF;
 @newgold : #eaaa28;
-//@newgold : #A78C26;
-//lolo @newgold : ##484848;
 
+//scroller activated on page
 html {
     overflow-y: scroll;
 }
+//main layout
 body {
     //    font
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
-    //    line-height
     line-height: 1.7;
     background-color: @darkblue;
     color: @textcolorwheat;
@@ -79,13 +79,18 @@ body {
         letter-spacing: 0.5px;
         color: @fontcolor;
     }
+    //headers
     h1 {
         font-size: 2em;
+        color: @fontcolor;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 300;
     }
     h2 {
         font-size: 1.5em;
         color: @gold;
-        font-weight: 500;
+        font-weight: 400;
     }
     //bold
     .bold {
@@ -93,15 +98,29 @@ body {
         font-weight:bold
         
     }
-    //    userwarning
+    //userwarning
     .userwarning {
         
         color: @feedbackwarning;
         
     }
-    //    no text decoration
+    //usersucces
+    .usersucces {
+        
+        color: @feedbacksucces !important;
+        
+    }
+    //no text decoration
     .textdecoration {
         text-decoration: none;
+    }
+    //floatleft
+    .floatleft {
+        float: left;
+    }
+    //floatright
+    .floatright {
+        float: right;
     }
     //    gold line
     .goldhr {
@@ -140,12 +159,13 @@ body {
         border: 1px solid @gold;
         transition: 0.2s;
     }
+    //hovereffect
     .graybutton:hover {
         color: #c4b48a;
         transition: 0.2s;
         border: 1px solid #c4b48a;
     }
-    //    boostrap row space
+    //    boostrap row space. buffers
     .top-buffer {
         margin-top: 20px;
     }
@@ -171,6 +191,9 @@ body {
         left: 60px;
         line-height: 1.7;
     }
+    .carticon {
+        font-size:30px;
+    }
     //    cart and cart page
     .cartamount {
         background-color: #e63c3c;
@@ -186,16 +209,16 @@ body {
     }
     //cartpage
     .cartproductcontainer {
-        border: 1px solid @gold;
+        border: 1px solid @darkgray;
         background-color: white;
     }
+    //product in cart
     .cartproduct {
         color: black;
         margin: 20px;
         img {
             width: 100%;
             max-width: 400px;
-            //            height: 200px;
         }
         h2 {
             color: @darkgray;
@@ -204,12 +227,25 @@ body {
     //cart process breadcrumbs
     .breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\276F\00a0";}
     
-    //cartbutton
+    //cart tooltip
+    .tooltip.bottom .tooltip-arrow {
+
+    border-bottom:5px solid @darkgray;
+        
+    }
+    .tooltip-inner{
+
+        background-color:@darkgray;
+        color: @fontcolor;
+
+    }
+    //button to payment
      #cartnext {
         display: block;
         margin: auto;
+        width: 153px;
+         margin-top: 20px;
     }
-    
     //wrapper
     #wrapper {
         width: 80%;
@@ -217,49 +253,47 @@ body {
     }
     //    jumbotron
     .jumbotron {
-        background-image: url(../images/antiqueworkshop.jpg);
+        background-image: url(../images/tingfinder-headerbillede.jpg);
         background-size: cover;
         line-height: 1;
         border-bottom: 2px solid @gold;
+        background-color: #000000;
         
         div {
             max-width: 1170px;
             margin: auto;
         }
         h1 {
-            color: @fontcolor;
-            text-shadow: 1px 1px 0px rgba(150, 150, 150, 0.5);
+            color: #FFFFFF;
+            text-shadow: 0px 0px 20px rgb(0, 0, 0);
         }
         p {
-            font-weight: bold;
+            font-weight: 500;
             color: @fontcolor;
+            text-shadow: 0px 0px 20px rgb(0, 0, 0);
+            color: #FFFFFF;
         }
     }
+    //FRONTPAGE
     //main
     main {
         min-height: 400px;
         margin-bottom: 30px;
         border-radius: 5px;
-        //        padding: 20px;
-        //        FRONTPAGE
+        
+        //processicons
         .processicon {
             width: 120px;
             display: block;
             margin: auto;
             margin-top: 20px;
             margin-bottom: 20px;
-            //            not draggable
             user-drag: none;
             -moz-user-select: none;
             -webkit-user-drag: none;
         }
         .processiconabout{
             width: 150px;
-//            display: block;
-//            margin: auto;
-//            margin-top: 20px;
-//            margin-bottom: 20px;
-            //            not draggable
             user-drag: none;
             -moz-user-select: none;
             -webkit-user-drag: none;
@@ -278,10 +312,6 @@ body {
             
             img {
                 width: 100%;
-                //                height: 200px; //remove after imagescale
-                //                opacity: 1;
-                //                transition: 0.4s;
-                //                z-index: 1;
             }
         }
         .textoverlay {
@@ -292,7 +322,6 @@ body {
             z-index: 1;
             color: @darkgray;
         }
-        //        little new
         .image-container {
             position: relative;
             p {
@@ -337,7 +366,10 @@ body {
                     margin-left: 5px;
                 }
             }
-            
+        .colorboxpic {
+            border: 1px solid gray;
+            height: 80px;
+        }
         
         
 //        ABOUT PAGE
@@ -374,7 +406,7 @@ body {
                 display: block;
             }
         }
-//        google maps
+//        Google maps
         #map_canvas {
 
             height:400px;
@@ -426,7 +458,6 @@ body {
     }
     //active navbar
     #active {
-        //        color: #dd5b5b;
         background-color: @gold;
         color: white;
     }
@@ -435,19 +466,11 @@ body {
         border-bottom: 2px solid @gold;
     }
 
-    //burgermenu size and padding
+    //mobilemenu size and padding
     .navbar-toggle {
         padding: 15px;
     }
     #nav-icon4 span {
-        //            display: block;
-        //            position: absolute;
-        //            height: 9px;
-        //            width: 100%;
-        //            background: #d3531a;
-        //            border-radius: 9px;
-        //            opacity: 1;
-        //            left: 0;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -o-transform: rotate(0deg);
@@ -527,17 +550,19 @@ body {
     .admintext {
         color: @gold;
     }
+    //social media
+    .socialmediaicons {
+        font-size:48px;
+    }
     //trustpilot
     #trustpilot {
         
         width:120px;
-//        margin-left: 50px;
         display: block;
-//        margin: auto;
         margin-top: 20px;
 
     }
-    //admin
+    //ADMIN PAGE
     .adminlogindiv {
         width: 220px;
         margin: auto;
@@ -560,7 +585,6 @@ body {
 }
 
 //NAVBAR
-//@bgDefault      : @darkgray;
 @bgDefault : @darkgray;
 @bgHighlight : #000000;
 @colDefault : #a89a75;
@@ -665,19 +689,13 @@ body {
         }
     }
 }
-//tyskenhavn
-body {
-.jumbotrontyskenhavn {
-    
-    background-image: url(../images/tyskenhavn/coverimage.png);
-    background-size: 100% 100%;
-    
-}
-    
-}
-
+//TYSKENHAVN PAGE
 #tyskenhavnbody {
     background-color: @newblue;
+    
+    .tyskenhavncoverimage {
+        width: 100%;
+    }
     
     .icon-bar {
         background-color: @newgold;
@@ -731,12 +749,10 @@ body {
         border-color: @newgold;
     }
     
-    
-}
-
-;/** medium **/
+};/** medium **/
 
 @media only screen and (min-width: 768px) {
+    
     //    navbar
     ul {
         position: relative;
@@ -750,12 +766,12 @@ body {
     #notification {
         display: none;
     }
+    //logo
     body {
         #logo {
             margin: 5px 5px 0px 0px;
         }
     }
-
     //cart2 
     .cart2 {
         #cart2icon {
@@ -767,14 +783,17 @@ body {
             }
         }
     }
+    //product in cart
     .cartproduct {
         img {
             width: 100%;
         }
     }
-    #cartnext {
-//        display: inline-block;
-//        float: right;
+    //button to payment
+    body {
+        #cartnext {
+        margin-top: 0px;
+    }
     }
     //    PAYMENT PAGE
     body {
@@ -802,7 +821,7 @@ body {
         }
         
     }
-    //    footer
+    //    FOOTER
     body {
         #footer {
             .footerspace {
@@ -812,7 +831,6 @@ body {
     }
     //active page
     #active {
-        //        color: #dd5b5b;
         background-color: transparent !important;
         color: @gold !important;
         padding-bottom: 14px;
@@ -855,12 +873,11 @@ body {
         right: 0;
     }
     
-    
 }
-
 //Tyskenhavn
 #tyskenhavnbody {
     
+    //Tyskenhavn logo
     #tyskenhavnlogo {
         width: 150px;
         margin: 15px 0px 0px 6px !important;
@@ -879,13 +896,11 @@ body {
     .diamondrow hr {
         width: 47% !important;
     }
-    #cartnext {
-//        background-color: red;
-}
-    //Tyskenhavn
-#tyskenhavnbody {
+   
+    //Tyskenhavn body
+    #tyskenhavnbody {
     
-    
+    //Tyskenhavn logo
     #tyskenhavnlogo {
         width: 200px;
         margin-top: 10px;

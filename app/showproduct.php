@@ -36,19 +36,19 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
         //compares stock quantity to shoppingcart quantity of the product
         if($_SESSION["items"][$pid]>=$stock){
     
-            $feedback = '<h1 style="color:#e63c3c">Vi har ikke flere af dette produkt på lager</h1>';
+            $feedback = '<h1 class="userwarning">Vi har ikke flere af dette produkt på lager</h1>';
 
         }else {
         //adds product to shoppingcart quantity
             $_SESSION["items"][$pid] += $qty;
 
-            $feedback = '<h1 style="color:#68E63C">Tilføjet til vogn</h1>';
+            $feedback = '<h1 class="usersucces">Tilføjet til vogn</h1>';
 
         }
         
         }else {
         //creates key to items with productid and quantity
-                $feedback = '<h1 style="color:#68E63C">Tilføjet til vogn</h1>';
+                $feedback = '<h1 class="usersucces">Tilføjet til vogn</h1>';
                 $_SESSION["items"][$pid] = $qty;
 
         }
@@ -177,7 +177,7 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
     ?>
              
 <!--colorbox billeder-->
-<a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" height="80" style="border: 1px solid gray;" alt="produktbilled" /></a>
+<a class='gallery' href='<?= $imgsrc ?>'><img src="<?= $imgsrc ?>" class="colorboxpic" alt="produktbilled" /></a>
 
     <?php
             

@@ -189,9 +189,9 @@ require_once("php/head.php");
 
                                 </div>
                                 
-                                <div class="col-xs-12 col-lg-2">
+                                <div class="col-xs-12 col-md-2 col-lg-2">
                                     
-                                <a href="checkout.php" class="textdecoration" ><h2 href="checkout.php" class="btn graybutton sharp" id="cartnext">Til betaling<i class="fa fa-arrow-right"></i></a>
+                                <a href="checkout.php" class="textdecoration btn graybutton sharp" id="cartnext">Til kassen<i class="fa fa-arrow-right"></i></a>
                           
                                 </div>
 

@@ -83,7 +83,7 @@ if(isset($_SESSION["items"])){
                     <li><a href="tyskenhavn.php" <?= $tyskenhavn ?> class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
                     <!--cart in navbar-->
-                    <li><a href="cart.php"><i class="fa fa-shopping-cart" style="font-size:30px;"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
+                    <li><a href="cart.php"><i class="fa fa-shopping-cart carticon"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
 
                 </ul>
 

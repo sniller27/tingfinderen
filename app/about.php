@@ -45,11 +45,10 @@ require_once("php/header.php");
             <div class="col-sm-10">
                 <h2>Finder historie</h2>
                 <p>Hos Tingfinderen køber vi gamle ting og sager som enten er blevet smidt ud eller ikke længer har nogle personlig værdi for ejeren igennem kommuner eller privatpersoner.</p>
-            </div>
-            </div>
-            
-<!--            goldline-->
+                <!--            goldline-->
             <hr class="goldhr">
+            </div>
+            </div>
             
             <!--        cleaning gem icon-->
             <div class="row">
@@ -59,11 +58,12 @@ require_once("php/header.php");
             <div class="col-sm-10">
                 <h2>Restaurerer</h2>
                 <p>Hos Tingfinderen tager vi de gamle ting og giver dem en ny chance ved at restaurere dem.</p>
+                <!--            goldline-->
+            <hr class="goldhr">
             </div>
             </div>
             
-            <!--            goldline-->
-            <hr class="goldhr">
+            
             
             <!--        give gem icon-->
             <div class="row">
@@ -73,11 +73,12 @@ require_once("php/header.php");
             <div class="col-sm-10">
                 <h2>Sælger</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+                                <!--            goldline-->
+            <hr class="goldhr">
             </div>
             </div>
             
-            <!--            goldline-->
-            <hr class="goldhr">
+           
             
             <!--        shiny gem icon-->
             <div class="row">
@@ -87,6 +88,8 @@ require_once("php/header.php");
             <div class="col-sm-10">
                 <h2>Pynter</h2>
                                 <p>Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
+                                <!--            goldline-->
+            <hr class="goldhr">
             </div>
             </div>
             
