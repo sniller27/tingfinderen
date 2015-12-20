@@ -88,7 +88,7 @@ session_start();
 
                                 <img src="images/givegem.svg" alt="3.step in proces" class="processicon" />
                                 <h2 class="text-center">Sælger</h2>
-                                <p class="text-center">Vores yderst velrestaurerede produkter bliver derefter solgt til vores flinke kunder, som altid kan forlade vores forretningen med oprejst pande og smil i øjnene.</p>
+                                <p class="text-center">Vores yderst velrestaurerede produkter bliver derefter solgt til vores kunder, som altid kan forlade shoppen med en god oplevelse og følelsen af at have fået en god og tilfreds handel.</p>
 
                             </div>
 

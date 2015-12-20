@@ -136,11 +136,11 @@ $itemlist
 <br>
 <br>
 <br>
-Tak fordi du handlede hos
+Tak fordi du handlede hos os
 <br>
 <br>
 Venlig hilsen<br>
-Tingfinderen.dk
+Tingfinderen
 
 EOD;
 

@@ -72,7 +72,7 @@ require_once("php/header.php");
             </div>
             <div class="col-sm-10">
                 <h2>Sælger</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor ex nec leo lobortis mattis. Maecenas ac interdum dui, at fermentum leo. Ut quis maximus enim.</p>
+                                <p>Vores yderst velrestaurerede produkter bliver derefter solgt til vores kunder, som altid kan forlade shoppen med en god oplevelse og følelsen af at have fået en god og tilfreds handel.</p>
                                 <!--            goldline-->
             <hr class="goldhr">
             </div>
