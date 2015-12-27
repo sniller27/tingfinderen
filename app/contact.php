@@ -28,7 +28,7 @@ require_once("php/head.php");
 
 <!-- Google maps API -->
 <script type="text/javascript"
-    src="http://maps.google.com/maps/api/js?sensor=false">
+    src="http://maps.google.com/maps/api/js">
 </script>
 <script type="text/javascript">
   function initialize() {
@@ -99,7 +99,7 @@ require_once("php/header.php");
                <p>Send os endelig en besked, hvis du har spørgsmål eller vil vide andet. Vi er klar på tasterne, altid!</p>
                
 <!--               form-->
-        <form action="php/sendemail.php" method="post" class="contactform" name="contactform" onsubmit="return validatecontactform()">
+        <form action="php/sendemail.php" method="post" class="contactform" name="contactform" id="contactform">
             
             <input type="text" placeholder="Navn" name="name" aria-label="navn" required>
             <input type="email" placeholder="Email" name="mail" aria-label="email" required>

@@ -228,7 +228,7 @@ EOD;
                     
 <!--                    contactinformation form-->
                     <div class="row">
-                        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="contactform" name="checkoutform" onsubmit="return validatecheckoutform()">
+                        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="contactform" name="checkoutform" id="checkoutform">
 
                             <div class="col-sm-6">
 
@@ -373,8 +373,6 @@ EOD;
 
                 ?>
 
-<!--   JavaScript validation  -->
-<script src="js/script.js"></script>
    
 </body>
 

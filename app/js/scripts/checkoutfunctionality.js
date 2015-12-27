@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    
-           //radio buttons functioning
+
+    //check if form exists on page
+    if(document.getElementById('checkoutform') != null){
+        //radio buttons functioning
            document.getElementById('deliveryaddress').disabled = true;
            
            document.getElementById('yessent').onchange = disablefield;
@@ -21,5 +23,7 @@ else if (document.getElementById('yessent').checked == true ){
 }   
 
 }
+    }
+           
            
 });
