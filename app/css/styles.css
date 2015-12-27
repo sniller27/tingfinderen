@@ -395,6 +395,7 @@ body main .contactform {
   color: black;
 }
 body main .contactform input[type="text"],
+body main .contactform input[type="number"],
 body main .contactform input[type="email"],
 body main .contactform textarea {
   display: block;

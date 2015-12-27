@@ -181,7 +181,8 @@ EOD;
         require_once("php/head.php");
 
         ?>
-    
+
+    <script src="js/zipcodes.js"></script>    
 
     </head>
 
@@ -235,7 +236,19 @@ EOD;
                                 <input type="text" name="firstname" placeholder="Navn" maxlength="100" aria-label="fornavn" required>
                                 <input type="text" name="lastname" placeholder="Efternavn" maxlength="100" aria-label="efternavn" required>
                                 <input type="text" name="address" placeholder="Adresse" maxlength="45" aria-label="adresse" required>
-                                <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" aria-label="postnr" required>
+<!--                                OLD ZIPCODES-->
+<!--                                <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" aria-label="postnr" required>-->
+                                
+<!--                                NEW ZIPCODES-->
+    <input type="number" name="zipcode" placeholder="Post Nr." maxlength="4" list="zipcodes" id="zipcode" aria-label="postnr" required/>
+<!--    the datalist of zipcodes-->
+	<datalist id="zipcodes">
+	</datalist>
+
+                                
+                                
+                                
+                                
                                 <input type="email" name="email" placeholder="Email" maxlength="100" aria-label="email" required>
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
