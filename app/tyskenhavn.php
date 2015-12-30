@@ -37,6 +37,30 @@ session_start();
 
         <!--Fontawesome CDN-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+        <!--Modernizr-->
+        <script src="plugins/modernizr/modernizr-2.8.3.min.js"></script>
+
+
+        <!--Modernizr SVG to PNG-->
+           <script>
+               $(document).ready(function(){
+
+                   if (!Modernizr.svg) {
+            var imgs = document.getElementsByTagName('img');
+            var svgExtension = /.*\.svg$/
+            var l = imgs.length;
+            for(var i = 0; i < l; i++) {
+                if(imgs[i].src.match(svgExtension)) {
+                    imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+                    console.log(imgs[i].src);
+                }
+            }
+        }
+
+        });
+
+            </script>
 
     </head>
 
@@ -51,7 +75,7 @@ session_start();
 
             <div class="navbar-header">
 
-                <a href="tyskenhavn.php"><img src="images/tyskenhavn/tyskenhavn-logo.svg" alt="Tingfinderen logo" id="tyskenhavnlogo"></a>
+                <a href="tyskenhavn.php"><img src="images/tyskenhavn/tyskenhavn-logo.svg" alt="Tyskenhavn logo" id="tyskenhavnlogo"></a>
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" id="nav-icon4">
                     <span class="icon-bar"></span>
