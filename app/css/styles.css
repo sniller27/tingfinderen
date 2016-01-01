@@ -160,7 +160,7 @@ body .bold {
   font-weight: bold;
 }
 body .userwarning {
-  color: #e63c3c;
+  color: #e63c3c !important;
 }
 body .usersucces {
   color: #68E63C !important;
@@ -679,6 +679,12 @@ body .adminlogindiv input {
 #tyskenhavnbody .navbar-collapse,
 #tyskenhavnbody .navbar-form {
   border-color: #eaaa28;
+}
+.no-borderradius .cartamount {
+  background-color: transparent;
+  background: url(../images/smallredcircle.png);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
 }
 /** medium **/
 @media only screen and (min-width: 768px) {

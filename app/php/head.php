@@ -38,26 +38,5 @@
 <meta property="og:image" content="images/opengraphpicture.jpg" />
 <meta property="og:title" content="Køb fedt genbrugsdesign hos Tingfinderen" />
 
-<!--Modernizr-->
+<!--Modernizr library-->
 <script src="plugins/modernizr/modernizr-2.8.3.min.js"></script>
-
-
-<!--Modernizr SVG to PNG-->
-   <script>
-       $(document).ready(function(){
- 
-           if (!Modernizr.svg) {
-    var imgs = document.getElementsByTagName('img');
-    var svgExtension = /.*\.svg$/
-    var l = imgs.length;
-    for(var i = 0; i < l; i++) {
-        if(imgs[i].src.match(svgExtension)) {
-            imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-            console.log(imgs[i].src);
-        }
-    }
-}
-           
-});
-    
-    </script>

@@ -101,7 +101,7 @@ body {
     //userwarning
     .userwarning {
         
-        color: @feedbackwarning;
+        color: @feedbackwarning !important;
         
     }
     //usersucces
@@ -207,6 +207,7 @@ body {
         color: #FFFFFF;
         line-height: 1.4;
     }
+    
     //cartpage
     .cartproductcontainer {
         border: 1px solid @darkgray;
@@ -750,6 +751,17 @@ body {
         border-color: @newgold;
     }
     
+}
+
+//Modernizr fallbacks
+.no-borderradius {
+        .cartamount {
+            background-color: transparent;
+            background: url(../images/smallredcircle.png);
+//            background: url(../images/borderradius.png);
+            background-size: 10px 10px;
+            background-repeat: no-repeat;
+        }
 };/** medium **/
 
 @media only screen and (min-width: 768px) {
