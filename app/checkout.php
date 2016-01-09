@@ -36,38 +36,40 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     require_once("php/config.php");
     
-    //check zipcode with prepared statement
-//    $sqlzip = 'select idzipcodes from zipcodes where idzipcodes = ?;';
-//    $stmtzip = $conn->prepare($sqlzip);
-//    $stmtzip->bind_param('i', $zipcode);
-//    $stmtzip->bind_result($zipidcode);
-//    $stmtzip->execute();
-//
-//    if($stmtzip->fetch() == 1){
-//        
-////        die('Det indtastede post nr. eksisterer ikke');
+    //check zipcode with prepared statement RIGTIG
+    $sqlzip = 'select idzipcodes from zipcodes where idzipcodes = ?;';
+    $stmtzip = $conn->prepare($sqlzip);
+    $stmtzip->bind_param('i', $zipcode);
+    $stmtzip->bind_result($zipidcode);
+    $stmtzip->execute();
+
+    if($stmtzip->fetch() == 0){
+        
+        die('Det indtastede post nr. eksisterer ikke');
 //        echo $zipidcode;
-//
-//    }else {
-//        echo 'findes ikke';
-//    }
+
+    }else {
+//        echo 'findes';
+//        die('Det indtastede post nr. eksisterer');
+    }
+    $stmtzip->close();
     
     //WRONG START 
-    $sqlzipcheck = "select idzipcodes from zipcodes where idzipcodes = $zipcode;";
-    $resultzip = $conn->query($sqlzipcheck);
-
-    $bool = true;
-    //saves order id
-    while($row = $resultzip->fetch_array()){
-    
-        echo 'fandt: ' . $row['idorders'];
-        $bool = false;
-        
-    }
-    if($bool){
-        die('Det indtastede post nr. eksisterer ikke');
-    }
-    
+//    $sqlzipcheck = "select idzipcodes from zipcodes where idzipcodes = $zipcode;";
+//    $resultzip = $conn->query($sqlzipcheck);
+//
+//    $bool = true;
+//    //saves order id
+//    while($row = $resultzip->fetch_array()){
+//    
+//        echo 'fandt: ' . $row['idorders'];
+//        $bool = false;
+//        
+//    }
+//    if($bool){
+//        die('Det indtastede post nr. eksisterer ikke');
+//    }
+//    
     //END
     
     //inserts order query
@@ -326,9 +328,9 @@ EOD;
                                 </select>
 
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
-<label for="yessent">
+<label for="newsletter">
                                    <br>
-                                    <input type="checkbox"><span style="color:#e3e1e1">Jeg ønsker at modtage nyhedsbrev fra Tingfinderen</span></label>
+                                    <input type="checkbox" id="newsletter"><span style="color:#e3e1e1">Jeg ønsker at modtage nyhedsbrev fra Tingfinderen</span></label>
                             </div>
 
 <!--                               recipetable-->
