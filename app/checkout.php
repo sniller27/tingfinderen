@@ -4,7 +4,11 @@ session_start();
 //only access to page if shoppingcart isn't empty
 if(isset($_SESSION["items"])){
 $sessionids = '';
+$error = '';
 
+    if(isset($_GET['error'])){
+        $error = '<h1 class="userwarning">Det indtastede post nr. eksisterer ikke</h1>';
+    }
 
 //checks for post form submission
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -26,16 +30,52 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $deliveryaddress = $_POST['location'];
         
     }else {
+        header("Location: succespage.php?error=true");   
         die('Error: der er ikke blevet valgt en mulighed for forsendelse');
     }
     
     require_once("php/config.php");
+    
+    //check zipcode with prepared statement
+//    $sqlzip = 'select idzipcodes from zipcodes where idzipcodes = ?;';
+//    $stmtzip = $conn->prepare($sqlzip);
+//    $stmtzip->bind_param('i', $zipcode);
+//    $stmtzip->bind_result($zipidcode);
+//    $stmtzip->execute();
+//
+//    if($stmtzip->fetch() == 1){
+//        
+////        die('Det indtastede post nr. eksisterer ikke');
+//        echo $zipidcode;
+//
+//    }else {
+//        echo 'findes ikke';
+//    }
+    
+    //WRONG START 
+    $sqlzipcheck = "select idzipcodes from zipcodes where idzipcodes = $zipcode;";
+    $resultzip = $conn->query($sqlzipcheck);
+
+    $bool = true;
+    //saves order id
+    while($row = $resultzip->fetch_array()){
+    
+        echo 'fandt: ' . $row['idorders'];
+        $bool = false;
+        
+    }
+    if($bool){
+        die('Det indtastede post nr. eksisterer ikke');
+    }
+    
+    //END
     
     //inserts order query
     $sql = "INSERT INTO `orders`(`status`, `deliveryaddresses_iddeliveryaddresses`) VALUES ('ikke sendt', $deliveryaddress);";
 
     //prepared statement
     $stmt = $conn->prepare($sql);
+//    $stmt->bind_param('s', $deliveryaddress);
     $stmt->execute();
     
     //gets id from the order which was just created
@@ -61,8 +101,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     foreach($_SESSION["items"] as $key => $val)
     { 
   
-    $sqlorderbrigde = "INSERT INTO `orders_has_products`(`orders_idorders`, `products_idproducts`, `quantity`) VALUES ($orderid,$key,$val);";
+    $sqlorderbrigde = "INSERT INTO `orders_has_products`(`orders_idorders`, `products_idproducts`, `quantity`) VALUES (?, ?, ?);";
     $stmtorderbrigde = $conn->prepare($sqlorderbrigde);
+    $stmtorderbrigde->bind_param('iii', $orderid, $key, $val);
     $stmtorderbrigde->execute();
     
 //    echo $val . ' af produkt ' . $key . ' -- ';
@@ -170,7 +211,7 @@ EOD;
     <head>
 
         <!-- title -->
-        <title>Tingfinderen.dk | Betaling</title>
+        <title>Tingfinderen.dk | Kassen</title>
 
         <!-- Pane Description -->
         <meta name="description" content="Læs om Tingfinderen koncept og opstand.">
@@ -221,7 +262,8 @@ EOD;
 
                         <div class="col-sm-12">
 
-                            <h1>Betaling</h1>
+                           <?= $error ?>
+                            <h1>Kasse</h1>
 
                         </div>
 
@@ -233,14 +275,14 @@ EOD;
 
                             <div class="col-sm-6">
 
-                                <input type="text" name="firstname" placeholder="Navn" maxlength="100" aria-label="fornavn" required>
-                                <input type="text" name="lastname" placeholder="Efternavn" maxlength="100" aria-label="efternavn" required>
-                                <input type="text" name="address" placeholder="Adresse" maxlength="45" aria-label="adresse" required>
+                                <input type="text" name="firstname" placeholder="Navn" maxlength="100" aria-label="fornavn" title="Indtast fornavn" required>
+                                <input type="text" name="lastname" placeholder="Efternavn" maxlength="100" aria-label="efternavn" title="Indtast efternavn" required>
+                                <input type="text" name="address" placeholder="Adresse" maxlength="45" aria-label="adresse" title="Indtast adresse" required>
 <!--                                OLD ZIPCODES-->
 <!--                                <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" aria-label="postnr" required>-->
                                 
 <!--                                NEW ZIPCODES-->
-    <input type="number" name="zipcode" placeholder="Post Nr." maxlength="4" list="zipcodes" id="zipcode" aria-label="postnr" required/>
+    <input type="text" name="zipcode" placeholder="Post Nr." maxlength="4" list="zipcodes" id="zipcode" aria-label="postnr" title="Indtast post nummer" required/>
 <!--    the datalist of zipcodes-->
 	<datalist id="zipcodes">
 	</datalist>
@@ -249,7 +291,7 @@ EOD;
                                 
                                 
                                 
-                                <input type="email" name="email" placeholder="Email" maxlength="100" aria-label="email" required>
+                                <input type="email" name="email" placeholder="Email" maxlength="100" aria-label="email" title="Indtast email" required>
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
                                 <label for="yessent">
@@ -284,7 +326,9 @@ EOD;
                                 </select>
 
                                 <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
-
+<label for="yessent">
+                                   <br>
+                                    <input type="checkbox"><span style="color:#e3e1e1">Jeg ønsker at modtage nyhedsbrev fra Tingfinderen</span></label>
                             </div>
 
 <!--                               recipetable-->
