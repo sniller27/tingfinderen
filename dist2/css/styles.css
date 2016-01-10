@@ -159,6 +159,9 @@ body h2 {
 body .bold {
   font-weight: bold;
 }
+body select:disabled {
+  background-color: gray;
+}
 body .userwarning {
   color: #e63c3c !important;
 }
@@ -434,6 +437,9 @@ body .tablediv {
 body #submitcheckout {
   margin-top: 20px;
 }
+body .whitespan {
+  color: #e3e1e1;
+}
 body .succesdiv {
   margin: auto;
   position: relative;
@@ -536,8 +542,8 @@ body .socialmediaicons {
 }
 body #trustpilot {
   width: 120px;
-  display: block;
   margin-top: 20px;
+  margin-right: 30px;
 }
 body .adminlogindiv {
   width: 220px;
@@ -574,6 +580,7 @@ body .adminlogindiv input {
 }
 .navbar-default .navbar-nav > li > a {
   color: #a89a75;
+  font-weight: 400;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

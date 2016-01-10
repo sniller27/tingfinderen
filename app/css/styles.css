@@ -437,6 +437,9 @@ body .tablediv {
 body #submitcheckout {
   margin-top: 20px;
 }
+body .whitespan {
+  color: #e3e1e1;
+}
 body .succesdiv {
   margin: auto;
   position: relative;
@@ -539,8 +542,8 @@ body .socialmediaicons {
 }
 body #trustpilot {
   width: 120px;
-  display: block;
   margin-top: 20px;
+  margin-right: 30px;
 }
 body .adminlogindiv {
   width: 220px;

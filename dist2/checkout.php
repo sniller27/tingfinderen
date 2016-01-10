@@ -6,7 +6,9 @@ if(isset($_SESSION["items"])){
 $sessionids = '';
 $error = '';
 
-    if(isset($_GET['error'])){
+    if(isset($_GET['optionerror'])){
+        $error = '<h1 class="userwarning">Der er ikke blevet valgt en mulighed for forsendelse</h1>';
+    }else if(isset($_GET['ziperror'])){
         $error = '<h1 class="userwarning">Det indtastede post nr. eksisterer ikke</h1>';
     }
 
@@ -30,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $deliveryaddress = $_POST['location'];
         
     }else {
-        header("Location: succespage.php?error=true");   
+        header("Location: succespage.php?optionerror");   
         die('Error: der er ikke blevet valgt en mulighed for forsendelse');
     }
     
@@ -45,6 +47,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if($stmtzip->fetch() == 0){
         
+        //page redirect
+        header("Location: checkout.php?ziperror");  
         die('Det indtastede post nr. eksisterer ikke');
 //        echo $zipidcode;
 
@@ -297,9 +301,9 @@ EOD;
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
                                 <label for="yessent">
-                                    <input type="radio" name="sent" id="yessent" value="yessent" checked required>Ja</label>
+                                    <input type="radio" name="sent" id="yessent" value="yessent" checked required><span class="whitespan">Ja</span></label>
                                 <label for="nosent">
-                                    <input type="radio" name="sent" id="nosent" value="nosent" required>Nej</label>
+                                    <input type="radio" name="sent" id="nosent" value="nosent" required><span class="whitespan">Nej</span></label>
 
                                
                                 <select id="deliveryaddress" name="location">
@@ -327,10 +331,10 @@ EOD;
                                 ?>
                                 </select>
 
-                                <p>(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
+                                <p class="nb">(NB: Bemærk leveringsadresse og faktureringsaddresse er den samme!)</p>
 <label for="newsletter">
                                    <br>
-                                    <input type="checkbox" id="newsletter"><span style="color:#e3e1e1">Jeg ønsker at modtage nyhedsbrev fra Tingfinderen</span></label>
+                                    <input type="checkbox" id="newsletter" checked><span style="color:#e3e1e1">Jeg ønsker at modtage nyhedsbrev fra Tingfinderen</span></label>
                             </div>
 
 <!--                               recipetable-->

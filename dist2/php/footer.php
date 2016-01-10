@@ -29,6 +29,11 @@
                     <br/>+45 60 15 85 75
                     <br/> kontakt@tingfinderen.dk
                 </p>
+                <img src="images/payment/visa.png" alt="visa">
+                <img src="images/payment/mastercard.png" alt="mastercard">
+                <img src="images/payment/discover.png" alt="discover">
+                <img src="images/payment/americanexpress.png" alt="americanexpress">
+                <img src="images/payment/paypal.png" alt="paypal">
 
             </div>
 
@@ -59,8 +64,9 @@
                 <a href="https://www.youtube.com/channel/UC0UBSMu4ebnayb1tB02G4PA" target="_blank"><i class="fa fa-youtube-square socialmediaicons"></i></a>
 
     <!--      Trustpilot-->
-           <a href="https://dk.trustpilot.com/review/tingfinderen.dk" target="_blank"><img src="images/trustpilot.png" id="trustpilot" alt="trustpilot"></a>
-
+           <div><a href="https://dk.trustpilot.com/review/tingfinderen.dk" target="_blank"><img src="images/trustpilot.png" id="trustpilot" alt="trustpilot"></a>
+            <img src="images/emearke.png" alt="emaerke" style="width:50px">
+            </div>
             </div>
 
         </div>

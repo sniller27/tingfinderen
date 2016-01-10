@@ -19,6 +19,45 @@ session_start();
 
         ?>
         
+        <script>
+//            http://jsfiddle.net/wuSF7/462/
+        $(function(){
+    jQuery('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+    
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+    
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+    
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+            
+            // Check if the viewport is set, else we gonna set it if we can.
+            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+    
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+    
+        }, 'xml');
+    
+    });
+});
+</script>
+        
     </head>
 
     <body>
@@ -70,7 +109,7 @@ session_start();
 
                                 <a href="about.php"><img src="images/questiongem.svg" alt="1.step in proces" class="processicon" /></a>
                                 <h2 class="text-center">Finder historie</h2>
-                                <p class="text-center">Hos Tingfinderen køber vi gamle ting og sager som enten er blevet smidt ud eller ikke længer har nogle personlig værdi for ejeren igennem kommuner eller privatpersoner.</p>
+                                <p>Hos Tingfinderen køber vi gamle ting og sager som enten er blevet smidt ud eller ikke længer har nogle personlig værdi for ejeren igennem kommuner eller privatpersoner.</p>
 
                             </div>
 
@@ -79,7 +118,7 @@ session_start();
 
                                 <a href="about.php"><img src="images/cleangem.svg" alt="2.step in proces" class="processicon" /></a>
                                 <h2 class="text-center">Restaurerer</h2>
-                                <p class="text-center">Hos Tingfinderen tager vi de gamle ting og giver dem en ny chance ved at restaurere dem.</p>
+                                <p>Hos Tingfinderen tager vi de gamle ting og giver dem en ny chance ved at restaurere dem.</p>
 
                             </div>
 
@@ -88,7 +127,7 @@ session_start();
 
                                 <a href="about.php"><img src="images/givegem.svg" alt="3.step in proces" class="processicon" /></a>
                                 <h2 class="text-center">Sælger</h2>
-                                <p class="text-center">Vores yderst velrestaurerede produkter bliver derefter solgt til vores kunder, som altid kan forlade shoppen med en god oplevelse og følelsen af at have fået en god og tilfreds handel.</p>
+                                <p>Vores yderst velrestaurerede produkter bliver derefter solgt til vores kunder, som altid kan forlade shoppen med en god oplevelse og følelsen af at have fået en god og tilfreds handel.</p>
 
                             </div>
 
@@ -97,7 +136,7 @@ session_start();
 
                                 <a href="about.php"><img src="images/shinygem.svg" alt="4.step in proces" class="processicon" /></a>
                                 <h2 class="text-center">Pynter</h2>
-                                <p class="text-center">Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
+                                <p>Med ting fra tingfinderen får dit hjem eller kontor et nyt smart look med ældre ting som er blevet pudset op til en ny og moderne standard.</p>
 
                             </div>
 
@@ -165,6 +204,20 @@ session_start();
             require_once("php/footer.php");
 
             ?>
+            <style>
+/*
+                #Layer_1 .st0 {
+                    fill: #a89a75;
+                    transition: 0.2s;
+
+                }
+                #Layer_1 .st0:hover {
+                    fill: #c4b48a;
+                    transition: 0.2s;
+                }
+*/
+       
+        </style>
     </body>
 
 </html>

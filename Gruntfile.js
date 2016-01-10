@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         uglify: {
     js: {
       files: {
-        'dist/js/script.js': ['app/js/script.js']
+        'dist2/js/script.js': ['app/js/script.js']
       }
     }
   },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
   },
   target: {
     files: {
-      'dist/css/styles.css': ['dist/css/styles.css']
+      'dist2/css/styles.css': ['dist2/css/styles.css']
     }
   }
 },
@@ -92,12 +92,12 @@ module.exports = function(grunt) {
         cache: false
       },
 
-      dist: {
+      dist2: {
         files: [{
           expand: true,
           cwd: 'app/images/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'dist/images'
+          dest: 'dist2/images'
         }]
       }
     },
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
   files: {
     cwd: 'app/',  // set working folder / root to copy
     src: '**/*',           // copy all files and subfolders
-    dest: 'dist/',    // destination folder
+    dest: 'dist2/',    // destination folder
     expand: true           // required when using cwd
   }
 },

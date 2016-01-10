@@ -301,9 +301,9 @@ EOD;
 
                                 <p>Ønskes tilsendt til egen adresse?</p>
                                 <label for="yessent">
-                                    <input type="radio" name="sent" id="yessent" value="yessent" checked required>Ja</label>
+                                    <input type="radio" name="sent" id="yessent" value="yessent" checked required><span class="whitespan">Ja</span></label>
                                 <label for="nosent">
-                                    <input type="radio" name="sent" id="nosent" value="nosent" required>Nej</label>
+                                    <input type="radio" name="sent" id="nosent" value="nosent" required><span class="whitespan">Nej</span></label>
 
                                
                                 <select id="deliveryaddress" name="location">
