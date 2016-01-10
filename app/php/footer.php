@@ -29,6 +29,11 @@
                     <br/>+45 60 15 85 75
                     <br/> kontakt@tingfinderen.dk
                 </p>
+                <img src="images/payment/visa.png" alt="visa">
+                <img src="images/payment/mastercard.png" alt="mastercard">
+                <img src="images/payment/discover.png" alt="discover">
+                <img src="images/payment/americanexpress.png" alt="americanexpress">
+                <img src="images/payment/paypal.png" alt="paypal">
 
             </div>
 

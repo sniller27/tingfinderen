@@ -98,6 +98,11 @@ body {
         font-weight:bold
         
     }
+    select:disabled {
+
+        background-color: gray;
+        
+    }
     //userwarning
     .userwarning {
         
@@ -626,6 +631,8 @@ body {
         > li {
             > a {
                 color: @colDefault;
+                
+    font-weight: 400;
                 &:hover,
                 &:focus {
                     color: @colHighlight;

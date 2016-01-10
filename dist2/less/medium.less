@@ -1,0 +1,141 @@
+/** medium **/
+
+@media only screen and (min-width: 768px) {
+    
+    //    navbar
+    ul {
+        position: relative;
+        top: 15px;
+    }
+    //    diamond hr
+    .diamondrow hr {
+        width: 46% !important;
+    }
+    //  notification
+    #notification {
+        display: none;
+    }
+    //logo
+    body {
+        #logo {
+            margin: 5px 5px 0px 0px;
+        }
+    }
+    //cart2 
+    .cart2 {
+        #cart2icon {
+            left: 20px;
+        }
+        a {
+            p {
+                left: 50px;
+            }
+        }
+    }
+    //product in cart
+    .cartproduct {
+        img {
+            width: 100%;
+        }
+    }
+    //button to payment
+    body {
+        #cartnext {
+        margin-top: 0px;
+    }
+    }
+    //    PAYMENT PAGE
+    body {
+        //    payment button
+        #submitcheckout {
+            float: right;
+            margin-top: 0px;
+        }
+    }
+    //SUCCES PAGE
+    .succesdiv {
+        
+        width: 50%;
+        margin: auto;
+        position: relative;
+        margin-top: 15%;
+        padding: 15px;
+        text-align: center;
+        background-color: @darkgray;
+        border: 1px solid @gold;
+        p,h1,h2 {
+            color: @gold;
+            font-weight: 400;
+            line-height: 2;
+        }
+        
+    }
+    //    FOOTER
+    body {
+        #footer {
+            .footerspace {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    //active page
+    #active {
+        background-color: transparent !important;
+        color: @gold !important;
+        padding-bottom: 14px;
+        border-bottom: 1px solid @gold;
+    }
+    //    HOVEREFFECTS
+    /* Underline From Center */
+    .hvr-underline-from-center {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        overflow: hidden;
+    }
+    .hvr-underline-from-center:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: @gold;
+        height: 1px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .hvr-underline-from-center:not(#active):hover:before,
+    .hvr-underline-from-center:not(#active):focus:before,
+    .hvr-underline-from-center:not(#active):active:before {
+        left: 0;
+        right: 0;
+    }
+    
+}
+//Tyskenhavn
+#tyskenhavnbody {
+    
+    //Tyskenhavn logo
+    #tyskenhavnlogo {
+        width: 150px;
+        margin: 15px 0px 0px 6px !important;
+    }
+    
+    //    HOVEREFFECTS TYSKENHAVN
+    .hvr-underline-from-center:before {
+  
+        background: @newgold;
+        
+    }
+}

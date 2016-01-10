@@ -159,6 +159,9 @@ body h2 {
 body .bold {
   font-weight: bold;
 }
+body select:disabled {
+  background-color: gray;
+}
 body .userwarning {
   color: #e63c3c !important;
 }
@@ -574,6 +577,7 @@ body .adminlogindiv input {
 }
 .navbar-default .navbar-nav > li > a {
   color: #a89a75;
+  font-weight: 400;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
