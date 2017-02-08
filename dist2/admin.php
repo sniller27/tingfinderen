@@ -37,7 +37,7 @@ if($stmt->fetch() == 1){
             //starts session and redirects
             $_SESSION['uid'] = $uidfromthedb;
 //            echo 'session startet';
-            header("Location: php/adminview.php");
+            header("Location: php/adminview");
 
             }else{
                 
@@ -69,7 +69,7 @@ if($stmt->fetch() == 1){
 </head>
 <body>
 <!--back to frontpage link-->
-<a href="index.php" class="admintext">Tilbage til forside</a>
+<a href="home" class="admintext">Tilbage til forside</a>
 
 <!--loginbox-->
 <div class="adminlogindiv">

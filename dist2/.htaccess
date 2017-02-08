@@ -1,0 +1,15 @@
+RewriteEngine on
+
+#url renaming
+RewriteRule ^home index.php
+
+#showproducts
+RewriteRule ^product/([0-9]+)$ showproduct.php?productid=$1
+RewriteRule ^product/([0-9]+)/1 showproduct.php?productid=$1&qty=1
+
+#cart
+RewriteRule ^cart/([0-9]+)$ cart.php?id=$1
+
+#extension removal
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

@@ -57,7 +57,7 @@ require_once("php/header.php");
     
     <div class="col-xs-6 col-sm-3 product productsize nopadding">
 
-        <a href="showproduct.php?productid=<?= $row['idproducts']; ?>">
+        <a href="product/<?= $row['idproducts']; ?>">
                 <img src="<?= $row['mainimage']; ?>" alt="<?= $row['productname']; ?>" class="separator" />
         </a>
          

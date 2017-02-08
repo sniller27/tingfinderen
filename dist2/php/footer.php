@@ -49,7 +49,7 @@
             <!--Admin login-->
             <div class="col-sm-3 footerspace">
 
-                <a href="admin.php" class="admintext">Admin Login</a>
+                <a href="admin" class="admintext">Admin Login</a>
 
             </div>
 

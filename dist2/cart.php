@@ -140,7 +140,7 @@ require_once("php/head.php");
                                 </div>
                                 <div class="col-sm-1">
                                     
-                                    <a href="cart.php?id=<?= $productid ?>" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Fjern produkt">X</a>
+                                    <a href="cart/<?= $productid ?>" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Fjern produkt">X</a>
 
                                 </div>
 
@@ -191,7 +191,7 @@ require_once("php/head.php");
                                 
                                 <div class="col-xs-12 col-md-2 col-lg-2">
                                     
-                                <a href="checkout.php" class="textdecoration btn graybutton sharp" id="cartnext">Til kassen<i class="fa fa-arrow-right"></i></a>
+                                <a href="checkout" class="textdecoration btn graybutton sharp" id="cartnext">Til kassen<i class="fa fa-arrow-right"></i></a>
                           
                                 </div>
 

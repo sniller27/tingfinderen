@@ -156,7 +156,7 @@ if(isset($_GET['productid']) && isset($_GET['qty'])){
                                     <?= $price ?> kr,-
                                 </h2>
                                 <br>
-                                <a href="product/<?= $productid ?>/1" class="btn graybutton sharp">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
+                                <a href="<?= $_SERVER['PHP_SELF'] ?>?productid=<?= $productid ?>&amp;qty=1" class="btn graybutton sharp">Læg i vogn<i class="fa fa-shopping-cart"></i></a>
                             </div>
 
 <!--                           Colorbox slides-->

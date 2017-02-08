@@ -89,8 +89,8 @@ session_start();
                 <div class="text-center">
                     <h1>Velkommen til Tingfinderen</h1>
                     <p>Her hos Tingfinderen sælger vi restaurerede produkter med en historie. Kig forbi vores butik i indre København eller tag på eventyr i vores online shop.</p>
-                    <a href="shop.php" class="btn graybutton sharp">Køb</a>
-                    <a href="about.php#sell" class="btn graybutton sharp">Sælg</a>
+                    <a href="shop" class="btn graybutton sharp">Køb</a>
+                    <a href="about#sell" class="btn graybutton sharp">Sælg</a>
                 </div>
 
 

@@ -76,14 +76,14 @@ if(isset($_SESSION["items"])){
 
                 <ul class="nav navbar-nav navbar-right verticalalign">
 
-                    <li><a href="index.php" <?= $frontpage ?> class="uppercase hvr-underline-from-center">Forside</a></li>
-                    <li><a href="shop.php" <?= $shop ?> class="uppercase hvr-underline-from-center">Shop</a></li>
-                    <li><a href="about.php" <?= $about ?> class="uppercase hvr-underline-from-center">Info</a></li>
-                    <li><a href="contact.php" <?= $contact ?> class="uppercase hvr-underline-from-center">Kontakt</a></li>
-                    <li><a href="tyskenhavn.php" <?= $tyskenhavn ?> class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
+                    <li><a href="home" <?= $frontpage ?> class="uppercase hvr-underline-from-center">Forside</a></li>
+                    <li><a href="shop" <?= $shop ?> class="uppercase hvr-underline-from-center">Shop</a></li>
+                    <li><a href="about" <?= $about ?> class="uppercase hvr-underline-from-center">Info</a></li>
+                    <li><a href="contact" <?= $contact ?> class="uppercase hvr-underline-from-center">Kontakt</a></li>
+                    <li><a href="tyskenhavn" <?= $tyskenhavn ?> class="uppercase hvr-underline-from-center">Tyskenhavn.dk</a></li>
                     
                     <!--cart in navbar-->
-                    <li><a href="cart.php"><i class="fa fa-shopping-cart carticon"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
+                    <li><a href="cart"><i class="fa fa-shopping-cart carticon"></i><p class="cartamount"><?= $itemcount ?></p></a></li>
 
                 </ul>
 
